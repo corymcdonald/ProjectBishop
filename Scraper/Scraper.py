@@ -88,7 +88,7 @@ def parsePreReq(prereq):
                 if x + 1 < len(my_list) and ('hour' in my_list[x + 1]
                         or 'hr' in my_list[x + 1]):
                     result = result.strip() + ' ' + currentItemUpper + ' HOURS '
-                    if JSONresult[len(JSONresult)] == '}':
+                    if JSONresult[len(JSONresult)-1] == '}':
                       JSONresult += '],"Course' + str(resultCount) + '": ['
                     JSONresult += '{ "hours":"' + currentItemUpper + '"}'
                     lastParseNeedsAND = True
@@ -110,7 +110,7 @@ def parsePreReq(prereq):
                 lastParseNeedsAND = True
                 if currentItemUpper not in result:
                   tempArray = (result.strip()).split(' ')
-                  if result != '' and (tempArray[len(tempArray)-1] != 'or' and result.strip() != 'or') and (tempArray[len(tempArray)-1] != 'and' and result.strip() != 'and'):
+                  if result.strip() != '' and (tempArray[len(tempArray)-1] != 'or' and result.strip() != 'or') and (tempArray[len(tempArray)-1] != 'and' and result.strip() != 'and'):
                     result = result.strip() + ' or '
                     JSONresult += ','
                     
@@ -120,10 +120,14 @@ def parsePreReq(prereq):
             #The university likes to put this inbetween classes. Sometimes they like to put it in sentences too
             if currentItemUpper == 'OR':
                 lastParseNeedsAND = False
+                # We want to make sure that the last entry is not an OR before we add another OR
+                # Also we want to make sure result is not empty and we add an "OR" to nothing
                 tempArray = (result.strip()).split(' ')
-                if tempArray[len(tempArray)-1] != 'or' and result.strip() != 'or':
-                  result = result.strip() + ' or '
-                  JSONresult += ','
+                if result.strip() != '' and tempArray[len(tempArray)-1] != 'or' and result.strip() != 'or':
+                  # We also want to make sure the last result wasn't an AND
+                  if tempArray[len(tempArray)-1] != 'and' and result.strip() != 'and':
+                    result = result.strip() + ' or '
+                    JSONresult += ','
             elif currentItemUpper == 'AND':
                 lastParseNeedsAND = False
                 tempArray = (result.strip()).split(' ')
