@@ -70,23 +70,20 @@ def parsePreReq(prereq):
 
         # determine if class is lab
         lab = False
-        if x + 1 < len(my_list) and len(my_list[x + 1].replace(':', '')) == 5 \
+        if x + 1 < len(my_list) and len(my_list[x + 1].replace('.','').replace(':', '')) == 5 \
                 and (my_list[x + 1])[:4].isdigit():
             # todo take this out only because test data is invalid
             if ':' not in my_list[x + 1]:
                 # print('lab')
                 lab = True
 
+        
         # We are currently have a class
         if x + 1 < len(my_list) and (
-            (len(
-                my_list[x].replace(
-                    '.',
-                    '')) == 4 and my_list[
-                x + 1].isdigit()) or lab):
+            (len(my_list[x].replace('.','')) == 4 and my_list[x + 1].isdigit()) or lab):
             if not crossListed:
                 if lastParseNeedsAND:
-                    result = result.strip() + ' and '
+                    result = result.replace('.','').strip() + ' and '
                     resultCount += 1
                     JSONresult += '],"Course' + str(resultCount) + '": ['
 
@@ -157,21 +154,19 @@ def parsePreReq(prereq):
             lastParseNeedsAND = True
             if currentItemUpper not in result:
                 tempArray = (result.strip()).split(' ')
-                if result.strip() != '' and (
-                    tempArray[
-                        len(tempArray) -
-                        1] != 'or' and result.strip() != 'or') and (
-                    tempArray[
-                        len(tempArray) -
-                        1] != 'and' and result.strip() != 'and'):
-                    result = result.strip() + ' or '
-                    JSONresult += ','
+                if result.strip() != '' and (tempArray[len(tempArray) -1] != 'or' and result.strip() != 'or') and (
+                    tempArray[len(tempArray) -1] != 'and' and result.strip() != 'and'):
+                      result = result.strip() + ' or '
+                      JSONresult += ','
 
-                JSONresult += '{ "name":"' + \
-                    currentItemUpper.replace('.', '') + '"}'
-                result = result.strip() + ' ' + \
-                    currentItemUpper.replace('.', '')
-
+                JSONresult += '{ "name":"' + currentItemUpper.replace('.', '') + '"}'
+                result = result.strip() + ' ' + currentItemUpper.replace('.', '')
+        
+        if 'LAB' in currentItemUpper:
+          JSONresult += '{ "name":"LAB"}'
+        elif 'DRILL' in currentItemUpper:
+          JSONresult += '{ "name":"DRILL"}'
+        
         # The university likes to put this inbetween classes. Sometimes they
         # like to put it in sentences too
         if currentItemUpper == 'OR':
@@ -222,67 +217,73 @@ def parsePreReq(prereq):
     return returnValue
 
 
-f = open('prereq.txt', 'r')
-i = 0
+# f = open('CoReq.txt', 'r')
+# i = 0
 
-# parsePreReq('(AGEC 2142/AGEC 2141L or AGEC 2143) or equivalent, AGEC 2303 or equivalent, and senior standing is recommended.')
+# variable = ''
+# temp = 0
+# while True:
+#     prereq = f.readline()
+#     if not prereq:
+#         break
 
-variable = ''
-temp = 0
-while True:
-    prereq = f.readline()
-    if not prereq:
-        break
-
-    # if i == 2:
-    # print()
-    if i > temp:
-        # print(str(round((i/2951)*100,2)) + '%')
-        if("grade" in prereq):
-            print(prereq)
-            parsePreReq(prereq) + '\n'
-    i = i + 1
+#     # if i == 2:
+#     # print()
+#     if i > temp:
+#         # print(str(round((i/2951)*100,2)) + '%')
+#         print(prereq)
+#         parsePreReq(prereq) + '\n'
+#     i = i + 1
 
     # if i == temp + 22 +1 : break
 
 
-# d=open('json.txt','w')
-# d.write(variable)
 
+print("Start: " + str(datetime.datetime.now()))
 
-# print("Start: " + str(datetime.datetime.now()))
+url = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
+catalogData = requests.get(url)
+catalogContent = catalogData.content
 
-# url = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
-# catalogData = requests.get(url)
-# catalogContent = catalogData.content
+soup = BeautifulSoup(catalogContent)
 
-# soup = BeautifulSoup(catalogContent)
+soup.select(".sitemaplink")
 
-# soup.select(".sitemaplink")
+for link in soup.select(".sitemaplink"):
+  majorURL = 'http://catalog.uark.edu/' + link['href']
+  majorData = requests.get(majorURL)
+  majorContent = majorData.content
+  majorSoup = BeautifulSoup(majorContent)
+  courses = majorSoup.select(".courseblock")
 
-# for link in soup.select(".sitemaplink"):
-#   majorURL = 'http://catalog.uark.edu/' + link['href']
-#   majorData = requests.get(majorURL)
-#   majorContent = majorData.content
-#   majorSoup = BeautifulSoup(majorContent)
-#   courses = majorSoup.select(".courseblock")
+  for course in courses:
+    courseBlockTitle = course.select(".courseblocktitle")[0].get_text().strip().replace(' ',' ');
+    courseBlockDescription = course.select(".courseblockdesc")[0].get_text().strip().replace(' ',' ');
 
-#   for course in courses:
-#     courseBlockTitle = course.select(".courseblocktitle")[0].get_text().strip();
-#     courseBlockDescription = course.select(".courseblockdesc")[0].get_text().strip();
+    courseDescriptionAndPreCoReq = courseBlockDescription.split("Corequisite:")
+    courseDescription = courseDescriptionAndPreCoReq[0].strip()
+    
+    coReq = ''
+    preReq = ''
 
-#     courseDescriptionAndPreCoReq = courseBlockDescription.split("Prerequisite:")
-#     courseDescription = courseDescriptionAndPreCoReq[0].strip()
-#     preAndCoReq = ""
+    if len(courseDescriptionAndPreCoReq) >1:
+      preAndCoReq = courseDescriptionAndPreCoReq[1].strip().split('Prerequisite')
+      coReq = preAndCoReq[0].replace(':','').strip()
+      if len(preAndCoReq) >1:
+        preReq = preAndCoReq[1]
+    elif "Prerequisite" in courseDescription:
+      preReq = courseBlockDescription.split("Prerequisite")[1].replace(':','').strip()
+    
+    with open("AllCourses.txt", "a") as myfile:
+      myfile.write(courseBlockTitle + "\n" + courseDescription + "\n" + coReq + "\n" + preReq + "\n\n")
 
-#     if len(courseDescriptionAndPreCoReq) >1:
-#       preAndCoReq = courseDescriptionAndPreCoReq[1].strip()
+    if coReq != "":
+      with open("CoReq.txt", "a") as coreq:
+        coreq.write(coReq.replace('\n',' ') + "\n")
+    
+    if preReq != "":
+      with open("PreReq.txt", "a") as mahfile:
+        mahfile.write(preReq.replace('\n',' ') + "\n")
+        
 
-#     with open("test.txt", "a") as myfile:
-#       myfile.write(courseBlockTitle + "\n" + courseDescription + "\n" + preAndCoReq + "\n\n")
-
-#     if preAndCoReq != "":
-#       with open("prereq.txt", "a") as mahfile:
-#         mahfile.write(courseBlockTitle.split('.')[0] + ": " + preAndCoReq.replace('\n',' ') + "\n")
-
-# print("End: " + str(datetime.datetime.now()))
+print("End: " + str(datetime.datetime.now()))
