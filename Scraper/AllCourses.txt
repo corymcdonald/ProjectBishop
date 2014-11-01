@@ -27450,3 +27450,1103 @@ WLIT 700V.  Doctoral Dissertation  (Sp, Su, Fa).  1-18 Hour.
 
 
 
+ACCT 2013.  Accounting Principles  (Sp, Fa).  3 Hours.
+Introduction of accounting as an information system with emphasis on processing and presenting information in the form of financial statements for use in decision making. The course emphasizes business processes and double entry accounting. Prerequisite:  WCOB 1120 or ISYS 1123, and MATH 2053 or MATH 2554, and WCOB 1111 (for business majors) with a grade of C or better.
+
+WCOB 1120 or ISYS 1123, and MATH 2053 or MATH 2554, and WCOB 1111 (for business majors) with a grade of C or better.
+
+ACCT 2013H.  Honors Accounting Principles  (Sp, Fa).  3 Hours.
+Introduction of accounting as an information system with emphasis on processing and presenting information in the form of financial statements for use in decision making. The course emphasizes business processes and double entry accounting. Prerequisite:  WCOB 1120 or ISYS 1123, and MATH 2053 or MATH 2554, and WCOB 1111 (for business majors) with a grade of C or better.
+This course is equivalent to ACCT 2013.
+
+WCOB 1120 or ISYS 1123, and MATH 2053 or MATH 2554, and WCOB 1111 (for business majors) with a grade of C or better.
+This course is equivalent to ACCT 2013.
+
+ACCT 2023.  Accounting Principles II  (Sp, Su, Fa).  3 Hours.
+In this course we study managerial accounting concepts and their use in business decisions. We will examine the development and analysis of cost information for management use in decision-making, income determination, and performance evaluation. Prerequisite:  ACCT 2013 with a grade of C or better.
+
+ACCT 2013 with a grade of C or better.
+
+ACCT 310V.  Accounting Internship  (Sp, Su, Fa).  1-3 Hour.
+This class is designed to give students an internship opportunity to combine their formal academic preparation with an exposure to the accounting profession.  Prerequisite:  ACCT 3723.
+May be repeated for up to 3 hours of degree credit.
+
+ACCT 3723.
+May be repeated for up to 3 hours of degree credit.
+
+ACCT 3533.  Accounting Technology  (Sp, Fa).  3 Hours.
+This course provides an overview of accounting information systems and illustrates the importance of technology to accountants.  Students are exposed to a variety of information technologies including manual, file-oriented, and database systems.  The relative advantages and disadvantages of each type of system are highlighted and discussed.
+ACCT 3723.
+:  ACCT 2013 with a grade of B or better.
+
+ACCT 3613.  Managerial Uses of Accounting Information  (Sp, Fa).  3 Hours.
+Use of accounting information for managerial decisions in a changing, global environment. Identifying the specific information needs of managerial decisions, focusing on the role of both financial and non-financial accounting information within the context of a continually changing information system technology. Covers business as well as non-profit and governmental organizations. This course includes spreadsheet analysis.  Prerequisite: ACCT 2013 with a grade of B or better.
+
+ACCT 2013 with a grade of B or better.
+
+ACCT 3723.  Intermediate Accounting I  (Sp, Fa).  3 Hours.
+This course is designed to study the theoretical basis for financial accounting concepts and principles related to financial reporting. This course emphasizes researching technical accounting pronouncements for application to external financial reporting issues.
+WCOB 2043 or FINN 3043.
+:  ACCT 2013 with a grade of B or better.
+
+ACCT 3753.  Intermediate Accounting II  (Sp).  3 Hours.
+This is the second financial accounting course designed to continue study of financial accounting concepts and principles. This course emphasizes research of technical accounting pronouncements for application to external financial reporting issues.  Prerequisite:  ACCT 3723 with a grade of "C" or better.
+
+ACCT 3723 with a grade of "C" or better.
+
+ACCT 3843.  Fundamentals of Taxation  (Sp, Fa).  3 Hours.
+Overview of basic income tax principles and tax planning techniques. Overview of the income tax treatment of business entities. Focus on the income tax treatment of individuals (with emphasis on the Federal Income Tax). Prerequisite:  ACCT 2013 with a grade of B or better and ACCT 3723 with a grade of C or better.
+
+ACCT 2013 with a grade of B or better and ACCT 3723 with a grade of C or better.
+
+ACCT 4003H.  Honors Accounting Colloquium  (Fa).  3 Hours.
+Explores events, concepts and/or new developments in the field of accounting. Prerequisite:  Senior standing and ACCT 3723 with a grade of C or better.
+
+Senior standing and ACCT 3723 with a grade of C or better.
+
+ACCT 410V.  Special Topics in Accounting  (Irregular).  1-3 Hour.
+Explore current events, concepts and new developments relevant to Accounting not available in other courses.  Prerequisite: ACCT 3723 with a grade of "C" or better.
+May be repeated for degree credit.
+
+ACCT 3723 with a grade of "C" or better.
+May be repeated for degree credit.
+
+ACCT 4203.  Taxation of Business Entities  (Irregular).  3 Hours.
+Focus on the income tax treatment of corporations and pass-through business entities.  Prerequisite:  ACCT 3843 with a grade of C or better.
+
+ACCT 3843 with a grade of C or better.
+
+ACCT 4673.  Product, Project and Service Costing  (Fa).  3 Hours.
+Cost systems with emphasis on information generation for cost management of products, projects and services. The course includes spreadsheet and other computer program analysis.  Prerequisite: ACCT 2023 or ACCT 3613 and ACCT 3723 with  grades of C or better.
+
+ACCT 2023 or ACCT 3613 and ACCT 3723 with  grades of C or better.
+
+ACCT 4703.  Governmental/Nonprofit Accounting  (Sp, Fa).  3 Hours.
+The course will critically examine current issues in governmental and non-profit accounting, financial statement compliance and control for governmental and non-profit entities, and auditing for government and other non-profit organizations. Topics will include examination of state and local government accounting and reporting; sources and applications of taxes and program resources; not-for-profit organization accounting including taxation, regulatory, performance, and compliance issues; industry specific issues in accounting for health care organizations and colleges and universities; and federal governmental accounting. The course will also examine the application processes and compliance procedures for not-for-profit organizations and grants, and will provide a brief introduction to urban planning and economics. Prerequisite:  ACCT 2013, ACCT 2023 and ACT 3723, each with a grade of "C" or better.
+
+ACCT 2013, ACCT 2023 and ACT 3723, each with a grade of "C" or better.
+
+ACCT 4753.  Intermediate Accounting III  (Sp, Fa).  3 Hours.
+The objective of this course is to continue to build the student's understanding of financial accounting and preparation for the Financial Accounting Reporting section of the CPA examination. Prerequisite:  ACCT 3753 with a grade of C or better.
+
+ACCT 3753 with a grade of C or better.
+
+ACCT 4963.  Audit and Assurance Services  (Sp).  3 Hours.
+Professional standards and procedures as applied to external and internal assurance engagements. Including coverage of the economic role of assurance providers, engagement planning, risk assessment, evidence gathering, and reporting.  Prerequisite:  ACCT 3723 with a grade of "C" or better.
+
+ACCT 3723 with a grade of "C" or better.
+
+ACCT 5223.  Accounting for Supply Chain & Retail Organizations  (Fa).  3 Hours.
+Highlights the role played by accounting information in managing supply chains and retail operations. Provides tools for managing cost flows, including activity-based costing, retail accounting, and operational budgeting. Focuses on improving decision making processes, and linking the impact of retail/supply chain decisions to financial statements and shareholder value.
+
+
+
+ACCT 5413.  Advanced Financial Accounting  (Fa).  3 Hours.
+Integrated course which examines the financial reporting, tax, managerial, systems and auditing aspects of major corporate restructurings arising from events such as mergers, acquisitions, spinoffs, reorganizations and downsizing. Prerequisite:  ACCT 3753 with a grade of "C" or better.
+
+ACCT 3753 with a grade of "C" or better.
+
+ACCT 5433.  Fraud Prevention and Detection  (Fa).  3 Hours.
+An examination of various aspects of fraud prevention and detection, including the sociology of fraud, elements of fraud, types of fraud involving accounting information, costs of fraud, use of controls to prevent fraud, and methods of fraud detection.  Prerequisite: MBAD 512V with a grade of "C" or better.
+
+MBAD 512V with a grade of "C" or better.
+
+ACCT 5443.  Asset Management  (Irregular).  3 Hours.
+Managing assets to achieve corporate strategy. Included are issues such as strategy formulation, acquisition processes, internal controls, system requirements, accounting measurements, inventory models, re-engineering, capital budgeting, tax issues, and discussion of current business events that have ethical implications.  Prerequisite: MBAD 513V with a grade of "C" or better.
+
+MBAD 513V with a grade of "C" or better.
+
+ACCT 5463.  Financial Statement Analysis  (Sp).  3 Hours.
+This course is designed to study financial statements and their related footnotes; tools and procedures common to financial statement analysis; the relationships among business transactions, environmental forces (political, economic, and social), and reported financial information; and how financial statement information can help solve certain business problems.  Prerequisite:  ACCT 3723 with a grade of "C" or better.
+
+ACCT 3723 with a grade of "C" or better.
+
+ACCT 549V.  Special Topics in Accounting  (Irregular).  1-3 Hour.
+Seminar in current topics not covered in other courses. Students may enroll in one or more units.
+May be repeated for up to 3 hours of degree credit.
+
+
+
+ACCT 5873.  Advanced Taxation  (Fa).  3 Hours.
+In-depth coverage of the tax treatment of corporations including advanced tax issues. Introduction to tax research including the organization and authority of tax law; accessing and using the tax law; and, applying tax law to taxpayer scenarios.  Prerequisite:  ACCT 3843 or equivalent with a grade of "C" or better.
+
+ACCT 3843 or equivalent with a grade of "C" or better.
+
+ACCT 5883.  Individual Tax Planning  (Sp).  3 Hours.
+In-depth coverage of the tax treatment of passthrough business entities including advanced tax issues.  Overview of the income tax treatment of estates and trusts.  Overview of the essentials of estate and gift taxation. Prerequisite:  MBAD 512V or ACCT 3843 each with a grade of  "C" or better.
+
+MBAD 512V or ACCT 3843 each with a grade of  "C" or better.
+
+ACCT 5953.  Auditing Standards  (Fa).  3 Hours.
+Professional aspects of financial statement auditing and registered auditors. Including ethics and legal responsibilities; internal control testing; critical evaluation of evidence; application of sampling; and reporting problems. Prerequisite:  ACCT 4963 with a grade of "C" or better.
+
+ACCT 4963 with a grade of "C" or better.
+
+ACCT 6013.  Graduate Colloquium  (Irregular).  3 Hours.
+Presentation and critique of research papers and proposals.
+May be repeated for up to 9 hours of degree credit.
+
+
+
+ACCT 6033.  Accounting Research Seminar I  (Irregular).  3 Hours.
+First course in the accounting research seminar sequence which explores and evaluates current accounting literature. Course content reflects recent developments in the literature and specific interests of participants. Examples of potential topics include research methods in accounting, managerial accounting, behavioral accounting,.
+
+
+
+ACCT 6133.  Accounting Research Seminar II  (Irregular).  3 Hours.
+Second course in the accounting research seminar sequence which explores and evaluates current accounting literature. Course content reflects recent developments in the literature and specific interests of participants. Examples of potential topics include research methods in accounting, financial accounting, managerial accounting, behavioral accounting, tax, audit, international accounting, and education. Prerequisite:  ACCT 6033.
+
+ACCT 6033.
+
+ACCT 6233.  Accounting Research Seminar III  (Irregular).  3 Hours.
+Third course in the accounting research seminar sequence which explores and evaluates current accounting literature. Course content reflects recent developments in the literature and specific interests of participants.  Examples of potential topics include research methods in accounting, financial accounting, managerial accounting, behavioral accounting, tax, audit, international accounting, and education. Prerequisite:  ACCT 6033.
+
+ACCT 6033.
+
+ACCT 636V.  Special Problems in Accounting  (Sp, Fa).  1-6 Hour.
+Special research project under supervision of a graduate faculty member.
+
+
+
+ACCT 6433.  Accounting Research Seminar IV  (Irregular).  3 Hours.
+Fourth course in the accounting research seminar sequence which explores and evaluates current accounting literature. Course content reflects recent developments in the literature and specific interests of participants.  Examples of potential topics include research methods in accounting, financial accounting, managerial accounting, behavioral accounting, tax, audit, international accounting, and education. Prerequisite:  ACCT 6033.
+
+ACCT 6033.
+
+ACCT 6633.  Accounting Research Seminar V  (Irregular).  3 Hours.
+Fifth course in the accounting research seminar sequence which explores and evaluates current accounting literature. Course content reflects recent developments in the literature and specific interests of participants.  Examples of potential topics include research methods in accounting, financial accounting, managerial accounting, behavioral accounting, tax, audit, international accounting, and education. Prerequisite:  ACCT 6033.
+
+ACCT 6033.
+
+ACCT 700V.  Doctoral Dissertation  (Sp, Fa).  1-18 Hour.
+Prerequisite:  Candidacy.
+
+Candidacy.
+
+ADLL 5113.  Perspectives in Adult Education  (Sp, Fa).  3 Hours.
+Historical overview of the evolving field of adult education and lifelong learning in responsibilities of adult education providers and reviews the expansion of adult and lifelong learning opportunities associated with societal and demographic shifts.
+
+
+
+ADLL 5123.  Principles and Practices of Adult Learning  (Su, Fa).  3 Hours.
+Overview of the adult learner including characteristics, motivation for participating in learning, and strategies for developing educational programs for diverse adult populations.
+
+
+
+ADLL 5133.  Curriculum Development in ABE and ASE  (Fa).  3 Hours.
+Curriculum development in Adult Basic Education (ABE) and Adult Secondary Education (ASE) settings including the various educational functioning levels, measures to asses student levels, selection of teaching materials, and development of curriculum utilizing instructional standards for ABE and ASE programs.
+
+
+
+ADLL 5143.  Instructional Strategies and Assessment in Adult Education  (Sp).  3 Hours.
+Selection and utilization of materials and instructional methods for use in adult learning settings. Evaluative strategies to develop or select appropriate tools and techniques predicated upon the needs and goals of adult learners.
+
+
+
+ADLL 5153.  Organization and Administration of Adult and Lifelong Learning Programs  (Sp).  3 Hours.
+Legal, ethical, staffing, and financial considerations for the development and implementation of programs for adult and lifelong learners in various programs including literacy centers, GED centers, community education, lifelong/leisure learning, and postsecondary education.
+
+
+
+ADLL 5163.  Managing Change in Adult and Lifelong Learning  (Su, Fa).  3 Hours.
+Strategies for planning, organizing, and facilitating change in programs that serve adult learners from diverse populations, across varied developmental stages and geographic locations. Discussion of social change that has impacted adult education and analysis of change models relevant to individuals, groups and organizations.
+
+
+
+ADLL 5173.  Program Planning  (Su).  3 Hours.
+Program development process for adult and lifelong learners. Overview of assessment, developing program objectives, identifying resources, and designing program plans.
+
+
+
+ADLL 5183.  Technology and Innovation in Adult Learning  (Su).  3 Hours.
+Techniques for designing, developing, implementing, and assessing technology-mediated adult and lifelong learning programs. Discussion of issues relevant to the use of innovative strategies for delivering instruction via emerging technologies and their potential impact on content and learning outcomes.
+
+
+
+ADLL 5193.  Seminar in Adult and Lifelong Learning  (Sp, Su).  3 Hours.
+Seminars focused on topics related to adult and lifelong learning.
+
+
+
+ADLL 5213.  Adult and Lifelong Learning Internship  (Sp, Fa).  3 Hours.
+Internship in adult and lifelong learning settings.
+
+
+
+ADLL 5223.  Adult and Lifelong Learning Applied Project  (Sp, Su, Fa).  3 Hours.
+Development and Implementation of a project focused on adult and lifelong learning. Consent of advisor/instructor required.
+
+
+
+ADLL 5233.  Independent Study  (Sp, Su, Fa).  3 Hours.
+Provides students with an opportunity to pursue special study in adult and lifelong learning.
+May be repeated for up to 6 hours of degree credit.
+
+
+
+ADLL 6113.  Advanced Adult Learning Theory  (Irregular).  3 Hours.
+Advanced study of theories and models of adult and lifelong learning with an emphasis on current trends, recent research, and issues affecting the field. Issues covered will include critical theory and advancements in neuroscience and cognition as they relate to adult learning and lifespan development.
+
+
+
+ADLL 6123.  Leadership and Ethics in Adult and Lifelong Learning  (Irregular).  3 Hours.
+This doctoral course focuses on leadership principles and ethical considerations that are critical to developing and sustaining adult education programs that benefit individuals, organizations, and communities. Course content will include case study analysis and lectures from scholar-practitioners from the field.
+
+
+
+ADLL 6133.  Analysis of International Adult and Lifelong Programs  (Irregular).  3 Hours.
+Survey of the historical and philosophical events which have shaped adult and lifelong learning worldwide. Discussion of issues affecting adult education and lifelong learning including globalization, educational access, and variance in national policies.
+
+
+
+ADLL 6143.  Instructional Adaptation and Innovation in Adult and Lifelong Learning  (Irregular).  3 Hours.
+An overview of teaching and learning methods, styles, and techniques which are applicable when facilitating adult learners across diverse settings. Content to include teaching and learning style assessment, accommodating learning styles, physical and learning disabilities, language differences and cultural norms.
+
+
+
+ADLL 6153.  Policy and Public Governance of Adult and Lifelong Learning Programs  (Irregular).  3 Hours.
+Policy analysis and public governance issues in adult and lifelong learning with emphasis on state and federal programs. Discussions of how to evaluate, design, and implement policy focused on promoting adult and lifelong learning activities in a myriad of organizations. Overview of trends and current issues related to policy and public governance of adult and lifelong learning.
+
+
+
+ADLL 6163.  Adult Development and Psychology  (Irregular).  3 Hours.
+Focus on adult developmental psychology with emphasis on lifespan development and specific issues related to learning in the various stages of adulthood. Work-life balance, meaning of work, generational issues.
+
+
+
+ADLL 6173.  Current Issues  (Irregular).  3 Hours.
+Exploration and discussion of current issues relative to adult education and lifelong learning. Focus on the review and application of current research as it relates to practice.
+May be repeated for up to 6 hours of degree credit.
+
+
+
+ADLL 6313.  Independent Study  (Irregular).  3 Hours.
+Independent study of topics in adult and lifelong learning.
+
+
+
+ADLL 6413.  Quantitative Reasoning in Adult and Lifelong Learning  (Irregular).  3 Hours.
+Methodologies for designing descriptive, correlational, and experimental studies. Development of research questions, definition of variables, selection or development of instruments, data collection, analysis, interpretation and reporting of research results. Prerequisite:  ESRM 6403 or equivalent.
+
+ESRM 6403 or equivalent.
+
+ADLL 6423.  Qualitative Reasoning in Adult and Lifelong Learning  (Irregular).  3 Hours.
+Methodologies for designing qualitative research studies in adult and lifelong learning settings. Selection of the appropriate qualitative tradition, selection of research subjects, development of data collection protocols, field work strategies, data analysis, data interpretation and presentation of data results.
+
+
+
+ADLL 6433.  Program Evaluation  (Irregular).  3 Hours.
+Overview of evaluation strategies in adult and lifelong learning programs that include: development of evaluation questions, selection or development of instrumentation, data collection methods, data analysis, and reporting of evaluation results. Emphasis on practical and ethical issues associated with evaluation processes. Prerequisite:  ESRM 6403 or equivalent.
+
+ESRM 6403 or equivalent.
+
+ADLL 6443.  Adult and Lifelong Learning Dissertation Seminar  (Irregular).  3 Hours.
+Development of dissertation proposal. Formation of research question, selection of methodologies, development of problem statement, research questions, and identification of research variables, constructs of phenomena. Identification of data collection and data analysis procedures. Prerequisite:  ESRM 6403 and ADLL 6413.
+
+ESRM 6403 and ADLL 6413.
+
+ADLL 700V.  Doctoral Dissertation  (Sp, Su, Fa).  1-18 Hour.
+Prerequisite:  Candidacy.
+
+Candidacy.
+
+AAST 1003.  Introduction to African and African American Studies  (Sp, Fa).  3 Hours.
+This course is an introduction to the interdisciplinary study of Africa and African Americans and their impact on the world order and society with an emphasis on that impact's manifestations in the United States of America.
+
+
+
+AAST 2023.  The African American Experience  (Sp, Su, Fa).  3 Hours.
+Examines various facets of African American culture that collectively construct the African American experience including art, literature, drama, migration, film, and education. Covers issues facing African Americans through a cultural and socio-political context to understand and appreciate African American impacts on the United States.
+
+
+
+AAST 3023.  African Americans in Sport  (Sp, Su, Fa).  3 Hours.
+Historical, sociological, and political issues and debate surrounding African Americans in sport. Contemporary issues facing African American athletes and sports figures.
+
+
+
+AAST 3123.  African American Students in Higher Education  (Irregular).  3 Hours.
+Examines the impact of college environments on African American students. Focuses on the following topics regarding African American students: retention, student demographics, student characteristics, current trends, issues and problems, student success, sub-populations, student values, and implications for higher education.
+
+
+
+AAST 3193.  The Making of the Modern Caribbean  (Fa).  3 Hours.
+History of the Caribbean from pre-Columbian to present times focusing in particular on indigenous origins, colonialism, slavery, rebellion, independence, nationalism, and political integration in the making of the modern Caribbean region.
+
+
+
+AAST 3233.  African American History to 1877  (Sp, Fa).  3 Hours.
+History of the African American experience in North America emphasizing economic, social, and cultural perspectives. Topics include the African slave trade, the creation of race and racism, the institution of slavery, free community formation in North, and the impact of the Civil War and Reconstruction on African Americans.
+This course is cross-listed with HIST 3233.
+
+
+
+AAST 3243.  African American History Since 1877  (Sp, Fa).  3 Hours.
+The course will study the major social, political, and economical issues relating to the African American experience beginning with the late post-Reconstruction period and will include all of the major personalities and influences in the Civil Rights Movement, from 1877 to the present.
+This course is cross-listed with HIST 3243.
+
+
+
+AAST 3253.  The History of Sub-Saharan Africa  (Fa).  3 Hours.
+Sub-Saharan African history from the 18th century to the present, with emphasis on the impact of the slave trade, colonization, Independence, and contemporary issues of the post-colonial period.  Examination of the ways Africans experienced change in terms of culture, society, economics, gender, religion, politics, and labor.
+
+
+
+AAST 3263.  African Americans in Film  (Irregular).  3 Hours.
+A survey of the history of images of African Americans in film, especially as these images are examined in the context of stereotypical renditions and/or realistic representations of African American experiences. Issues of African American history, culture, and socio-political context will be addressed in the analyses of these films. Prerequisite:  ENGL 1023 and junior or senior standing.
+
+ENGL 1023 and junior or senior standing.
+
+AAST 3283.  Civil Rights Policy and Politics  (Sp).  3 Hours.
+This course will draw from linkages between the protest phase of the civil rights and American political institutions. The course explores the institutional impact of the civil rights movement on the presidency, congress, the courts, administrative regulatory agencies, and civil rights advisory organizations.
+
+
+
+AAST 3293.  African American Politics  (Irregular).  3 Hours.
+This is a survey course designed to provide students with a comprehensive overview of African American political participation in the United States.  In addition to analyzing important events in African American Politics, the course attempts to explain evolving patterns of political participation in Black America.
+This course is cross-listed with PLSC 3293.
+
+
+
+AAST 3853.  Topics in African-American Literature and Culture  (Irregular).  3 Hours.
+The study of works of African-American literature, with attention to particular themes, genres, authors, literary movements, historical moments, or other organizing principles. Content varies.
+May be repeated for up to 9 hours of degree credit.
+
+
+
+AAST 4063.  Women in Africa  (Irregular).  3 Hours.
+Diversity of women's life experiences throughout sub-Saharan Africa will be examined. The class will investigate a range of topics, from marriage and motherhood to prostitution and popular culture. A historical dimension will be present throughout the course, and perspectives from literature and film will also be incorporated.
+This course is cross-listed with ANTH 4063.
+
+
+
+AAST 4073.  African Sociolinguistics  (Irregular).  3 Hours.
+Explores how language use intersects, constructs, and reflects social life in Africa. Covers key topics in sociolinguistics as they apply to current sociolinguistic issues on the African continent today.
+This course is cross-listed with ANTH 4073, WLLC 4073.
+
+
+
+AAST 4083.  African Popular Culture  (Irregular).  3 Hours.
+This class explores popular cultural expression across Africa. Topics range from hip hop and film, to second-hand clothing fashions and the media. We will consider how popular culture, while often inspired by global trends, is rooted in local circumstances and often reflects attempts to grapple with important issues.
+
+
+
+AAST 4093.  The History of African Americans and Social Justice  (Irregular).  3 Hours.
+Explores how the United States has extended social justice to African Americans during the nation's history. Examines social justice for blacks and the impact of historic policies and practices on black life today.
+This course is cross-listed with HIST 4093.
+
+
+
+AAST 4123.  Africa and the Trans-Atlantic Slave Trade  (Irregular).  3 Hours.
+Examines the trans-Atlantic slave trade with a primary focus on the role of Africa and Africans in creating the unique economy and culture of the trans-Atlantic world.
+
+
+
+AAST 4163.  African American Perspectives of Trauma, Loss, and Recovery  (Fa).  3 Hours.
+Explores dimensions of trauma, loss, and recovery within the lived experiences of African American individuals, families, and communities in the United States. Prerequisite:  Junior standing or instructor consent.
+
+Junior standing or instructor consent.
+
+AAST 4173.  Social Work with African American Families  (Sp, Fa).  3 Hours.
+An overview of historical and contemporary issues of African American families using culturally competent and strengths based frameworks. Focuses on the Black family as a social institution. Covers current trends affecting Black families, historical influences, evaluation of social policies, and programs of today. Prerequisite:  Junior standing or instructor consent.
+
+Junior standing or instructor consent.
+
+AAST 4263.  Independence and Africa Today  (Sp).  3 Hours.
+Examines the last half-century of Africa's history, focusing on the last few decades.  Introduction of Africa's colonial past, revolutions and struggles for independence. Review of African development in the post-colonial and contemporary era, successes and failures of independent Africa, and the challenges the continent faces today.
+This course is cross-listed with AAST 4363, HIST 4263.
+
+
+
+AAST 4273.  Comparative Slavery  (Irregular).  3 Hours.
+Explores the meaning of slavery around the world, both in ancient and modern times. This examination of how slavery differed in various cultures over time will allow students to explore the complexity of this labor relationship and gain a better understanding of how slavery was an integral part of world history.
+
+
+
+AAST 4323.  Racial Identity, Politics, and Public Policy  (Even years, Sp).  3 Hours.
+Examines how race and perceived racial differences affect political discourse, mobilization, representation, and political outcomes. Prerequisite:  PLSC 4293 or AAST 1003 or Junior standing.
+
+PLSC 4293 or AAST 1003 or Junior standing.
+
+AAST 4383.  The American Civil Rights Movement  (Irregular).  3 Hours.
+Introduction to the history and development of the civil rights movement in the United States.
+This course is cross-listed with HIST 4383.
+
+
+
+AAST 4463.  African American Theatre History - 1950 to Present  (Sp).  3 Hours.
+A chronological examination of African-American theatre history from 1950 to the present through the study of African-American plays and political/social conditions. Upon completion of this course, the student should be familiar with the major works of African-American theatre and have a deeper understanding of American history.
+
+
+
+AAST 4483.  African American Biographies  (Irregular).  3 Hours.
+Introduction to the history and intellectual development of famous and not-so-famous African Americans.
+This course is cross-listed with HIST 4483.
+
+
+
+AAST 4563.  The Old South, 1607-1865  (Odd years, Fall).  3 Hours.
+Survey of the political, social, and economic development of the antebellum South.
+
+
+
+AAST 4573.  The New South, 1860 to the Present  (Even years, Fa).  3 Hours.
+Survey of the development of the Civil War and postwar South to the present.
+
+
+
+AAST 4823.  Black Freedom in the Age of Emancipation  (Sp).  3 Hours.
+Comparative study of Atlantic World freedom movements from the perspective of the African Diaspora. Focuses on the histories, meanings, and legacies of the various types of black emancipation in the Atlantic World and the cultural technologies that enabled them.
+
+
+
+AAST 4853.  Studies in African American Literature and Culture  (Irregular).  3 Hours.
+The study of works of African American literature, with attention to particular themes, genres, authors, literary movements, historical moments, or other organizing principles. Content varies. At least one major research paper will be required.
+May be repeated for up to 9 hours of degree credit.
+
+
+
+AAST 4923.  History of the Black Press  (Even years, Sp).  3 Hours.
+Covers the historic context of contributions and innovations to U.S. newspapers by African Americans. Also investigates the role of the black press from its beginnings in 1827 through the civil rights movement. Prerequisite:  Junior standing.
+This course is cross-listed with JOUR 4923.
+
+Junior standing.
+This course is cross-listed with JOUR 4923.
+
+AAST 4933.  African American Political Ideology  (Odd years, Fa).  3 Hours.
+A survey course designed to identify and examine characteristics and functions of several variants of black political ideology/thought.
+This course is cross-listed with PLSC 4933.
+
+
+
+AAST 4953.  The History of Sub-Saharan African Women  (Irregular).  3 Hours.
+Introduction to the history of women in Sub-Saharan Africa, starting in the early 18th century through the 20th century. Focus on women and the transatlantic slave trade, women's influence in pre-colonial religious, political, and cultural institutions, and women's experiences under colonial rule and in post-colonial Africa.
+
+
+
+AAST 499V.  African American Studies Seminar  (Sp, Su, Fa).  1-12 Hour.
+Explores the various aspects of the African American experience as it relates to the development of black and white relationships in American society and the world at large. Variable topic each semester. Prerequisite:  Second semester sophomore standing.
+May be repeated for up to 12 hours of degree credit.
+
+Second semester sophomore standing.
+May be repeated for up to 12 hours of degree credit.
+
+AGEC 1103.  Principles of Agricultural Microeconomics  (Sp, Fa).  3 Hours.
+Introduction to agricultural economics, including a survey of the role and characteristics of agriculture businesses in our economic system. Basic economic concepts concerning price determination, profit maximization, and resource use are emphasized. The use of economic principles as applied to the production and marketing decisions made by managers of agricultural firms is demonstrated. Credit will be allowed for only one of AGEC 1103 or ECON 2023 or ECON 2023H. Pre- or
+MATH 1203.
+This course is cross-listed with ECON 2023.
+
+
+AGEC 2103.  Principles of Agricultural Macroeconomics  (Sp, Fa).  3 Hours.
+Applications of economics principles to problems of agricultural production, distribution, and income; including a study of the interrelationship between agriculture and other segments of the economy; and the dynamic forces in the economy which affect agriculture. Credit will be allowed for only one of AGEC 2103 or ECON 2013 or ECON 2013H. Pre- or
+MATH 1203.
+This course is cross-listed with ECON 2013.
+
+
+AGEC 2141L.  Agribusiness Financial Records Lab  (Fa).  1 Hour.
+A computer lab section for the AGEC 2142 Agribusiness Financial Records class is required to teach students accounting software and spreadsheet applications related to financial record keeping.
+AGEC 2142.
+:  AGME 2903 or WCOB 1120 and AGEC 1103 or ECON 2023 or ECON 2143.
+
+AGEC 2142.  Agribusiness Financial Records  (Fa).  2 Hours.
+Principles of small agricultural business management accounting practices are taught to allow students to gain hands-on experience with financial record keeping for a business. Resulting financial statements are analyzed to determine opportunities for enhancing financial efficiency.
+AGEC 2141 Lab.
+:  AGME 2903 or WCOB 1120 and AGEC 1103 or ECON 2023 or ECON 2143.
+
+AGEC 2303.  Introduction to Agribusiness  (Sp, Su).  3 Hours.
+Introduction to agribusiness issues as they relate to the food processing, wholesale and retail sectors of the agricultural industry.  Coverage of methods and tools agribusiness managers use to evaluate business opportunities.  Case studies serve to communicate concepts of product distribution, design, promotion and pricing in the development of a marketing plan. Prerequisite:  AGEC 1103 or ECON 2023.
+
+AGEC 1103 or ECON 2023.
+
+AGEC 2403.  Quantitative Tools for Agribusiness  (Fa).  3 Hours.
+Introduction to quantitative methods used in agricultural economics and agribusiness with an emphasis on skills and techniques that will enhance the ability of students to perform in upper division coursework.  Provides an overview of statistical and optimization methods used in research problems, economic theory, and applied decision making activities. Prerequisite:  (AGEC 1103 or ECON 2023 or ECON 2143) and (MATH 2043 or MATH 2053).
+
+(AGEC 1103 or ECON 2023 or ECON 2143) and (MATH 2043 or MATH 2053).
+
+AGEC 3303.  Food and Agricultural Marketing  (Sp).  3 Hours.
+Surveys consumer trends in food markets and the marketing activities of the food and fiber system.  Emphasizes marketing concepts for both commodities and differentiated food products.  Topics include applied consumer and price theory; marketing management; structure and performance of the food system; and current agricultural marketing topics. Prerequisite:  AGEC 1103 or ECON 2023 or ECON 2143.
+
+AGEC 1103 or ECON 2023 or ECON 2143.
+
+AGEC 3313.  Agribusiness Sales  (Sp).  3 Hours.
+Principles of professional sales and sales management techniques used in food and agricultural firms; develop a professional sales presentation; study current agribusiness industry professional sales persons and sales practices and techniques.
+Drill.
+:  AGEC 1103 or AGEC 2103 or ECON 2013 or ECON 2023 or ECON 2143 or equivalent, and completed 70 hours of coursework or consent of instructor.
+
+AGEC 3373.  Futures and Options Markets  (Fa).  3 Hours.
+Theory and mechanics of commodity futures and options markets including trading, margin, fees, etc.  Price relationships between cash, futures and options. Fundamental and technical price analysis.  Price risk management strategies for producers and users of agricultural commodity marketing plan.  Speculative and hedging simulation exercises. Prerequisite:  AGEC 1103 or ECON 2023.
+
+AGEC 1103 or ECON 2023.
+
+AGEC 3403.  Farm Business Management  (Fa).  3 Hours.
+Application of economic principles for the profitable organization and operation of the farm business. Focuses upon agricultural production management decision-making tools: budgeting techniques (enterprise, partial, cash flow), balance sheet, income statement, cash flow, investment analysis and risk management. Recommended: AGEC 1103 (or ECON 2023), AGEC 2142, and AGME 2903.
+
+
+
+AGEC 3413.  Principles of Environmental Economics  (Sp).  3 Hours.
+An introductory, issues-oriented course in the economics of the environment.  The course will focus on what is involved in how society makes decisions about environmental quality. The environmental issues important to the State of Arkansas and the United States will be emphasized.
+Drill component.
+:  AGEC 1103 or ECON 2023.
+This course is cross-listed with ENSC 3413.
+
+AGEC 3413H.  Honors Principles of Environmental Economics  (Sp).  3 Hours.
+An introductory, issues-oriented course in the economics of the environment.  The course will focus on what is involved in how society makes decisions about environmental quality. The environmental issues important to the State of Arkansas and the United States will be emphasized.
+Drill component.
+:  AGEC 1103 or ECON 2023.
+This course is cross-listed with AGEC 3413, ENSC 3413.
+
+AGEC 3503.  Agricultural Law I  (Fa).  3 Hours.
+Examination of those areas of law especially applicable to agriculture. Fundamentals of contract law, torts law, and property law will accompany discussion of major areas of agricultural law; acquisition and disposal of farmland; farm tenancies; rights and limitations in the use and ownership of farmland; water law; environmental protection; protection of the productivity of agricultural land; and the law of sales and secured transactions in an agricultural context.
+
+
+
+AGEC 3523.  Environmental and Natural Resources Law  (Even years, Sp).  3 Hours.
+Principles of environmental and natural resources law relevant to agriculture, food and the environmental sciences; legal principles relating to regulation of water, air, hazardous substances, land, wildlife, livestock, and water rights.  Principles of civil and criminal liabilities and other developing legal and regulatory issues relating to agriculture and natural resources.
+
+
+
+AGEC 400V.  Special Problems  (Sp, Su, Fa).  1-6 Hour.
+Special studies and readings conducted under the direct supervision of staff members to satisfy the requirements of individual students.
+May be repeated for up to 6 hours of degree credit.
+
+
+
+AGEC 401V.  Internship in Agribusiness  (Sp, Su, Fa).  1-6 Hour.
+A supervised practical work experience in an agribusiness firm or a governmental or industrial organization having direct impact on agriculture in order to gain professional competence and insight to employment opportunities. Prerequisite:  junior standing.
+May be repeated for up to 8 hours of degree credit.
+
+junior standing.
+May be repeated for up to 8 hours of degree credit.
+
+AGEC 402V.  Special Topics (Irregular).  1-3 Hour.
+Studies of selected topics in agricultural economics not available in other courses.
+May be repeated for degree credit.
+
+
+
+AGEC 4113.  Agricultural Prices and Forecasting  (Sp).  3 Hours.
+Price theory and techniques for predicting price behavior of general economy and price behavior of individual agricultural products will be analyzed. Provides practice in the application of economics and statistics to agricultural price analysis. Lecture 2 hours, laboratory 2 hours per week. Prerequisite:  AGEC 1103 (or ECON 2023), AGEC 2403, (introductory statistics AGST 4023 or STAT 2303 or WCOB 1033) and MATH 2053.
+
+AGEC 1103 (or ECON 2023), AGEC 2403, (introductory statistics AGST 4023 or STAT 2303 or WCOB 1033) and MATH 2053.
+
+AGEC 4123.  Legal Issues in Animal Agriculture  (Odd years, Sp).  3 Hours.
+An issues-oriented course focusing on the legal issues involved in the production of poultry, swine and livestock. Emphasis will center on the laws, regulations and policy arguments involved in animal confinement, antibiotic use, humane slaughter and veterinary medicine, along with other related issues. The wide range of regulation from local to state to federal, depending on the issue will be studied and discussed.
+This course is cross-listed with ANSC 4123, POSC 4123.
+
+
+
+AGEC 4143.  Agricultural Finance  (Fa).  3 Hours.
+Methods and procedures whereby agricultural firms acquire and utilize funds required for their successful operation. Emphasis is placed upon role of finance and financial planning and consideration is given to an understanding of financial firms serving agriculture. Prerequisite(s):  (AGEC 1103 or ECON 2023) and (AGEC 2103 or ECON 2013) and (AGEC 2142 or AGEC 2143 or ACCT 2013 or WCOB 1023).
+
+(s)  (AGEC 1103 or ECON 2023) and (AGEC 2103 or ECON 2013) and (AGEC 2142 or AGEC 2143 or ACCT 2013 or WCOB 1023).
+
+AGEC 4163.  Agricultural and Rural Development  (Fa).  3 Hours.
+Examination of agricultural and rural development issues in less developed countries. Alternative agricultural production systems are compared, development theories examined, and consideration given to the planning and implementation of development programs. Prerequisite:  AGEC 1103 (or ECON 2023).
+
+AGEC 1103 (or ECON 2023).
+
+AGEC 4313.  Agricultural Business Management  (Fa).  3 Hours.
+The planning, organizing, leading and controlling functions of management as they relate to agricultural business firms.  Marketing of value-added products, budgeting, organizational structure, cost control, financial statements, capital budgeting and employee supervision and motivation.  Case studies are used to teach communication and decision-making skills. Prerequisite:  (AGEC 2142/AGEC 2141L or AGEC 2143) or equivalent, AGEC 2303 or equivalent, and senior standing is recommended.
+
+(AGEC 2142/AGEC 2141L or AGEC 2143) or equivalent, AGEC 2303 or equivalent, and senior standing is recommended.
+
+AGEC 4323.  AgriBusiness Entrepreneurship (Sp).  3 Hours.
+Agribusiness entrepreneurship is the process of bringing food or rural-based products and services from conceptualization to market. The course presents the opportunities, problems and constraints facing individuals and firms operating in rural or isolated markets while emphasizing the steps in conceptualization, development, marketing, and delivery-selling of agribusiness rural products.  Prerequisite:  AGEC 1103 or equivalent.
+
+AGEC 1103 or equivalent.
+
+AGEC 4373.  Basis Trading: Applied Price Risk Management  (Sp, Su).  3 Hours.
+Use of futures markets as risk shifting institutions. Students design and implement hedging and cross hedging strategies for grain farmers, country elevators, soybean crushers, poultry firms, etc. Spreadsheets and statistical techniques are used to develop optimal hedging ratios. Prerequisite:  AGEC 3373 or consent of instructor.
+
+AGEC 3373 or consent of instructor.
+
+AGEC 4381.  Basis Trading:  Case Study  (Fa).  1 Hour.
+This course provides an opportunity to apply principles learned in AGEC 4373 to grain merchandising using the case study approach. Prerequisite:  AGEC 4373.
+
+AGEC 4373.
+
+AGEC 4613.  Political Economy of Agriculture and Food  (Fa).  3 Hours.
+Agricultural and food policies are studied from domestic and international perspectives. Laws, regulations, decisions and actions by governments and other institutions are examined in terms of rationale, content, and consequences. Economic and political frameworks are used to assess policies in terms competitive structure, operation, and performance of farming and food systems. Prerequisite:  (AGEC 1103 or ECON 2023) and (AGEC 2103 or ECON 2013) and (PSYC 2003 or SOCI 2013 or RSOC 2603).
+
+(AGEC 1103 or ECON 2023) and (AGEC 2103 or ECON 2013) and (PSYC 2003 or SOCI 2013 or RSOC 2603).
+
+AGEC 4623.  International Agricultural Trade and Commercial Policy  (Fa).  3 Hours.
+Analysis of agricultural market competition and performance in a global economy. The impact of domestic and international agricultural policies on domestic and international markets and welfare. Economic principles applied to the interaction of economic events in the world food economy. Prerequisite:  (AGEC 1103 or ECON 2023) and (AGEC 2103 or ECON 2013).
+
+(AGEC 1103 or ECON 2023) and (AGEC 2103 or ECON 2013).
+
+AGEC 500V.  Special Problems  (Sp, Su, Fa).  1-3 Hour.
+Individual reading and investigation of a special problem in agricultural economics not available under regular courses, under the supervision of the graduate faculty. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGEC 5011.  Seminar  (Sp, Fa).  1 Hour.
+Presentation and discussion of graduate student research. Formal presentations are made by all graduate students. Consideration given to research design, procedures, and presentation of results. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGEC 502V.  Special Topics (Irregular).  1-3 Hour.
+Advanced studies of selected topics in agricultural economics not available in other courses. Prerequisite:  Graduate standing.
+May be repeated for degree credit.
+
+Graduate standing.
+May be repeated for degree credit.
+
+AGEC 503V.  Internship in Agricultural Economics (Sp, Su, Fa).  1-3 Hour.
+On-the-job application of skills developed in the M.S. program.
+
+
+
+AGEC 5103.  Agricultural Microeconomics  (Fa).  3 Hours.
+Masters-level training in agricultural microeconomic theory and its application to food, agriculture and the environment. The course covers behavior of firms, households and markets, in more depth and rigor than encountered in undergraduate courses. Theories are explained and then applied to relevant food, agricultural, environment and resource issues.
+
+
+
+AGEC 5133.  Agricultural and Environmental Resource Economics  (Sp).  3 Hours.
+An economic approach to problems of evaluating private and social benefits and costs of altering the environment. Emphasis given to the interaction of individuals, institutions, and technology in problems of establishing and maintaining an acceptable level of environmental quality. Prerequisite:  Minimum of 3 hours Agricultural Economics or Economics at 3000 level or higher or PhD standing.
+
+Minimum of 3 hours Agricultural Economics or Economics at 3000 level or higher or PhD standing.
+
+AGEC 5143.  Financial Management in Agriculture  (Fa).  3 Hours.
+Covers advanced topics in agricultural finance. The general focus of the course is the financial management of non-corporate firms. Covers the basic tools of financial analysis including financial arithmetic, asset evaluation under risk, and financial analysis and planning using econometric models. Such topics covered include management of current assets, capital budgeting, capital structure, and institutions involved in agricultural finance. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGEC 5153.  The Economics of Public Policy  (Sp).  3 Hours.
+This class will examine the impact of public policy on agricultural and other business sectors as well as households and individuals, particular in rural areas.  Emphasis will also be placed on analyzing the potential impact of future policy changes.  The course will focus on the application of welfare criteria and economic analyses to the problems and policies affecting resource adjustments in agriculture and rural communities. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGEC 5303.  Agricultural Marketing Theory  (Fa).  3 Hours.
+Survey of the structure of agricultural product and factor markets including a critique of theoretical analyses of industry structure, conduct and performance; and a review of market structure research in agricultural industries. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGEC 5403.  Quantitative Methods for Agribusiness  (Fa).  3 Hours.
+Application of quantitative techniques used to support managerial decision-making and resource allocation in agricultural firms. Provides exposure to mathematical and statistical tools (regression analysis, mathematical programming, simulation) used in economic analysis in agriculture. Emphasis is placed on computer applications with conceptual linkage to economic theory. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGEC 5413.  Agribusiness Strategy  (Sp).  3 Hours.
+Addresses problems of strategy formulation in agribusiness emphasizing current problems and cases in agriculture. Surveys modern and classic perspectives on strategy with applications to agribusiness.  Examines the development of firm level strategies within the structure and competitive environment of agricultural firms and industries. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGEC 5613.  Econometrics I  (Sp).  3 Hours.
+Use of economic theory and statistical methods to estimate economic models. The single equation model is examined emphasizing multicollinearity, autocorrelation, heteroskedasticity, binary variables and distributed lags and model specification. Prerequisite:  MATH 2043 and knowledge of matrix methods, (which may be acquired as a corequisite), and (AGEC 1103 or ECON 2023) and (AGEC 2403 or AGST 4023 or STAT 2303 or WCOB 1033).
+
+MATH 2043 and knowledge of matrix methods, (which may be acquired as a corequisite), and (AGEC 1103 or ECON 2023) and (AGEC 2403 or AGST 4023 or STAT 2303 or WCOB 1033).
+
+AGEC 5623.  Quantitative Food and Agricultural Policy Analysis  ( Sp).  3 Hours.
+Introduction to applied analysis of domestic and international food and agricultural policies using quantitative tools. This course will provide hands-on experience with simulation modeling in microeconomics. An emphasis is placed on policy analysis through computer applications with theoretical underpinnings. Prerequisite:  (AGEC 5103 and AGEC 5403) or Instructor Consent.
+
+(AGEC 5103 and AGEC 5403) or Instructor Consent.
+
+AGEC 5713.  Food Safety Law  (Irregular).  3 Hours.
+This course provides students with an introduction to food law and policy, history of food regulation, the organization of federal food law and regulatory agencies, government inspection and enforcement powers, food safety standards, food labeling, food advertising and product liability.  Web-based course.
+
+
+
+AGEC 5723.  Bioenergy and Resource Economics  (Even years, Fa).  3 Hours.
+This course surveys the allocation and conservation of natural resources from a perspective of optimal use and the sustainability of resources. The development and distribution issues relating to energy, land, water, and other resource areas are addressed in the course, with emphasis placed on the bioproducts and bioenergy concerns.
+
+
+
+AGEC 5733.  Bioenergy Economics and Sustainability  (Fa).  3 Hours.
+This course will provide an understanding of the economic issues relating to overall supply chains producing bioenergy and bio-based products. The course will address the economic, sustainability and social dimensions of these industries.
+
+
+
+AGEC 600V.  Master's Thesis  (Sp, Su, Fa).  1-6 Hour.
+Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGEC 700V.  Doctoral Dissertation  (Sp, Su, Fa).  1-18 Hour.
+Prerequisite:  Candidacy.
+
+Candidacy.
+
+AGED 1001.  Orientation to Agricultural and Extension Education  (Fa).  1 Hour.
+Continuation of AFLS 1011, Freshman Orientation, with attention given to sharing of possible solutions to individual problems. Exploration of anticipated collegiate experiences for departmental majors as well as post-graduation opportunities. Student and faculty interaction is stressed. The class meets during the last half of the fall semester twice a week. The class also meets 1 or 2 evenings for up to two hours each time.
+
+
+
+AGED 1031.  Introduction to Early Field Experience  (Fa).  1 Hour.
+A thirty hour field experience designed to give prospective agricultural education teachers an opportunity to observe and participate in a variety of school settings.
+AGED 1123.
+
+
+AGED 1123.  Foundations of Agricultural Education  (Fa).  3 Hours.
+A preparatory course evaluating the historical foundations of agricultural education with an introduction to the psychological, sociological and philosophical foundations of education. This course will encourage reflective practice through understanding of educational trends, classroom environment creation and utilization, and effective program planning.
+AGED 1031.
+
+
+AGED 2143.  Introduction to Agricultural Communications  (Odd years, Sp).  3 Hours.
+A survey of agricultural communications for students in the ACOM concentration and minor and anyone seeking a basic understanding of the discipline. The course provides an overview of the history, philosophy, and theories of the discipline and introduces students to career options, skills and practical competencies required of agricultural communicators.
+
+
+
+AGED 3133.  Methods of Teaching  (Fa).  3 Hours.
+Methods and techniques in teaching agriculture at the secondary level. Lecture 2 hours, laboratory 2 hours per week.
+Lab component and AGED 1123.
+:  AGED 1031.
+
+AGED 3143.  Communicating Agriculture to the Public  (Sp, Su, Fa).  3 Hours.
+An overview of public communications theory and practices in the agricultural, food, and life sciences with a particular focus on technical writing, public relations and media relations writing, campaign planning, public speaking, and various mass media communication techniques, including print, broadcast, electronic, and social media.
+
+
+
+AGED 3153.  Leadership Development in Agriculture  (Sp).  3 Hours.
+Identification of styles and roles of leadership; development of leadership techniques and skills required in working with organizations; dynamics of group action; methods of resolving conflict; ethical considerations for leaders; and personal skills development. Prerequisite:  Junior standing.
+
+Junior standing.
+
+AGED 3153H.  Honors Leadership Development in Agriculture  (Sp).  3 Hours.
+Identification of styles and roles of leadership; development of leadership techniques and skills required in working with organizations; dynamics of group action; methods of resolving conflict; ethical considerations for leaders; and personal skills development. Prerequisite:  Junior standing.
+
+Junior standing.
+
+AGED 3163.  Curriculum Development and Assessment Techniques in AGED  (Sp).  3 Hours.
+An introductory course designed to guide students through the curriculum development and assessment processes. This course will enable students to understand the need for quality curriculum and assessment, design quality curricula and assessment, and evaluate the relationship between roles of curriculum documents and assessments in formal education. Prerequisite:  AGED 1123.
+
+AGED 1123.
+
+AGED 3243.  Ag Reporting and Feature Writing  (Odd years, Fa).  3 Hours.
+This course will provide students an exposure to writing, interviewing, and editing news on agricultural issues in agricultural industry publications. Students will gain practical experience with journalistic interviewing, news writing, feature writing, digital photography, and writing for broadcast on agricultural issues. This course is designed for students with at least six hours of upper division courses. Pre- or
+JOUR 1033 and lab component.
+
+
+AGED 3943.  Professional Development in Agricultural Communications  (Even years, Fa).  3 Hours.
+Overview of professional and technical skills needed to succeed in internships and jobs in the field of agricultural communications.
+
+
+
+AGED 4003.  Issues in Agriculture  (Fa).  3 Hours.
+Lecture and discussion on local, regional, national and international issues related to agricultural policy, ethics, environment, society, and science. Designed for students with at least six hours of upper division agricultural science courses. Prerequisite:  Junior standing.
+
+Junior standing.
+
+AGED 400V.  Special Problems in Agricultural and Extension Education  (Sp, Su, Fa).  1-6 Hour.
+Individual study or research for advanced undergraduates in the field of agricultural and extension education.
+
+
+
+AGED 401V.  Special Topics  (Irregular).  1-3 Hour.
+Studies of selected topics in agricultural or extension education not covered in other courses.
+May be repeated for up to 4 hours of degree credit.This course is equivalent to AGED 401.
+
+
+
+AGED 4143.  Electronic Communications in Agriculture  (Even years, Sp).  3 Hours.
+An overview of communication technology in the agricultural, food and life sciences.
+
+
+
+AGED 4233.  Program Development  (Sp).  3 Hours.
+Principles and concepts of leadership, program organization, supervised agricultural experience, and advisory committees. This course is a portion of pre-professional studies required for certification in agricultural education. Prerequisite:  AGED 3133.
+
+AGED 3133.
+
+AGED 4243.  Graphic Design in AFLS  (Sp, Su, Fa).  3 Hours.
+This course provides students with graphic design and software skills specific to industries in Agriculture, Food, and Life Sciences. Students will learn to use industry-standard software (InDesign, Photoshop, Illustrator, Microsoft Excel, etc.) to prepare text and graphics and package them for use in print production. Prerequisite:  AGME 2903.
+
+AGME 2903.
+
+AGED 4343.  Communication Campaigns in Agriculture  (Odd years, Sp).  3 Hours.
+Students will develop understanding of the principles, practices and applications of social marketing, integrated marketing communications, advertising and public relations as they pertain to developing communication campaign strategies for the agricultural industry. Students will develop a communication campaign for an agricultural company and/or entity focused on a specific product or service.  Prerequisite:  Junior, Senior or Graduate status.
+
+Junior, Senior or Graduate status.
+
+AGED 4443.  Principles of Technological Change  (Odd years, Fa).  3 Hours.
+This course introduces a structured approach for dealing with the organizational and human aspects of technology transition, including the key concepts of resistance and change management, organizational change, communications, and processes by which professional change agents influence the introduction, adoption, and diffusion of technological change. This course may be offered as a web-based course. Prerequisite:  Junior status.
+
+Junior status.
+
+AGED 4543.  Ag Publications  (Even years, Sp).  3 Hours.
+Students produce a magazine through classroom study mirroring a professional magazine staff and are provided an opportunity for their writing, advertisements, photographs and artwork to be published in the magazine. By using computer applications, students integrate various skills including writing, editing and layout in agricultural publications. Prerequisite:  JOUR 1033.
+
+JOUR 1033.
+
+AGED 4632.  Teaching Diverse Populations in Agricultural and Extension Education  (Sp).  2 Hours.
+This course is designed to provide pre-service teachers of agriculture with an understanding of teaching diverse populations as applied to problems of practice in agricultural and extension education.
+
+
+
+AGED 475V.  Internship in Agricultural Education  (Sp, Su, Fa).  1-6 Hour.
+Scheduled practical field experiences under the supervision of a professional practitioner in off-campus secondary school systems. Emphasis includes classroom preparation, teaching, and student evaluation. Successful completion of a criminal background check required before a student can begin internship. Prerequisite: Admission into Clinical Practice.
+May be repeated for up to 6 hours of degree credit.
+
+Admission into Clinical Practice.
+May be repeated for up to 6 hours of degree credit.
+
+AGED 4843.  Methods in Agricultural Laboratories  (Sp).  3 Hours.
+Methods and management techniques in all types of agricultural laboratories that may be in a secondary agricultural science program. Emphasis on management of students and facilities, equipment, and materials. Lecture 2 hours, laboratory 4 hours per week. Prerequisite:  AGME 2123.
+
+AGME 2123.
+
+AGED 5001.  Seminar  (Irregular).  1 Hour.
+Presentations and discussion of graduate student research as well as review of current literature and topics of current interest by students and faculty. All graduate students will make at least one formal presentation.
+
+
+
+AGED 5013.  Advanced Methods in Agricultural Mechanics  (Odd years, Su).  3 Hours.
+Emphasis on shop organization and management, courses of study, unit shop instruction, and development of skills in agricultural mechanics.
+
+
+
+AGED 5033.  Developing Leadership in Agricultural Organizations  (Fa).  3 Hours.
+Organizational concepts of leadership; administrative styles and structures; leadership for boards, committees, governmental bodies, and review of societal and political processes. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGED 5053.  Philosophy of Agricultural and Extension Education  (Sp).  3 Hours.
+An examination and analysis of social and economic events leading to the establishment and maintenance of federal, state, county, and local agricultural education programs. Lecture 3 hours per week. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGED 510V.  Special Problems  (Sp, Su, Fa).  1-6 Hour.
+Individual investigation of a special problem in agricultural education which is not available through regular courses. These will be directed by a member of the graduate faculty. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGED 520V.  Special Topics in Agricultural and Extension Education  (Irregular).  1-4 Hour.
+Topics not covered in other courses or a more intensive study of specific topics in agriculture education. Prerequisite:  Graduate standing.
+May be repeated for degree credit.
+
+Graduate standing.
+May be repeated for degree credit.
+
+AGED 5363.  Educational Delivery Techniques  (Irregular).  3 Hours.
+Students will learn to apply teaching and learning theory in the development of engaging instruction delivered through electronic media. The goal of the course is not to make experts in "programming" or "theory", but rather to prepare students with the knowledge/practical skills necessary to deliver curriculum through various methods. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGED 5463.  Research Methodology in the Social Sciences  (Fa).  3 Hours.
+Logical structure and the method of science. Basic elements of research design; observation, measurement, analytic method, interpretation, verification, presentation of results.  Applications to research in economic or sociological problems of agriculture and human environmental sciences. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGED 5473.  Interpreting Social Data in Agriculture  (Sp).  3 Hours.
+The development of competencies in analyzing, interpreting and reporting the results of analyses of social science data in agriculturally related professions. Students will select appropriate analysis techniques and procedures for various problems, analyze data, and interpret and report the results of statistical analyses in narrative and tabular form.
+
+
+
+AGED 5483.  Technical Communication in the Social Sciences  (Sp).  3 Hours.
+This course will provide students with the basic principles and techniques in communicating social science information relevant to human subject research in agriculture, natural resources, and life sciences to the general public. Communication processes covered in the course include audience identification, writing, editing, and production of social science-based materials for popular and refereed publications. Focus will also be placed on thesis preparation and writing and research manuscript development and dissemination of social science research. Web delivered course. Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGED 550V.  College Teaching in Agriculture and Related Disciplines  (Irregular).  1-3 Hour.
+For students who are pursuing graduate degrees where emphasis is on preparation for a research career, but who also may desire or expect to teach. Provides theory and practice in planning and executing a college-level course.
+
+
+
+AGED 5563.  Thesis Proposal Development  (Fa).  3 Hours.
+The purpose of this course is to assist graduate students in the preparation of their thesis research proposal. Students will produce the first three chapters of their thesis by the end of the course. Prerequisite:  AGED 5463 or HESC 5463.
+
+AGED 5463 or HESC 5463.
+
+AGED 575V.  Internship in Agricultural Education  (Sp, Su, Fa).  1-6 Hour.
+Scheduled practical field experiences under supervision of a professional practitioner in off-campus secondary school systems.  Emphasis includes classroom preparation, teaching, and student evaluation.
+
+
+
+AGED 600V.  Master's Thesis  (Sp, Su, Fa).  1-6 Hour.
+Prerequisite:  Graduate standing.
+
+Graduate standing.
+
+AGME 1611L.  Fundamentals of Agricultural Systems Technology Laboratory  (Fa).  1 Hour.
+Study of basic mathematical and physical science concepts important in the mechanization of agriculture. Laboratory required for agricultural education, communication and technology majors enrolled in AGME 1613, optional for others enrolled in AGME 1613.
+AGME 1613.
+
+
+AGME 1613.  Fundamentals of Agricultural Systems Technology  (Fa).  3 Hours.
+Introduction to basic physical concepts important in agricultural technical systems: applied mechanics, power and machinery management, structures and electrification, and soil and water conservation. Lecture 3 hours per week.
+AGME 1611L (for AECT Majors).
+
+
+AGME 2123.  Metals and Welding  (Sp, Fa).  3 Hours.
+An introduction to agricultural mechanics shop work to include hot and cold metal work, arc welding, and gas welding and cutting. Lecture 2 hours, laboratory 3 hours per week.
+Lab component.
+
+
+AGME 2903.  Agricultural and Human Environmental Sciences Applications of Microcomputers  (Sp, Su, Fa).  3 Hours.
+Lecture and laboratory assignments covering the contemporary use of microcomputers in agricultural, food and life sciences. Emphasis placed on learning to use selected, appropriate Microsoft (Windows, Word, Excel, PowerPoint and Access), email/Internet, and collaboration software packages.
+
+
+
+AGME 3042.  Agricultural Construction Technology  (Irregular).  2 Hours.
+Principles of building design and construction. Includes site selection calculating structural loads and computerized packages for building design. Safety practices, selection of building materials and determining costs are also included. Lecture is one hour and lab is two hours per week. Prerequisite:  MATH 1203 and junior standing.
+
+MATH 1203 and junior standing.
+
+AGME 3101L.  Small Power Units/Turf Equipment Laboratory  (Sp).  1 Hour.
+Testing, evaluation, and maintenance of engines, hydrostatic power transmission systems, and equipment commonly used in the turf and landscaping industries.
+AGME 3102.
+:  MATH 1203.
+
+AGME 3102.  Small Power Units/Turf Equipment  (Sp).  2 Hours.
+Principles of operation, adjustment, repair, maintenance, and trouble shooting of small air-cooled engines and power units, including various engine systems, service and maintenance of turf equipment and machinery. Lecture 2 hours per week.
+AGME 3101L.
+:  MATH 1203.
+
+AGME 3153.  Surveying in Agriculture and Forestry  (Fa).  3 Hours.
+Techniques and procedures normally used in determining areas and characterizing the topography of agricultural and forest lands. Includes basic concepts of surveying; use and care of level, transit, distance measuring equipment; topographic mapping and public land surveys. Lecture and laboratory 6 hours per week. Prerequisite:  MATH 1203.
+
+MATH 1203.
+
+AGME 3173.  Electricity in Agriculture  (Sp).  3 Hours.
+Principles of electricity; wiring of home, farmstead and other agricultural structures; selection of electric motors and their care and application in the broad field of agriculture; lighting and special uses of electricity such as heating and electrical controls. Lecture 2 hours, laboratory 2 hours per week.
+Lab component.
+:  MATH 1203.
+
+AGME 400V.  Special Problems  (Sp, Su, Fa).  1-6 Hour.
+Individual research or study in electrification, irrigation, farm power, machinery, or buildings. Prerequisite:  Senior standing.
+May be repeated for degree credit.
+
+Senior standing.
+May be repeated for degree credit.
+
+AGME 402V.  Special Topics in Agricultural Mechanization  (Irregular).  1-4 Hour.
+Topics not covered in other courses or a more intensive study of special topics in agricultural mechanization.
+May be repeated for degree credit.
+
+
+
+AGME 4203.  Mechanized Systems Management  (Even years, Fa).  3 Hours.
+Selection, sizing, and operating principles of agricultural machinery systems, including power sources.  Cost analysis and computer techniques applied to planning and management of mechanized systems.
+Lab component.
+:  MATH 1203.
+
+AGME 4973.  Irrigation  (Sp).  3 Hours.
+Methods of applying supplemental water to soils to supply moisture essential for plant growth, sources of water, measurement of irrigation water, pumps, conveyance structure, economics, and irrigation for special crops. Lecture 2 hours, laboratory 2 hours per week.
+Lab component.
+:  MATH 1203.
+
+AGST 4011.  SAS Programming for Agricultural Sciences  (Sp, Fa).  1 Hour.
+An introduction to the SAS programming language with an emphasis on the reading and restructuring of data files, and the displaying of data in tabular and graphic forms. The course is taught using a hands-on approach.
+
+
+
+AGST 4023.  Principles of Experimentation  (Fa).  3 Hours.
+Fundamental concepts of experimental and statistical methods as applied to agricultural research. Lecture 3 hours per week. Prerequisite: MATH 1203 or higher level.
+
+MATH 1203 or higher level.
+
+AGST 500V.  Special Problems  (Sp, Su, Fa).  1-6 Hour.
+Individual investigation of a special problem in some area of statistics applicable to the agricultural, food, environmental, and life sciences not available under existing courses.
+May be repeated for up to 6 hours of degree credit.
+
+
+
+AGST 5014.  Experimental Design  (Sp).  4 Hours.
+Types of experimental designs, their analysis and application to agricultural research. Lecture 3 hours and laboratory 2 hours per week.
+Lab component.
+:  AGST 4011 and (AGST 4023 or STAT 4003).
+
+AGST 504V.  Special Topics  (Irregular).  1-4 Hour.
+Topics not covered in other courses or a broader-based study of specific topics in statistics and related areas. Prerequisite:  Graduate standing.
+May be repeated for degree credit.
+
+Graduate standing.
+May be repeated for degree credit.
+
+AGST 5713.  Applied Regression Analysis for Agricultural Sciences  (Fa).  3 Hours.
+Analysis of agricultural experiments which contain quantitative factors through regression procedures. Lecture 3 hours per week. Prerequisite:  AGST 4011 and (AGST 4023 or STAT 4003).
+
+AGST 4011 and (AGST 4023 or STAT 4003).
+
+AGST 5901.  Statistical Consulting Process  (Sp).  1 Hour.
+Examines the components of statistical consulting with emphasis on the interpersonal aspects.
+
+
+
+AFLS 1011H.  Introduction to the Bumpers College Honors Program  (Fa).  1 Hour.
+An introduction to the requirements, expectations, and opportunities of the Bumpers College Honors Program. The course is available to all students, but is required for NEW students in the Bumpers College Honors Program. Topics covered will include: purpose and organization of the honors program, project requirements, research and creative activity opportunities, study abroad, and written and oral communication exercises. Recitation 2 hours per week for the first 8 weeks of the semester.
+This course is equivalent to AFLS 1011.
+
+
+
+AFLS 3131H.  Honors Management and Leadership  (Irregular).  1 Hour.
+Leadership styles and principles and organizational systems as they relate to professional situations. Recitation 3 hours per week for the first 5 weeks of the semester. Prerequisite: Junior standing.
+
+Junior standing.
+
+AFLS 3413H.  Honors Proposal Development  (Sp).  3 Hours.
+This course offers a synthesis level learning opportunity. Course will include creative process, ethics, proposal writing, literature review, experimental design, scientific theory and methods, data collection, statistics, budget, and summary. Students will draw on their background and presentations to create written proposals. Three hours per week for 10 weeks.  Prerequisite:  Junior or senior standing.
+
+Junior or senior standing.
+
+AFLS 3512H.  Honors Rotations in Agricultural Laboratory Research  (Sp).  2 Hours.
+A laboratory course to introduce students to current laboratory research techniques used in agricultural and life sciences. Hands-on laboratory exercises will emphasize current cellular and molecular research techniques, laboratory notebook keeping, data interpretation, and presentation of results. 4 hours per week.  Prerequisite:  BIOL 1543 or equivalent.
+
+BIOL 1543 or equivalent.
+
+AFLS 400VH.  Honors Thesis  (Sp, Su, Fa).  1-6 Hour.
+May be repeated for up to 6 hours of degree credit.
+
+
+
+AFLS 401VH.  Honors Special Topics  (Irregular).  1-3 Hour.
+Studies of selected topics not covered in other courses. Must be in the Honors program to register for this course.
+May be repeated for up to 4 hours of degree credit.
+
+
+
+AFLS 4431H.  Honors Exploring Ethics  (Fa).  1 Hour.
+Exploring issues relevant to human deeds in plants, animals, and environment. Issues to be addressed include the sanctity of life issues, their role of mass media in the modern world and the responsibility of individuals as professionals. Recitation 3 hours per week for the second 5 weeks of the semester.
+
+
+
+AERO 1011.  The Foundations of the United States Air Force I  (Fa).  1 Hour.
+A survey course designed to introduce cadets to the United States Air Force and Air Force Reserve Officer Training Corps. Topics include: mission and organization of the Air Force, officership and professionalism, military customs and courtesies, Air Force officer opportunities, and an introduction to communication skills. Leadership LAB mandatory for cadets.
+Lab component.
+
+
+AERO 1021.  The Foundations of the United States Air Force II  (Sp).  1 Hour.
+A survey course designed to introduce cadets to the United States Air Force and Air Force Reserve Officer Training Corps. Topics include: mission and organization of the Air Force, officership and professionalism, military customs and courtesies, Air Force officer opportunities, and an introduction to communication skills. Leadership LAB mandatory for cadets.
+Lab component.
+
+
+AERO 2011.  The Evolution of Air and Space Power I  (Fa).  1 Hour.
+This historical survey features topics on Air Force heritage and leaders; introduction to air power through examination of the Air Force Core Functions and continued application of communication skills. Its purpose is to instill an appreciation of the development and employment of air power and to motivate sophomore students to transition from AFROTC cadet to Air Force ROTC officer candidate.
+Lab component.
+
+
+AERO 2021.  The Evolution of Air and Space Power II  (Sp).  1 Hour.
+This historical survey features topics on Air Force heritage and leaders; introduction to air power through examination of the Air Force Core Functions and continued application of communication skills. Its purpose is to instill an appreciation of the development and employment of air power and to motivate sophomore students to transition from AFROTC cadet to Air Force officer candidate.
+Lab component.
+
+
+AERO 3013.  Air Force Leadership Studies I  (Fa).  3 Hours.
+A study of leadership, management fundamentals, professional knowledge, Air Force personnel and evaluation systems, leadership ethics, and the communication skills required of an Air Force junior officer. Case studies are used to examine Air Force leadership and management situations.
+Lab component.
+
+
+AERO 3023.  Air Force Leadership Studies II  (Sp).  3 Hours.
+A study of leadership, management fundamentals, professional knowledge, Air Force personnel and evaluation systems, leadership ethics, and the communication skills required of an Air Force junior officer. Case studies are used to examine Air Force leadership and management situations.
+Lab component.
+
+
+AERO 4013.  National Security Affairs and Preparation for Active Duty I  (Fa).  3 Hours.
+Examines the national security process, regional studies, advanced leadership ethics, and Air Force doctrine. Special topics of interest focus on the military as a profession, officership, military justice, civilian control of the military, preparation for active duty, and current issues affecting military professionalism. Communication skills are honed within this structure.
+Lab component.
+
+
+AERO 4023.  National Security Affairs and Preparation for Active Duty II  (Sp).  3 Hours.
+Examines the national security process, regional studies, advanced leadership ethics, and Air Force doctrine. Special topics of interest focus on the military as a profession, officership, military justice, civilian control of the military, preparation for active duty, and current issues affecting military professionalism. Communication skills are honed within this structure.
+Lab component.
+
+
+AMST 2003.  Introduction to American Studies  (Fa).  3 Hours.
+Introduction to American Studies as an interdisciplinary field of study. Examination of a selected topic from various methodological perspectives.
+
+
+
+ANSC 1001L.  Introductory to Animal Sciences Laboratory  (Sp, Fa).  1 Hour.
+Study of facilities used in production, processing, and management in animal agriculture. Identification, selection evaluation and testing of livestock, meat, and milk. Laboratory 3 hours per week.
+
+
+

@@ -1,0 +1,27 @@
+WCOB 2043 or FINN 3043.
+
+{
+    "Course0": [
+        {
+            "grade": "D", 
+            "name": "WCOB 2043"
+        }
+    ]
+}
+MATH 1203. This course is cross-listed with ECON 2023.
+
+{
+    "Course0": []
+}
+MATH 1203. This course is cross-listed with ECON 2013.
+
+{
+    "Course0": []
+}
+AGEC 2142.
+
+{
+    "Course0": []
+}
+AGEC 2141 Lab.
+

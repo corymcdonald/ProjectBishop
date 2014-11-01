@@ -21,7 +21,7 @@ def isReal(txt):
         return False
 
 
-def parsePreReq(prereq):
+def parseClassRequirements(prereq):
     returnValue = ''
     prereq = prereq.replace(
         '\n',
@@ -70,6 +70,9 @@ def parsePreReq(prereq):
 
         # determine if class is lab
         lab = False
+        
+       
+        
         if x + 1 < len(my_list) and len(my_list[x + 1].replace('.','').replace(':', '')) == 5 \
                 and (my_list[x + 1])[:4].isdigit():
             # todo take this out only because test data is invalid
@@ -80,13 +83,16 @@ def parsePreReq(prereq):
         
         # We are currently have a class
         if x + 1 < len(my_list) and (
-            (len(my_list[x].replace('.','')) == 4 and my_list[x + 1].isdigit()) or lab):
+            (len(my_list[x].replace('.','')) == 4 and my_list[x + 1].replace('.','').isdigit()) or lab):
             if not crossListed:
                 if lastParseNeedsAND:
                     result = result.replace('.','').strip() + ' and '
                     resultCount += 1
                     JSONresult += '],"Course' + str(resultCount) + '": ['
 
+                if JSONresult[len(JSONresult)-1] == '}':
+                  JSONresult += ','
+                  
                 grade = 'D'
                 # Trying to figure out if there is a grade required
 
@@ -94,7 +100,7 @@ def parsePreReq(prereq):
                     couldBeGrade = my_list[x + 2].replace('"', '')
                     if couldBeGrade == 'A' or couldBeGrade == 'B' or couldBeGrade == 'C':
                         grade = couldBeGrade
-
+                  
                 result = result.strip() + ' ' + \
                     my_list[x].replace(
                         '.', '') + ' ' + my_list[x + 1].replace('.', '')
@@ -108,7 +114,10 @@ def parsePreReq(prereq):
                 result = result.strip() + ' and '
                 resultCount += 1
                 JSONresult += '],"Course' + str(resultCount) + '": ['
-
+            
+            if JSONresult[len(JSONresult)-1] == '}':
+                  JSONresult += ','
+                  
             JSONresult += '{ "major":"' + my_list[x].replace(
                 '.', '') + ' ' + my_list[x + 1].replace('.', '') + '"}'
             result = result.strip() + ' ' + \
@@ -158,12 +167,15 @@ def parsePreReq(prereq):
                     tempArray[len(tempArray) -1] != 'and' and result.strip() != 'and'):
                       result = result.strip() + ' or '
                       JSONresult += ','
-
+                if JSONresult[len(JSONresult)-1] == '}':
+                  JSONresult += ','
+                
                 JSONresult += '{ "name":"' + currentItemUpper.replace('.', '') + '"}'
                 result = result.strip() + ' ' + currentItemUpper.replace('.', '')
         
         if 'LAB' in currentItemUpper:
-          JSONresult += '{ "name":"LAB"}'
+          if not (x - 1 > 0 and (my_list[x - 1])[:4].isdigit()):
+            JSONresult += '{ "name":"LAB"}'
         elif 'DRILL' in currentItemUpper:
           JSONresult += '{ "name":"DRILL"}'
         
@@ -208,35 +220,34 @@ def parsePreReq(prereq):
 
     JSONresult += "]}"
     JSONresult = JSONresult.replace(',]', ']')
-
+    # print(JSONresult)
+    
     r = (json.loads(JSONresult))
-    print(json.dumps(r, sort_keys=True, indent=4))
+    # print(json.dumps(r, sort_keys=True, indent=4))
 
     returnValue = JSONresult
 
     return returnValue
 
 
-# f = open('CoReq.txt', 'r')
-# i = 0
+# preReqFile = open('PreReq.txt', 'r')
+# coReqFile = open('CoReq.txt', 'r')
 
-# variable = ''
-# temp = 0
 # while True:
-#     prereq = f.readline()
+#     prereq = preReqFile.readline()
 #     if not prereq:
 #         break
+#     # print(prereq)
+#     print(parseClassRequirements(prereq))
 
-#     # if i == 2:
-#     # print()
-#     if i > temp:
-#         # print(str(round((i/2951)*100,2)) + '%')
-#         print(prereq)
-#         parsePreReq(prereq) + '\n'
-#     i = i + 1
-
-    # if i == temp + 22 +1 : break
-
+# while True:
+#     coreq = coReqFile.readline()
+#     if not coreq:
+#       break
+    
+#     # print(coreq)
+#     print(parseClassRequirements(coreq))
+    
 
 
 print("Start: " + str(datetime.datetime.now()))
@@ -279,11 +290,11 @@ for link in soup.select(".sitemaplink"):
 
     if coReq != "":
       with open("CoReq.txt", "a") as coreq:
-        coreq.write(coReq.replace('\n',' ') + "\n")
+        coreq.write(parseClassRequirements(coReq.replace('\n',' ')) + "\n")
     
     if preReq != "":
-      with open("PreReq.txt", "a") as mahfile:
-        mahfile.write(preReq.replace('\n',' ') + "\n")
+      with open("PreReq.txt", "a") as prereqFile:
+        prereqFile.write(parseClassRequirements(preReq.replace('\n',' ')) + "\n")
         
 
 print("End: " + str(datetime.datetime.now()))

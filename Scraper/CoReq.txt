@@ -699,3 +699,33 @@ THTR 1321L.
 Drama majors with at least junior standing.
 COMM 1313.
 COMM 1313.
+{ "Course0": [{ "name":"ACCT 3723","grade":"D" }]}
+{ "Course0": [{ "name":"WCOB 2043","grade":"D" },{ "name":"FINN 3043","grade":"D" }]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" }]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 2142","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 2141","grade":"D" }]}
+{ "Course0": [{ "name":"DRILL"}]}
+{ "Course0": [{ "name":"DRILL"}]}
+{ "Course0": [{ "name":"DRILL"}]}
+{ "Course0": [{ "name":"AGED 1123","grade":"D" }]}
+{ "Course0": [{ "name":"AGED 1031","grade":"D" }]}
+{ "Course0": [{ "name":"LAB"}],"Course1": [{ "name":"AGED 1123","grade":"D" }]}
+{ "Course0": [{ "name":"JOUR 1033","grade":"D" }],"Course1": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"AGME 1613","grade":"D" }]}
+{ "Course0": [{ "name":"AGME 1611L","grade":"D" }]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"AGME 3102","grade":"D" }]}
+{ "Course0": [{ "name":"AGME 3101L","grade":"D" }]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}
+{ "Course0": [{ "name":"LAB"}]}

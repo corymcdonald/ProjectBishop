@@ -2902,3 +2902,109 @@ WLIT 1113.
 WLIT 1113H and participation in the Fulbright College Scholars Program or English ACT score of 28 or above. This course is equivalent to WLIT 1123.
 WLIT 1113.
 Graduate standing. May be repeated for up to 6 hours of degree credit.
+{ "Course0": [{ "name":"WCOB 1120","grade":"D" },{ "name":"ISYS 1123","grade":"D" }],"Course1": [{ "name":"MATH 2053","grade":"D" },{ "name":"MATH 2554","grade":"D" }],"Course2": [{ "name":"WCOB 1111","grade":"D" }]}
+{ "Course0": [{ "name":"WCOB 1120","grade":"D" },{ "name":"ISYS 1123","grade":"D" }],"Course1": [{ "name":"MATH 2053","grade":"D" },{ "name":"MATH 2554","grade":"D" }],"Course2": [{ "name":"WCOB 1111","grade":"D" }]}
+{ "Course0": [{ "name":"ACCT 2013","grade":"C" }]}
+{ "Course0": [{ "name":"ACCT 3723","grade":"D" }]}
+{ "Course0": [{ "name":"ACCT 2013","grade":"B" }]}
+{ "Course0": [{ "name":"ACCT 2013","grade":"B" }]}
+{ "Course0": [{ "name":"ACCT 2013","grade":"B" }]}
+{ "Course0": [{ "name":"ACCT 3723","grade":"C" }]}
+{ "Course0": [{ "name":"ACCT 2013","grade":"B" }],"Course1": [{ "name":"ACCT 3723","grade":"C" }]}
+{ "Course0": [{ "name":"SENIOR"}],"Course1": [{ "name":"ACCT 3723","grade":"C" }]}
+{ "Course0": [{ "name":"ACCT 3723","grade":"C" }]}
+{ "Course0": [{ "name":"ACCT 3843","grade":"C" }]}
+{ "Course0": [{ "name":"ACCT 2023","grade":"D" },{ "name":"ACCT 3613","grade":"D" }],"Course1": [{ "name":"ACCT 3723","grade":"D" }]}
+{ "Course0": [{ "name":"ACCT 2013","grade":"D" }],"Course1": [{ "name":"ACCT 2023","grade":"D" }],"Course2": []}
+{ "Course0": [{ "name":"ACCT 3753","grade":"C" }]}
+{ "Course0": [{ "name":"ACCT 3723","grade":"C" }]}
+{ "Course0": [{ "name":"ACCT 3753","grade":"C" }]}
+{ "Course0": []}
+{ "Course0": []}
+{ "Course0": [{ "name":"ACCT 3723","grade":"C" }]}
+{ "Course0": [{ "name":"ACCT 3843","grade":"D" },{ "name":"EQUIVALENT"}]}
+{ "Course0": [{ "name":"ACCT 3843","grade":"D" }]}
+{ "Course0": [{ "name":"ACCT 4963","grade":"C" }]}
+{ "Course0": [{ "name":"ACCT 6033","grade":"D" }]}
+{ "Course0": [{ "name":"ACCT 6033","grade":"D" }]}
+{ "Course0": [{ "name":"ACCT 6033","grade":"D" }]}
+{ "Course0": [{ "name":"ACCT 6033","grade":"D" }]}
+{ "Course0": [{ "name":"CANDIDACY"}]}
+{ "Course0": [{ "name":"ESRM 6403","grade":"D" },{ "name":"EQUIVALENT"}]}
+{ "Course0": [{ "name":"ESRM 6403","grade":"D" },{ "name":"EQUIVALENT"}]}
+{ "Course0": [{ "name":"ESRM 6403","grade":"D" }],"Course1": [{ "name":"ADLL 6413","grade":"D" }]}
+{ "Course0": [{ "name":"CANDIDACY"}]}
+{ "Course0": [{ "name":"ENGL 1023","grade":"D" }],"Course1": [{ "name":"JUNIOR"},{ "name":"SENIOR"}]}
+{ "Course0": [{ "name":"JUNIOR"},{ "name":"CONSENT"}]}
+{ "Course0": [{ "name":"JUNIOR"},{ "name":"CONSENT"}]}
+{ "Course0": [{ "name":"PLSC 4293","grade":"D" },{ "name":"AAST 1003","grade":"D" },{ "name":"JUNIOR"}]}
+{ "Course0": [{ "name":"JUNIOR"}]}
+{ "Course0": [{ "name":"SOPHOMORE"}]}
+{ "Course0": [{ "name":"AGME 2903","grade":"D" },{ "name":"WCOB 1120","grade":"D" }],"Course1": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" },{ "name":"ECON 2143","grade":"D" }]}
+{ "Course0": [{ "name":"AGME 2903","grade":"D" },{ "name":"WCOB 1120","grade":"D" }],"Course1": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" },{ "name":"ECON 2143","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" },{ "name":"ECON 2143","grade":"D" }],"Course1": [{ "name":"MATH 2043","grade":"D" },{ "name":"MATH 2053","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" },{ "name":"ECON 2143","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"AGEC 2103","grade":"D" },{ "name":"ECON 2013","grade":"D" },{ "name":"ECON 2023","grade":"D" },{ "name":"ECON 2143","grade":"D" },{ "name":"EQUIVALENT"}],"Course1": [{ "hours":"70"},{ "name":"CONSENT"}]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }]}
+{ "Course0": [{ "name":"JUNIOR"}]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }],"Course1": [{ "name":"AGEC 2403","grade":"D" }],"Course2": [{ "name":"AGST 4023","grade":"D" },{ "name":"STAT 2303","grade":"D" },{ "name":"WCOB 1033","grade":"D" }],"Course3": [{ "name":"MATH 2053","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }],"Course1": [{ "name":"AGEC 2103","grade":"D" },{ "name":"ECON 2013","grade":"D" }],"Course2": [{ "name":"AGEC 2142","grade":"D" },{ "name":"AGEC 2143","grade":"D" },{ "name":"ACCT 2013","grade":"D" },{ "name":"WCOB 1023","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 2142","grade":"D" }],"Course1": [{ "name":"AGEC 2141L","grade":"D" },{ "name":"AGEC 2143","grade":"D" },{ "name":"EQUIVALENT"}],"Course2": [{ "name":"AGEC 2303","grade":"D" }],"Course3": [{ "name":"SENIOR"}]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"EQUIVALENT"}]}
+{ "Course0": [{ "name":"AGEC 3373","grade":"D" },{ "name":"CONSENT"}]}
+{ "Course0": [{ "name":"AGEC 4373","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }],"Course1": [{ "name":"AGEC 2103","grade":"D" },{ "name":"ECON 2013","grade":"D" }],"Course2": [{ "name":"PSYC 2003","grade":"D" },{ "name":"SOCI 2013","grade":"D" },{ "name":"RSOC 2603","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }],"Course1": [{ "name":"AGEC 2103","grade":"D" },{ "name":"ECON 2013","grade":"D" }]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "hours":"3"},{ "name":"HIGHER"},{ "name":"PHD"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"MATH 2043","grade":"D" }],"Course1": [{ "name":"AGEC 1103","grade":"D" },{ "name":"ECON 2023","grade":"D" }],"Course2": [{ "name":"AGEC 2403","grade":"D" },{ "name":"AGST 4023","grade":"D" },{ "name":"STAT 2303","grade":"D" },{ "name":"WCOB 1033","grade":"D" }]}
+{ "Course0": [{ "name":"AGEC 5103","grade":"D" }],"Course1": [{ "name":"AGEC 5403","grade":"D" },{ "name":"CONSENT"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"CANDIDACY"}]}
+{ "Course0": [{ "name":"AGED 1031","grade":"D" }]}
+{ "Course0": [{ "name":"JUNIOR"}]}
+{ "Course0": [{ "name":"JUNIOR"}]}
+{ "Course0": [{ "name":"AGED 1123","grade":"D" }]}
+{ "Course0": [{ "name":"JUNIOR"}]}
+{ "Course0": [{ "name":"AGED 3133","grade":"D" }]}
+{ "Course0": [{ "name":"AGME 2903","grade":"D" }]}
+{ "Course0": [{ "name":"JUNIOR"},{ "name":"SENIOR"},{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"JUNIOR"}]}
+{ "Course0": [{ "name":"JOUR 1033","grade":"D" }]}
+{ "Course0": []}
+{ "Course0": [{ "name":"AGME 2123","grade":"D" }]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"AGED 5463","grade":"D" },{ "name":"HESC 5463","grade":"D" }]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" }],"Course1": [{ "name":"JUNIOR"}]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" }]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" }]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" }]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" }]}
+{ "Course0": [{ "name":"SENIOR"}]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" }]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" }]}
+{ "Course0": [{ "name":"MATH 1203","grade":"D" },{ "name":"HIGHER"}]}
+{ "Course0": [{ "name":"AGST 4011","grade":"D" }],"Course1": [{ "name":"AGST 4023","grade":"D" },{ "name":"STAT 4003","grade":"D" }]}
+{ "Course0": [{ "name":"GRADUATE"}]}
+{ "Course0": [{ "name":"AGST 4011","grade":"D" }],"Course1": [{ "name":"AGST 4023","grade":"D" },{ "name":"STAT 4003","grade":"D" }]}
+{ "Course0": [{ "name":"JUNIOR"}]}
+{ "Course0": [{ "name":"JUNIOR"},{ "name":"SENIOR"}]}
+{ "Course0": [{ "name":"BIOL 1543","grade":"D" },{ "name":"EQUIVALENT"}]}
