@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Site</title>
+  <title>Bishop</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400italic,100,300,700,400' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bishopTheme', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<%= yield %>
+<%= render 'shared/navigation' %>
+
+<div id="main-container" class="container-fluid">
+  <%= yield %>
+</div>
 
 </body>
 </html>

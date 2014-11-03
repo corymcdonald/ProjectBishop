@@ -1,0 +1,65 @@
+.navbar-default {
+  background: transparent;
+  border: 0;
+  margin-bottom: 0;
+  height: auto;
+}
+
+.brand:hover {
+  background-color: transparent;
+}
+
+.jumbotron {
+  padding: 100px 0 36px;
+  margin-top: -100px;
+  background: image-url('JumboBackground.png');
+  height: 600px
+}
+
+.jumbotron h1 {
+  color: white;
+}
+
+.btn {
+   border-radius: 2px;
+   background-color: rgba(255, 255, 255, 0);
+   border-color: rgb(225, 225, 225);
+   color: white;
+   font-family: 'Roboto', sans-serif;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgb(255, 255, 255);
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:visited:hover {
+  color: white;
+}
+
+
+body {
+  background-color: black;
+  
+
+}
+
+h1, h3, th, td {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+} 
+
+.img-responsive {
+  margin: auto;
+}
+
+.TestImageClass {
+ padding: 10px 20px 10px;
+  margin: auto;
+}
