@@ -23,27 +23,8 @@ def isReal(txt):
 
 def parseClassRequirements(prereq):
     returnValue = ''
-    prereq = prereq.replace(
-        '\n',
-        '').replace(
-        ',',
-        '').replace(
-            '"',
-            '').replace(
-                '(',
-                '').replace(
-                    ')',
-                    '').replace(
-                        '/',
-                        ' ').replace(
-                            ';',
-                            '').replace(
-                                'with a',
-                                '').replace(
-                                    'grade of',
-                                    '').replace(
-                                        'or better',
-        '')
+    prereq = prereq.replace('\n','').replace(',','').replace('"','').replace('(','').replace(')','').replace('/',
+                        ' ').replace(';','').replace('with a','').replace('grade of','').replace('or better','')
 
     prereq = re.sub(
         'May be repeated for up to \d* hours of degree credit',
@@ -51,16 +32,10 @@ def parseClassRequirements(prereq):
         prereq)
     prereq = re.sub('This course is equivalent to \w* \d*.', '', prereq)
 
-    # if 'grade of' in prereq:
-    # print(prereq)
-    # my_list = prereq.split(' ')
-
     resultCount = 0
     JSONresult = '{ "Course' + str(resultCount) + '": ['
     my_list = prereq.split(' ')
     my_list = list(filter(None, my_list))
-
-    # print(my_list)
 
     result = ''
     lastParseNeedsAND = False
@@ -249,17 +224,34 @@ def parseClassRequirements(prereq):
 #     print(parseClassRequirements(coreq))
     
 
-
 print("Start: " + str(datetime.datetime.now()))
 
-url = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
-catalogData = requests.get(url)
+# scheduleURL = 'https://scheduleofclasses.uark.edu/Main?strm=1149&Search='
+# scheduleData = requests.get(scheduleURL)
+# scheduleContent = scheduleData.content
+# soup = BeautifulSoup(scheduleContent)
+# table = soup.find("table")
+# rows = table.find_all('tr')
+# i = 0
+# for row in rows:
+#   currentRow = ''
+#   cells = row.find_all("td")
+#   for cell in cells:
+#     currentRow += (cell.get_text()) + ','
+#   currentRow += '\n'
+#   with open("sections.csv", "a") as sectionFile:
+#     sectionFile.write(currentRow)
+  
+
+catalogURL = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
+catalogData = requests.get(catalogURL)
 catalogContent = catalogData.content
 
 soup = BeautifulSoup(catalogContent)
 
 soup.select(".sitemaplink")
 
+myfile = open("seeds.rb", "a")
 for link in soup.select(".sitemaplink"):
   majorURL = 'http://catalog.uark.edu/' + link['href']
   majorData = requests.get(majorURL)
@@ -284,17 +276,12 @@ for link in soup.select(".sitemaplink"):
         preReq = preAndCoReq[1]
     elif "Prerequisite" in courseDescription:
       preReq = courseBlockDescription.split("Prerequisite")[1].replace(':','').strip()
-    
-    with open("AllCourses.txt", "a") as myfile:
-      myfile.write(courseBlockTitle + "\n" + courseDescription + "\n" + coReq + "\n" + preReq + "\n\n")
-
-    if coReq != "":
-      with open("CoReq.txt", "a") as coreq:
-        coreq.write(parseClassRequirements(coReq.replace('\n',' ')) + "\n")
-    
-    if preReq != "":
-      with open("PreReq.txt", "a") as prereqFile:
-        prereqFile.write(parseClassRequirements(preReq.replace('\n',' ')) + "\n")
+      
+    myfile.write("Course.create(title: '" + courseBlockTitle + "', description: '" + courseDescription + "', coreqDesc: '" + coReq + "', coreqData: '" + parseClassRequirements(coReq.replace('\n',' ')) + "', prereqDesc: '" + preReq + "', prereqData: '" + parseClassRequirements(preReq.replace('\n',' '))+ "')\n")
+      
+      # myfile.write(courseBlockTitle + "\n" + courseDescription + "\n" + coReq + "\n" + preReq + "\n\n")
+      # coreq.write() + "\n")
+      # prereqFile.write(+ "\n")
         
 
 print("End: " + str(datetime.datetime.now()))
