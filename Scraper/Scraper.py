@@ -226,62 +226,67 @@ def parseClassRequirements(prereq):
 
 print("Start: " + str(datetime.datetime.now()))
 
-# scheduleURL = 'https://scheduleofclasses.uark.edu/Main?strm=1149&Search='
-# scheduleData = requests.get(scheduleURL)
-# scheduleContent = scheduleData.content
-# soup = BeautifulSoup(scheduleContent)
-# table = soup.find("table")
-# rows = table.find_all('tr')
-# i = 0
-# for row in rows:
-#   currentRow = ''
-#   cells = row.find_all("td")
-#   for cell in cells:
-#     currentRow += (cell.get_text()) + ','
-#   currentRow += '\n'
-#   with open("sections.csv", "a") as sectionFile:
-#     sectionFile.write(currentRow)
+scheduleURL = 'https://scheduleofclasses.uark.edu/Main?strm=1149&Search='
+scheduleData = requests.get(scheduleURL)
+scheduleContent = scheduleData.content
+soup = BeautifulSoup(scheduleContent)
+table = soup.find("table")
+rows = table.find_all('tr')
+i = 0
+for row in rows:
+   currentRow = ''
+   cells = row.find_all("td")
+   for cell in cells:
+     print(cell['class'])
+     currentRow += (cell.get_text()) + ','
+   currentRow += '\n'
+   
+   if i>2:
+     break
+   i += 1
+   with open("sections.csv", "a") as sectionFile:
+    sectionFile.write(currentRow)
   
 
-catalogURL = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
-catalogData = requests.get(catalogURL)
-catalogContent = catalogData.content
+# catalogURL = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
+# catalogData = requests.get(catalogURL)
+# catalogContent = catalogData.content
 
-soup = BeautifulSoup(catalogContent)
+# soup = BeautifulSoup(catalogContent)
 
-soup.select(".sitemaplink")
+# soup.select(".sitemaplink")
 
-myfile = open("seeds.rb", "a")
-for link in soup.select(".sitemaplink"):
-  majorURL = 'http://catalog.uark.edu/' + link['href']
-  majorData = requests.get(majorURL)
-  majorContent = majorData.content
-  majorSoup = BeautifulSoup(majorContent)
-  courses = majorSoup.select(".courseblock")
+# myfile = open("seeds.rb", "a")
+# for link in soup.select(".sitemaplink"):
+#  majorURL = 'http://catalog.uark.edu/' + link['href']
+#  majorData = requests.get(majorURL)
+#  majorContent = majorData.content
+#  majorSoup = BeautifulSoup(majorContent)
+#  courses = majorSoup.select(".courseblock")
 
-  for course in courses:
-    courseBlockTitle = course.select(".courseblocktitle")[0].get_text().strip().replace(' ',' ')
-    courseBlockDescription = course.select(".courseblockdesc")[0].get_text().strip().replace(' ',' ')
-    courseBlockDescription = courseBlockDescription.replace("'", "")
-    courseBlockTitle = courseBlockTitle.replace("'", "")
-    # if "student's" in courseBlockDescription:
-    #   print(courseBlockDescription)
-    #   break
-    courseDescriptionAndPreCoReq = courseBlockDescription.split("Corequisite:")
-    courseDescription = courseDescriptionAndPreCoReq[0].strip().replace("'", "\'")
+#  for course in courses:
+#     courseBlockTitle = course.select(".courseblocktitle")[0].get_text().strip().replace(' ',' ')
+#     courseBlockDescription = course.select(".courseblockdesc")[0].get_text().strip().replace(' ',' ')
+#     courseBlockDescription = courseBlockDescription.replace("'", "")
+#     courseBlockTitle = courseBlockTitle.replace("'", "")
+#     # if "student's" in courseBlockDescription:
+#     #   print(courseBlockDescription)
+#     #   break
+#     courseDescriptionAndPreCoReq = courseBlockDescription.split("Corequisite:")
+#     courseDescription = courseDescriptionAndPreCoReq[0].strip().replace("'", "\'")
     
-    coReq = ''
-    preReq = ''
+#     coReq = ''
+#     preReq = ''
 
-    if len(courseDescriptionAndPreCoReq) >1:
-      preAndCoReq = courseDescriptionAndPreCoReq[1].strip().split('Prerequisite')
-      coReq = preAndCoReq[0].replace(':','').strip().replace("'","\'")
-      if len(preAndCoReq) >1:
-        preReq = preAndCoReq[1].replace("'","\'")
-    elif "Prerequisite" in courseDescription:
-      preReq = courseBlockDescription.split("Prerequisite")[1].replace(':','').strip()
+#     if len(courseDescriptionAndPreCoReq) >1:
+#       preAndCoReq = courseDescriptionAndPreCoReq[1].strip().split('Prerequisite')
+#       coReq = preAndCoReq[0].replace(':','').strip().replace("'","\'")
+#       if len(preAndCoReq) >1:
+#        preReq = preAndCoReq[1].replace("'","\'")
+#     elif "Prerequisite" in courseDescription:
+#       preReq = courseBlockDescription.split("Prerequisite")[1].replace(':','').strip()
       
-    myfile.write("Course.create(title: '" + courseBlockTitle + "', description: '" + courseDescription.replace("'","\'").replace("'", "\'") + "', coreqDesc: '" + coReq + "', coreqData: '" + parseClassRequirements(coReq.replace('\n',' ')) + "', prereqDesc: '" + preReq + "', prereqData: '" + parseClassRequirements(preReq.replace('\n',' '))+ "')\n")
+#     myfile.write("Course.create(title: '" + courseBlockTitle + "', description: '" + courseDescription.replace("'","\'").replace("'", "\'") + "', coreqDesc: '" + coReq + "', coreqData: '" + parseClassRequirements(coReq.replace('\n',' ')) + "', prereqDesc: '" + preReq + "', prereqData: '" + parseClassRequirements(preReq.replace('\n',' '))+ "')\n")
       
       # myfile.write(courseBlockTitle + "\n" + courseDescription + "\n" + coReq + "\n" + preReq + "\n\n")
       # coreq.write() + "\n")
