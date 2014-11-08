@@ -11,20 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141103193902) do
-
-  create_table "homes", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "logins", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "user_name"
-    t.string   "password"
-
-ActiveRecord::Schema.define(version: 20141108181114) do
+ActiveRecord::Schema.define(version: 20141108212611) do
 
   create_table "courses", force: true do |t|
     t.string   "title"
@@ -36,6 +23,14 @@ ActiveRecord::Schema.define(version: 20141108181114) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "coreRequirement"
+    t.string   "name"
+  end
+
+  create_table "majors", force: true do |t|
+    t.string   "major"
+    t.string   "course"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "sections", force: true do |t|
@@ -57,7 +52,6 @@ ActiveRecord::Schema.define(version: 20141108181114) do
     t.string  "school"
     t.string  "department"
     t.string  "campus"
-
   end
 
 end

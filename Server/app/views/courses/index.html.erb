@@ -1,4 +1,13 @@
-Hello world!
+<div style="padding-left:5px;background:white">
+<%= form_tag(courses_path, method: :get) do %>
+
+<%= text_field_tag :search %>
+<%= submit_tag "search" %>
+
+<% end %>
+
 <% @course.each do |course| %>
   <%= course.title %><br/>
 <% end %>
+
+</div>
