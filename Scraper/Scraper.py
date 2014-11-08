@@ -234,18 +234,37 @@ table = soup.find("table")
 rows = table.find_all('tr')
 i = 0
 for row in rows:
-   currentRow = ''
-   cells = row.find_all("td")
-   for cell in cells:
-     print(cell['class'])
-     currentRow += (cell.get_text()) + ','
-   currentRow += '\n'
-   
-   if i>2:
-     break
-   i += 1
-   with open("sections.csv", "a") as sectionFile:
-    sectionFile.write(currentRow)
+  result = 'Section.create('
+  cells = row.find_all("td")
+  if len(cells) > 0:
+    result += "status: '" +  cells[0].get_text() + "',"
+    result += "courseID: '" +  cells[1].get_text() + "',"
+    result += "title: '" +  cells[2].get_text() + "',"
+    result += "component: '" +  cells[3].get_text() + "',"
+    result += "session: '" +  cells[4].get_text() + "',"
+    result += "hour: '" + cells[5].get_text() + "',"
+    result += "classNumber: '" + cells[6].get_text() + "',"
+    result += "startDate: '" + cells[7].get_text() + "',"
+    result += "endDate: '" + cells[8].get_text() + "',"
+    result += "classDay: '" + cells[9].get_text().replace('\xa0', ';') + "',"
+    result += "location: '" + cells[10].get_text() + "',"
+    result += "instructor: '" + cells[11].get_text() + "',"
+    result += "enrolled: '" + cells[12].get_text().split('/')[0] + "',"
+    result += "size: '" + cells[12].get_text().split('/')[0] + "',"
+    result += "career: '" + cells[13].get_text() + "',"
+    result += "school: '" + cells[14].get_text() + "',"
+    result += "department: '" + cells[15].get_text() + "',"
+    result += "campus: '" + cells[16].get_text() + "'"
+  
+  result += ')\n'
+  # currentRow += '\n'
+  
+  # if i>100:
+    # break
+  i += 1
+  if result != 'Section.create(':
+    with open("seeds.rb", "a") as sectionFile:
+      sectionFile.write(result)
   
 
 # catalogURL = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'

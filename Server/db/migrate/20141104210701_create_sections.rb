@@ -10,8 +10,7 @@ class CreateSections < ActiveRecord::Migration
       t.integer :classNumber
       t.time :startDate
       t.time :endDate
-      t.string :classDay
-      t.string : classTime
+      t.string :classTime
       t.string :location
       t.string :instructor
       t.string :enrolled
