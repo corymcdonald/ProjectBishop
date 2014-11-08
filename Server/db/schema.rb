@@ -23,6 +23,41 @@ ActiveRecord::Schema.define(version: 20141103193902) do
     t.datetime "updated_at"
     t.string   "user_name"
     t.string   "password"
+
+ActiveRecord::Schema.define(version: 20141108181114) do
+
+  create_table "courses", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "coreqDesc"
+    t.text     "coreqData"
+    t.text     "prereqDesc"
+    t.text     "prereqData"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "coreRequirement"
+  end
+
+  create_table "sections", force: true do |t|
+    t.string  "status"
+    t.string  "courseID"
+    t.string  "title"
+    t.string  "component"
+    t.string  "session"
+    t.string  "hour"
+    t.integer "classNumber"
+    t.time    "startDate"
+    t.time    "endDate"
+    t.string  "classTime"
+    t.string  "location"
+    t.string  "instructor"
+    t.string  "enrolled"
+    t.string  "size"
+    t.string  "career"
+    t.string  "school"
+    t.string  "department"
+    t.string  "campus"
+
   end
 
 end
