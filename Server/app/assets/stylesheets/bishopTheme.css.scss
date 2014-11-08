@@ -1,3 +1,5 @@
+
+    
 .navbar-default {
   background: transparent;
   border: 0;
@@ -16,16 +18,25 @@
   height: 600px
 }
 
-.jumbotron h1 {
+.jumbo h1 {
   color: white;
+  font-size: 3em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
 }
 
+.jumbo h3 {
+  color: white;
+  font-size: 3em;
+  font-family: 'Roboto', sans-serif;
+}
 .btn {
    border-radius: 2px;
    background-color: rgba(255, 255, 255, 0);
    border-color: rgb(225, 225, 225);
    color: white;
    font-family: 'Roboto', sans-serif;
+   font-weight: 300;
 }
 
 .btn:hover {
@@ -52,7 +63,7 @@ body {
 h1, h3, th, td {
   color: white;
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-weight: 100;
 } 
 
 .img-responsive {
@@ -60,6 +71,6 @@ h1, h3, th, td {
 }
 
 .TestImageClass {
- padding: 10px 20px 10px;
+  padding: 10px 20px 10px;
   margin: auto;
 }
