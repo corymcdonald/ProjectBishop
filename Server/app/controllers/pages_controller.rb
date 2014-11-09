@@ -14,4 +14,10 @@ class PagesController < ApplicationController
   def register
   end
   
+  def searchresults
+  end
+  
+  def profile
+  end
+  
 end
