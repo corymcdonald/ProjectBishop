@@ -1,7 +1,9 @@
 <%= link_to 'Back to majors', majors_path %><br/>
+<%= link_to 'Add or edit courses for this major', edit_major_path(@major) %>
 <% @courses.each do |course| %>
-    <%= course.title %><br/>
-    <%= course.description %><br/>
-    <%= course.coreqDesc %><br/>
-    <%= course.prereqDesc %><br/>
+    <code>Title:</code><%= course.title %><br/>
+    <code>Description:</code> <%= course.description %><br/>
+    <code>Corequisites:</code> <%= course.coreqDesc %><br/>
+    <code>Prerequisites:</code> <%= course.prereqDesc %><br/>
+    <br/>
 <% end %>

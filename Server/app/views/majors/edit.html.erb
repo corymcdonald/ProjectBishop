@@ -1,0 +1,11 @@
+<% @major.each do |major| %>
+  <%= form_for major, url: majors_path(major), method: :patch do |f| %>
+    <p>
+      <%= f.label :course %><br>
+      <%= f.text_field :course %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <%end%>
+<%end%>
