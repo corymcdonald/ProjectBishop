@@ -11,6 +11,7 @@ $(document).ready(function() {
     <div class="col-xs-2"></div>
     <div class="col-xs-10">
     <h1>Course sandbox..</h1>
+    <% if @format == false%>
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
         Course <span class="caret"></span>
     </button>
@@ -19,6 +20,11 @@ $(document).ready(function() {
             <li role="course"><a role="menuitem" tabindex="-1" href="#"><%= a.title %></a></li>
         <% end %>
         </ul>
+    <% else %>
+        <% @course.each do |a| %>
+          <%= a.title %><br/>
+        <% end %>
+    <% end %>
     </div>
 </div>
 
