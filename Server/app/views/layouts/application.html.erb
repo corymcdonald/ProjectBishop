@@ -2,10 +2,7 @@
 <html>
 <head>
   <title>Bishop</title>
-  
-  <script type="text/javascript">
-   </script>
-  
+  <link rel="shortcut icon" type="image/png" href="/assets/favIcon.png"/>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="/assets/fonts.js"></script>
@@ -15,11 +12,15 @@
 </head>
 <body>
 
-<%= render 'shared/navigation' %>
+<div class="blackGround">
+  <%= render 'shared/navigation' %>
+</div>
 
 <div id="main-container" class="container-fluid">
   <%= yield %>
 </div>
+
+<%= render 'shared/footer' %>
 
 </body>
 </html>

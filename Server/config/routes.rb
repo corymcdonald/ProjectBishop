@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   resources :sections
   resources :courses
+  resources :pages
 
 
   # The priority is based upon order of creation: first created -> highest priority.
