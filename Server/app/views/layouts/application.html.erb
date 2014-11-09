@@ -14,15 +14,17 @@
 </head>
 <body>
 
-<div class="blackUI" style="padding: 20px 0 20px;">
+<div class="blackUI" style="padding: 2px 0 2px;">
   <%= render 'shared/navigation' %>
 </div>
 
 <div id="main-container" class="container-fluid">
   <%= yield %>
+  <%= render 'shared/footer' %>
 </div>
 
-<%= render 'shared/footer' %>
+
+
 
 </body>
 </html>

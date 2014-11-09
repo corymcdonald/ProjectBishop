@@ -8,10 +8,16 @@
   font-weight: 100;
 }
 
-.blackUI p, .blackUI a {
+.blackUI p {
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+}
+
+.blackUI a {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
 ////FORMS
@@ -39,6 +45,42 @@
   .blackUI a:visited:hover {
     color: white;
   }
+  
+  .blackUI .dropdown a {
+     border-radius: 2px;
+     background-color: rgba(255, 255, 255, 0);
+     border-color: rgb(225, 225, 225);
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 500;
+  }
+  
+  .blackUI .dropdown .btn {
+     border-radius: 2px;
+     background-color: rgba(255, 255, 255, 0);
+     border-color: rgb(225, 225, 225);
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 500;
+  }
+  
+  .blackUI .dropdown .btn:hover {
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgb(255, 255, 255);
+    color: white;
+  }
+  
+  .blackUI .dropdown a:visited {
+    color: white;
+  }
+  
+  .blackUI .dropdown a:visited:hover {
+    color: white;
+  }
+  
+  .blackUI .dropdown-menu {
+      background-color: black;
+  }
   //end
   
   //Labels
@@ -48,5 +90,6 @@
      font-weight: 400;
   }
   //end
+  
 
 ////END
