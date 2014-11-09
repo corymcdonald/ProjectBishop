@@ -1,5 +1,24 @@
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".dropdown-menu li a").click(function(){
+      var selText = $(this).text();
+      $(this).parents('.col-xs-10').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    });
+});
+</script>
 
-<% @course.each do |course| %>
-  <%= course.title %><br/>
-<% end %>
+<div class="row whiteUI">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-10">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+        Course <span class="caret"></span>
+    </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <% @course.each do |a| %>
+            <li role="course"><a role="menuitem" tabindex="-1" href="#"><%= a.title %></a></li>
+        <% end %>
+        </ul>
+    </div>
+    </div>
+</div>
 

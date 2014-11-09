@@ -32,47 +32,9 @@
 
 //JUMBOTRON
 .jumbo {
-  color:white; 
   background:url('/assets/JumboBackground.png')
 }
 //END
-
-////FORMS
-
-  //Button
-  .btn {
-     border-radius: 2px;
-     background-color: rgba(255, 255, 255, 0);
-     border-color: rgb(225, 225, 225);
-     color: white;
-     font-family: 'Roboto', sans-serif;
-     font-weight: 300;
-  }
-  
-  .btn:hover {
-    background-color: rgba(255, 255, 255, .1);
-    border-color: rgb(255, 255, 255);
-    color: white;
-  }
-  
-  a:visited {
-    color: white;
-  }
-  
-  a:visited:hover {
-    color: white;
-  }
-  //end
-  
-  //Labels
-  label {
-     color: white;
-     font-family: 'Roboto', sans-serif;
-     font-weight: 400;
-  }
-  //end
-
-////END
     
 //IMAGES
 .img-responsive {
@@ -89,41 +51,8 @@
 body {
   background-color: #212121;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-}
-
-p, a {
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-}
-
 //END
 
-//Special DIVs
-.blackGround {
-  background-color: black;
-}
-
-.whiteGround {
-  padding: 100px 0 100px;
-  background-color: #F2F2F2;
-}
-
-.whiteGround h1, .whiteGround h2, .whiteGround h3, .whiteGround h4, .whiteGround h5, .whiteGround h6, {
-  color: black;
-  font-weight: 300;
-}
-
-.whiteGround p, .whiteGround a {
-  color: black;
-  font-weight: 300;
-}
-//END
 
 
 

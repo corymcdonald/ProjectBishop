@@ -7,12 +7,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script type="text/javascript" src="/assets/fonts.js"></script>
   <%= stylesheet_link_tag    'bishopTheme', media: 'all' %>
+  <%= stylesheet_link_tag    'blackUI', media: 'all' %>
+  <%= stylesheet_link_tag    'whiteUI', media: 'all' %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<div class="blackGround">
+<div class="blackUI" style="padding: 20px 0 20px;">
   <%= render 'shared/navigation' %>
 </div>
 
