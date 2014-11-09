@@ -1,0 +1,7 @@
+<%= link_to 'Back to majors', majors_path %><br/>
+<% @courses.each do |course| %>
+    <%= course.title %><br/>
+    <%= course.description %><br/>
+    <%= course.coreqDesc %><br/>
+    <%= course.prereqDesc %><br/>
+<% end %>

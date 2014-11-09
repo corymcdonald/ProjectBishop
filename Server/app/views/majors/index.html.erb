@@ -1,0 +1,7 @@
+<div style="background:white;" class="container">
+  <%= link_to 'New major', new_major_path %>
+  <br/>
+  <% @major.each do |major| %>
+    <a href="<% concat majors_path %>/<%= major.major %>"><%= major.major %></a><br/>
+  <% end %>
+</div>
