@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20141110025504) do
+=======
+ActiveRecord::Schema.define(version: 20141108224830) do
+>>>>>>> 8c368ebd2d31992f0ffbea64f0d04e6d70cee9fc
 
   create_table "courses", force: true do |t|
     t.string   "title"
@@ -22,6 +26,7 @@ ActiveRecord::Schema.define(version: 20141110025504) do
     t.text     "prereqData"
     t.datetime "created_at"
     t.datetime "updated_at"
+<<<<<<< HEAD
     t.string   "coreRequirement"
     t.string   "name"
   end
@@ -54,6 +59,9 @@ ActiveRecord::Schema.define(version: 20141110025504) do
     t.string  "campus"
     t.string  "name"
     t.string  "section"
+=======
+    t.string   "name"
+>>>>>>> 8c368ebd2d31992f0ffbea64f0d04e6d70cee9fc
   end
 
 end
