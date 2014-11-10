@@ -1,5 +1,6 @@
-<% @major.each do |major| %>
-  <%= form_for major, url: majors_path(major), method: :patch do |f| %>
+<% @majors.each do |major| %>
+  <%= form_for major, url: majors_path + '/' + major.major, method: :patch do |f| %>
+    <%= hidden_field_tag(:major_id, major.id) %>
     <p>
       <%= f.label :course %><br>
       <%= f.text_field :course %>
@@ -9,3 +10,16 @@
     </p>
   <%end%>
 <%end%>
+<br/>
+Add new </br>
+<%= form_for :major, url: majors_path do |f| %>
+    
+    <p>
+      <%= f.label :course %><br>
+      <%= f.text_field :course %>
+    </p>
+   
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

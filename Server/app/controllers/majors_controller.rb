@@ -14,24 +14,30 @@ class MajorsController < ApplicationController
     @majors.each do |major|
       begin
         @courses.push(Course.where('name = ?', major.course).take!)
+        # render plain: @courses.inspect
       rescue
+        @tempCourse = Course.new(title: major.course)
+        @courses.push(@tempCourse)
       end
     end
+    
+    # render plain: @courses.inspect
   end
   
   def edit
-    @major = Major.where('major = ?', params[:id])
+    @majors = Major.where('major = ?', params[:id])
+    @major = Major.new()
+    @major.major = params[:id]
     # render plain: @major.inspect
   end
   
   def update
-    @major = Major.where('major = ?', params[:id]).where('course = ? ',params[:major]['course'])
-    render plain: params.inspect
-    # if @major.update(new_params)
-    #   redirect_to @major
-    # else
-      # render 'edit'
-    # end
+    @major = Major.find(params[:major_id])
+    if @major.update(new_params)
+      redirect_to majors_url + '/' + params[:id]
+    else
+      render 'edit'
+    end
   end
   
   def create

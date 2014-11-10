@@ -226,89 +226,91 @@ def parseClassRequirements(prereq):
 
 print("Start: " + str(datetime.datetime.now()))
 
-# scheduleURL = 'https://scheduleofclasses.uark.edu/Main?strm=1149&Search='
-# scheduleData = requests.get(scheduleURL)
-# scheduleContent = scheduleData.content
-# soup = BeautifulSoup(scheduleContent)
-# table = soup.find("table")
-# rows = table.find_all('tr')
-# i = 0
-# for row in rows:
-#   result = 'Section.create('
-#   cells = row.find_all("td")
-#   if len(cells) > 0:
-#     result += "status: '" +  cells[0].get_text() + "',"
-#     result += "courseID: '" +  cells[1].get_text() + "',"
-#     result += "title: '" +  cells[2].get_text().replace("'","") + "',"
-#     result += "component: '" +  cells[3].get_text().replace("'","") + "',"
-#     result += "session: '" +  cells[4].get_text() + "',"
-#     result += "hour: '" + cells[5].get_text() + "',"
-#     result += "classNumber: '" + cells[6].get_text() + "',"
-#     result += "startDate: '" + cells[7].get_text() + "',"
-#     result += "endDate: '" + cells[8].get_text() + "',"
-#     result += "classTime: '" + cells[9].get_text().replace('\xa0', ';') + "',"
-#     result += "location: '" + cells[10].get_text() + "',"
-#     result += "instructor: '" + cells[11].get_text().replace("'", "\\'") + "',"
-#     result += "enrolled: '" + cells[12].get_text().split('/')[0] + "',"
-#     result += "size: '" + cells[12].get_text().split('/')[0] + "',"
-#     result += "career: '" + cells[13].get_text() + "',"
-#     result += "school: '" + cells[14].get_text() + "',"
-#     result += "department: '" + cells[15].get_text() + "',"
-#     result += "campus: '" + cells[16].get_text() + "'"
+scheduleURL = 'https://scheduleofclasses.uark.edu/Main?strm=1149&Search='
+scheduleData = requests.get(scheduleURL)
+scheduleContent = scheduleData.content
+soup = BeautifulSoup(scheduleContent)
+table = soup.find("table")
+rows = table.find_all('tr')
+i = 0
+for row in rows:
+  result = 'Section.create('
+  cells = row.find_all("td")
+  if len(cells) > 0:
+    result += "status: '" +  cells[0].get_text() + "',"
+    result += "courseID: '" +  cells[1].get_text() + "',"
+    result += "name: '" + cells[1].get_text().split(' ')[0] + "',"
+    result += "section: '" + cells[1].get_text().split(' ')[1] + "',"
+    result += "title: '" +  cells[2].get_text().replace("'","") + "',"
+    result += "component: '" +  cells[3].get_text().replace("'","") + "',"
+    result += "session: '" +  cells[4].get_text() + "',"
+    result += "hour: '" + cells[5].get_text() + "',"
+    result += "classNumber: '" + cells[6].get_text() + "',"
+    result += "startDate: '" + cells[7].get_text() + "',"
+    result += "endDate: '" + cells[8].get_text() + "',"
+    result += "classTime: '" + cells[9].get_text().replace('\xa0', ';') + "',"
+    result += "location: '" + cells[10].get_text() + "',"
+    result += "instructor: '" + cells[11].get_text().replace("'", "\\'") + "',"
+    result += "enrolled: '" + cells[12].get_text().split('/')[0] + "',"
+    result += "size: '" + cells[12].get_text().split('/')[0] + "',"
+    result += "career: '" + cells[13].get_text() + "',"
+    result += "school: '" + cells[14].get_text() + "',"
+    result += "department: '" + cells[15].get_text() + "',"
+    result += "campus: '" + cells[16].get_text() + "'"
   
-#   result += ')\n'
-#   # currentRow += '\n'
+  result += ')\n'
+  # currentRow += '\n'
   
-#   # if i>100:
-#     # break
-#   i += 1
-#   if result != 'Section.create(':
-#     with open("seeds.rb", "a") as sectionFile:
-      # sectionFile.write(result)
+  # if i>100:
+    # break
+  i += 1
+  if result != 'Section.create(':
+    with open("sectionSeeds.rb", "a") as sectionFile:
+      sectionFile.write(result)
   
 
-catalogURL = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
-catalogData = requests.get(catalogURL)
-catalogContent = catalogData.content
+# catalogURL = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
+# catalogData = requests.get(catalogURL)
+# catalogContent = catalogData.content
 
-soup = BeautifulSoup(catalogContent)
+# soup = BeautifulSoup(catalogContent)
 
-soup.select(".sitemaplink")
-i=0
-myfile = open("seeds.rb", "a")
-for link in soup.select(".sitemaplink"):
-  majorURL = 'http://catalog.uark.edu/' + link['href']
-  majorData = requests.get(majorURL)
-  majorContent = majorData.content
-  majorSoup = BeautifulSoup(majorContent)
-  courses = majorSoup.select(".courseblock")
+# soup.select(".sitemaplink")
+# i=0
+# myfile = open("seeds.rb", "a")
+# for link in soup.select(".sitemaplink"):
+#   majorURL = 'http://catalog.uark.edu/' + link['href']
+#   majorData = requests.get(majorURL)
+#   majorContent = majorData.content
+#   majorSoup = BeautifulSoup(majorContent)
+#   courses = majorSoup.select(".courseblock")
 
-  for course in courses:
-    courseBlockTitle = course.select(".courseblocktitle")[0].get_text().strip().replace(' ',' ')
-    courseBlockDescription = course.select(".courseblockdesc")[0].get_text().strip().replace(' ',' ')
-    courseBlockDescription = courseBlockDescription.replace("'", "")
-    courseBlockTitle = courseBlockTitle.replace("'", "")
-    # if "student's" in courseBlockDescription:
-    #   print(courseBlockDescription)
-    #   break
-    courseDescriptionAndPreCoReq = courseBlockDescription.split("Corequisite:")
-    courseDescription = courseDescriptionAndPreCoReq[0].strip().replace("'", "\'")
+#   for course in courses:
+#     courseBlockTitle = course.select(".courseblocktitle")[0].get_text().strip().replace(' ',' ')
+#     courseBlockDescription = course.select(".courseblockdesc")[0].get_text().strip().replace(' ',' ')
+#     courseBlockDescription = courseBlockDescription.replace("'", "")
+#     courseBlockTitle = courseBlockTitle.replace("'", "")
+#     # if "student's" in courseBlockDescription:
+#     #   print(courseBlockDescription)
+#     #   break
+#     courseDescriptionAndPreCoReq = courseBlockDescription.split("Corequisite:")
+#     courseDescription = courseDescriptionAndPreCoReq[0].strip().replace("'", "\'")
     
-    coReq = ''
-    preReq = ''
+#     coReq = ''
+#     preReq = ''
 
-    if len(courseDescriptionAndPreCoReq) >1:
-      preAndCoReq = courseDescriptionAndPreCoReq[1].strip().split('Prerequisite')
-      coReq = preAndCoReq[0].replace(':','').strip().replace("'","\'")
-      if len(preAndCoReq) >1:
-        preReq = preAndCoReq[1].replace("'","\'")
-    elif "Prerequisite" in courseDescription:
-      preReq = courseBlockDescription.split("Prerequisite")[1].replace(':','').strip()
+#     if len(courseDescriptionAndPreCoReq) >1:
+#       preAndCoReq = courseDescriptionAndPreCoReq[1].strip().split('Prerequisite')
+#       coReq = preAndCoReq[0].replace(':','').strip().replace("'","\'")
+#       if len(preAndCoReq) >1:
+#         preReq = preAndCoReq[1].replace("'","\'")
+#     elif "Prerequisite" in courseDescription:
+#       preReq = courseBlockDescription.split("Prerequisite")[1].replace(':','').strip()
     
-    name = courseBlockTitle.replace('.','').split(' ')
-    name = name[0] + ' ' + name[1]
+#     name = courseBlockTitle.replace('.','').split(' ')
+#     name = name[0] + ' ' + name[1]
     
-    myfile.write("Course.create(name: '" + name + "', title: '" + courseBlockTitle + "', description: '" + courseDescription.replace("'","\'").replace("'", "\'") + "', coreqDesc: '" + coReq + "', coreqData: '" + parseClassRequirements(coReq.replace('\n',' ')) + "', prereqDesc: '" + preReq + "', prereqData: '" + parseClassRequirements(preReq.replace('\n',' '))+ "')\n")
+#     myfile.write("Course.create(name: '" + name + "', title: '" + courseBlockTitle + "', description: '" + courseDescription.replace("'","\'").replace("'", "\'") + "', coreqDesc: '" + coReq + "', coreqData: '" + parseClassRequirements(coReq.replace('\n',' ')) + "', prereqDesc: '" + preReq + "', prereqData: '" + parseClassRequirements(preReq.replace('\n',' '))+ "')\n")
       
 
 print("End: " + str(datetime.datetime.now()))
