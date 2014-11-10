@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'search' => 'pages#searchresults'
   get 'profile' => 'pages#profile'
   
+  
   get 'courses' => 'courses#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
