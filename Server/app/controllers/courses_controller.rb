@@ -8,5 +8,4 @@ class CoursesController < ApplicationController
       @format = false;
     end
   end
-  
 end
