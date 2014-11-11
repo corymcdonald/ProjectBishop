@@ -47,13 +47,27 @@ class MajorsController < ApplicationController
   
   def create
     @major = Major.new(new_params)
-    
     @major.save
-    redirect_to majors_path
+    if(params[:async])
+      redirect_to majors_path + '/' + @major.major +  '/edit'
+    else
+      redirect_to majors_path
+    end
+    
+  end
+  
+  def destroy
+    @major = Major.find(params[:id])
+    @major.destroy
+    
+    redirect_to majors_path + '/' + @major.major +  '/edit'
   end
   
   private
     def new_params
+      if params[:major]["course"]
+        params[:major]["course"] = params[:major]["course"].upcase
+      end
       params.require(:major).permit(:major, :course)
     end
 end

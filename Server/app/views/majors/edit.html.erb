@@ -1,22 +1,32 @@
-<div id="editMajor" class="row whiteUI">
+<div style="padding-top:0;" class="row whiteUI">
 <div class="container">
+<h1><a href="<%= majors_path %>">Majors</a></h1>
+<h2 ><a href="<%= majors_path + '/' + @major.major %>"><%= @major.major %></a></h2>
+  <div id="editMajor">
+    <% @majors.each do |major| %>
+      <%= form_for major, url: majors_path + '/' + major.major, method: :patch do |f| %>
+        <%= hidden_field_tag(:major_id, major.id) %>
+        <p>
+          <%= f.label :course %><br>
+          <%= f.text_field :course %>
+        </p>
+        <p>
+          <%= f.submit %>
+          
+          <%= link_to 'Remove', major_path(major), remote: true,
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+                    
+        </p>
+        
+      <%end%>
+    <%end%>
+  </div>
 
-<% @majors.each do |major| %>
-  <%= form_for major, url: majors_path + '/' + major.major, method: :patch do |f| %>
-    <%= hidden_field_tag(:major_id, major.id) %>
-    <p>
-      <%= f.label :course %><br>
-      <%= f.text_field :course %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-  <%end%>
-<%end%>
 <br/>
 <h2>Add new</h2>
-<%= form_for :major, url: majors_path do |f| %>
+<%= form_for :major, remote:true, url: majors_path, :html => {:id => "newMajor"} do |f| %>
     <%= f.hidden_field :major %>
+    <%= hidden_field_tag(:async, "true") %>
     <p>
       <%= f.label :course %><br>
       <%= f.text_field :course %>
@@ -51,8 +61,31 @@ $(document).ready(function() {
   
     checkJquery();
 
+
 });
+$(document).ready(function() {
+
+  $("#newMajor").on("ajax:success", function(e, data, status, xhr) {
+    $('#editMajor').html($(data).find('#editMajor').html())
+    $('#newMajor input[name="major[course]"]').val('')
+  })
+  $("#newMajor").on("ajax:error", function(e, xhr, status, error) {
+    $("#newMajor").append("<p>ERROR</p>");
+  });
+  $('.container').delegate('a', 'click', function() {
+    $(".edit_major").on("ajax:success", function(e, data, status, xhr) {
+      console.log('sucess!')
+    })
+    $(".edit_major").on("ajax:error", function(e, xhr, status, error) {
+      $(this).remove()
+      
+    });
+  });
+});
+
 </script>
+
+
 
 </div>
 </div>
