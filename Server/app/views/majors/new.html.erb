@@ -1,0 +1,15 @@
+<div id="editMajor" class="row whiteUI">
+<div class="container">
+  <%= form_for :major, url: majors_path do |f| %>
+      <p>
+        <%= f.label :major %><br>
+        <%= f.text_field :major %>
+      </p>
+     
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+  </div>
+</div>
+

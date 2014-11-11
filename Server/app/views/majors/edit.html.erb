@@ -15,9 +15,8 @@
 <%end%>
 <br/>
 <h2>Add new</h2>
-
 <%= form_for :major, url: majors_path do |f| %>
-    
+    <%= f.hidden_field :major %>
     <p>
       <%= f.label :course %><br>
       <%= f.text_field :course %>
@@ -27,20 +26,31 @@
       <%= f.submit %>
     </p>
 <% end %>
-
 <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
 
 <script>
 $('head').append('<link rel="stylesheet" type="text/css" href="http://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.3.custom.css" />')
 availableTags =  <%=  raw @coursesList.to_json %>
-$(document).ready(function() {
-    
+
+function jqueryLoaded() {
   $.each($('input'), function() {
     $(this).autocomplete({
       source: availableTags
     });
   });
+}
+function checkJquery() {
+    if (window.jQuery && jQuery.ui) {
+        jqueryLoaded();
+    } else {
+        window.setTimeout(checkJquery, 100);
+    }
+}
+$(document).ready(function() {
     
+  
+    checkJquery();
+
 });
 </script>
 

@@ -47,6 +47,7 @@ class MajorsController < ApplicationController
   
   def create
     @major = Major.new(new_params)
+    
     @major.save
     redirect_to majors_path
   end
