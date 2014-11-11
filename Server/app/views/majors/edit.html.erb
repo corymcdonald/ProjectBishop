@@ -1,3 +1,6 @@
+<div id="editMajor" class="row whiteUI">
+<div class="container">
+
 <% @majors.each do |major| %>
   <%= form_for major, url: majors_path + '/' + major.major, method: :patch do |f| %>
     <%= hidden_field_tag(:major_id, major.id) %>
@@ -11,7 +14,8 @@
   <%end%>
 <%end%>
 <br/>
-Add new </br>
+<h2>Add new</h2>
+
 <%= form_for :major, url: majors_path do |f| %>
     
     <p>
@@ -23,3 +27,22 @@ Add new </br>
       <%= f.submit %>
     </p>
 <% end %>
+
+<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
+<script>
+$('head').append('<link rel="stylesheet" type="text/css" href="http://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.3.custom.css" />')
+availableTags =  <%=  raw @coursesList.to_json %>
+$(document).ready(function() {
+    
+  $.each($('input'), function() {
+    $(this).autocomplete({
+      source: availableTags
+    });
+  });
+    
+});
+</script>
+
+</div>
+</div>

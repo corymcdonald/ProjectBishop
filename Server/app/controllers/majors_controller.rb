@@ -28,7 +28,12 @@ class MajorsController < ApplicationController
     @majors = Major.where('major = ?', params[:id])
     @major = Major.new()
     @major.major = params[:id]
-    # render plain: @major.inspect
+    @courses = Course.all
+    @coursesList = []
+    @courses.each do |p|
+      @coursesList.push(p.name)
+    end
+    
   end
   
   def update

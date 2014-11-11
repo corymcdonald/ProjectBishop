@@ -16,7 +16,7 @@ $(document).ready(function() {
         Course <span class="caret"></span>
     </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-        <% @course.each do |a| %>
+        <%= @course.each do |a| %>
             <li role="course"><a role="menuitem" tabindex="-1" href="#"><%= a.title %></a></li>
         <% end %>
         </ul>

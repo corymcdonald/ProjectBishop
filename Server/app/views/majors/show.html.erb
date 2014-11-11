@@ -1,7 +1,11 @@
-<%= link_to 'Back to majors', majors_path %><br/>
-<%= link_to 'Add or edit courses for this major', edit_major_path(@major) %><br/>
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div style="padding-top: 0;" id="editMajor" class="row whiteUI">
+<div class="container">
+<div >
+  <h1 ><%= @major %></h1>
+  <a class="btn btn-default btn-lg " href=<%= edit_major_path(@major) %>>Add or Edit Courses</a>
+</div>
 
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 <% @courses.each do |course| %>
   <div class="panel panel-default">
   
@@ -21,4 +25,9 @@
     </div>
   </div>
 <% end %>
+</div>
+
+
+
+</div>
 </div>
