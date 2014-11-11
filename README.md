@@ -2,23 +2,54 @@ Project Bishop
 =============
 For this project we are creating a schedule assistant that helps students select classes based on what courses they still need to take and which classes are better suited for their degree program. 
 
+Project Overview
+=============
+#### Pages
+* Index
+* User profiles
+* Dashboard
+* User Settings
+* Registration
+
+#### Project Languages
+* CSS
+* Ruby
+* Javascript
+* SQL
+* Git
+* HTML
+
 Project reponsibilities
 =============
 #### Lucas Dorrough
-
-View - Search - schedule planner image generation
+* Style sheet design
+* Static page design
+* Responsive design implementation
+* Grapic weekly schedule view
 
 #### Will Turner
-
-User Model - course\Section - server 
+* User database entries
+* registration
+* User Settings
+* Login
+* Password encryption
+* Server set up
 
 #### Matt Luther
+* Schedule generation algorithms
+* Major flowchart generation algorithms
+* Schedule database entries
+* Create new schedule
+* Remove schedule
 
-Schedule Model - schedule/flow chart generation algorithm - 
 
 #### Cory McDonald
-
-Major Model - Scraping - User Model
+* Scraping of Courses
+* Scraping of Sections
+* Major database entries
+* Section Databse entries
+* Course Database entries
+* Creating Major
 
 Database Migrations
 =============
