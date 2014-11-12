@@ -114,6 +114,8 @@ create_table "sections", force: true do |t|
 create_table "majors", force: true do |t|
     t.string   "major"
     t.string   "course"
+    t.string   "year"
+    t.string   "semester"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
