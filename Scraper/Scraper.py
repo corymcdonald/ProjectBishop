@@ -239,6 +239,8 @@ for row in rows:
   if len(cells) > 0:
     result += "status: '" +  cells[0].get_text() + "',"
     result += "courseID: '" +  cells[1].get_text() + "',"
+    result += "name: '" + cells[1].get_text().split(' ')[0] + "',"
+    result += "section: '" + cells[1].get_text().split(' ')[1] + "',"
     result += "title: '" +  cells[2].get_text().replace("'","") + "',"
     result += "component: '" +  cells[3].get_text().replace("'","") + "',"
     result += "session: '" +  cells[4].get_text() + "',"
@@ -263,7 +265,7 @@ for row in rows:
     # break
   i += 1
   if result != 'Section.create(':
-    with open("seeds.rb", "a") as sectionFile:
+    with open("sectionSeeds.rb", "a") as sectionFile:
       sectionFile.write(result)
   
 
@@ -274,16 +276,16 @@ for row in rows:
 # soup = BeautifulSoup(catalogContent)
 
 # soup.select(".sitemaplink")
-
+# i=0
 # myfile = open("seeds.rb", "a")
 # for link in soup.select(".sitemaplink"):
-#  majorURL = 'http://catalog.uark.edu/' + link['href']
-#  majorData = requests.get(majorURL)
-#  majorContent = majorData.content
-#  majorSoup = BeautifulSoup(majorContent)
-#  courses = majorSoup.select(".courseblock")
+#   majorURL = 'http://catalog.uark.edu/' + link['href']
+#   majorData = requests.get(majorURL)
+#   majorContent = majorData.content
+#   majorSoup = BeautifulSoup(majorContent)
+#   courses = majorSoup.select(".courseblock")
 
-#  for course in courses:
+#   for course in courses:
 #     courseBlockTitle = course.select(".courseblocktitle")[0].get_text().strip().replace(' ',' ')
 #     courseBlockDescription = course.select(".courseblockdesc")[0].get_text().strip().replace(' ',' ')
 #     courseBlockDescription = courseBlockDescription.replace("'", "")
@@ -301,15 +303,14 @@ for row in rows:
 #       preAndCoReq = courseDescriptionAndPreCoReq[1].strip().split('Prerequisite')
 #       coReq = preAndCoReq[0].replace(':','').strip().replace("'","\'")
 #       if len(preAndCoReq) >1:
-#        preReq = preAndCoReq[1].replace("'","\'")
+#         preReq = preAndCoReq[1].replace("'","\'")
 #     elif "Prerequisite" in courseDescription:
 #       preReq = courseBlockDescription.split("Prerequisite")[1].replace(':','').strip()
+    
+#     name = courseBlockTitle.replace('.','').split(' ')
+#     name = name[0] + ' ' + name[1]
+    
+#     myfile.write("Course.create(name: '" + name + "', title: '" + courseBlockTitle + "', description: '" + courseDescription.replace("'","\'").replace("'", "\'") + "', coreqDesc: '" + coReq + "', coreqData: '" + parseClassRequirements(coReq.replace('\n',' ')) + "', prereqDesc: '" + preReq + "', prereqData: '" + parseClassRequirements(preReq.replace('\n',' '))+ "')\n")
       
-#     myfile.write("Course.create(title: '" + courseBlockTitle + "', description: '" + courseDescription.replace("'","\'").replace("'", "\'") + "', coreqDesc: '" + coReq + "', coreqData: '" + parseClassRequirements(coReq.replace('\n',' ')) + "', prereqDesc: '" + preReq + "', prereqData: '" + parseClassRequirements(preReq.replace('\n',' '))+ "')\n")
-      
-      # myfile.write(courseBlockTitle + "\n" + courseDescription + "\n" + coReq + "\n" + preReq + "\n\n")
-      # coreq.write() + "\n")
-      # prereqFile.write(+ "\n")
-        
 
 print("End: " + str(datetime.datetime.now()))
