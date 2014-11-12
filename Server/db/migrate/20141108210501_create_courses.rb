@@ -3,6 +3,7 @@ class CreateCourses < ActiveRecord::Migration
     create_table :courses do |t|
       t.string :title
       t.string :name
+      t.string :coreRequirement
       t.text :description
       t.text :coreqDesc
       t.text :coreqData
