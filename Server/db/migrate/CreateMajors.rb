@@ -3,7 +3,8 @@ class CreateMajors < ActiveRecord::Migration
     create_table :majors do |t|
       t.string :major
       t.string :course
-
+      t.string :year
+      t.string :semester
       t.timestamps
     end
   end
