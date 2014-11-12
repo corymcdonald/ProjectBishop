@@ -5,11 +5,20 @@ $(document).ready(function() {
       $(this).parents('.col-xs-10').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
     });
 });
+
+function test() {
+    courses = <%= raw @course.to_json -%>;
+    
+    alert(courses[1])       
+}
 </script>
 
 <div class="row whiteUI">
     <div class="col-xs-2"></div>
     <div class="col-xs-10">
+    <script>
+        test();
+    </script>
     <h1>Course sandbox..</h1>
     <% if @format == false%>
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
