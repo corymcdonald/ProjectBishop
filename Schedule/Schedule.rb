@@ -14,7 +14,28 @@ def addSection(courseSection)
     @arrOfSections.push(courseSection)
 end
 def findTime(timeArray, startingLocation, start, finish)
-    #implement this soon
+    i = starting time + 1
+    currentTime = 0
+    while i != timeArray.length do
+        if timeArray[i].chr < 10 && timeArray[i].chr > 0
+            currentTime = currentTime + Integer(timeArray[i].chr)*60
+            break
+        end
+    end
+    i = i + 1
+    currentTime = currentTime + Integer(timeArray[i])
+    i = i + 1
+    if timeArray[i].chr == 'P'
+        currentTime = currentTime + 720
+    end
+    start << currentTime
+    i = i + 1
+    currentTime = Integer(timeArray[i])*60
+    i = i + 1
+    if timeArray[i].chr == 'P'
+        currentTime = currentTime + 720
+    end
+    finish << currentTime
 end
 def genereateSchedules(arrOfCourses)
     if arrOfCourses.length == 0
@@ -39,14 +60,12 @@ def genereateSchedules(arrOfCourses)
                     canAdd = true
                     currentSchedules.each do |schedule|
                         schedule.arrOfSections.each do |sectionToCheck|
-                            sectionTimes = section.classTime.split(/ |, |,/)
+                            sectionTimes = section.classTime.split(/ |, |,|:/)
                             for i in sectionTimes.length
                                 if sectionTimes[i].include? "Mon"
                                     startTime = null
                                     endTime = null
                                     findTime(sectionTimes, i, s)
-                                        
-                                        
                                 end
                                 if sectionTimes[i].include? "Tue"
                                     startTime = null
