@@ -17,8 +17,11 @@
 <div class="blackUI" style="padding: 2px 0 2px;">
   <%= render 'shared/navigation' %>
 </div>
-
+    
 <div id="main-container" class="container-fluid">
+  <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
   <%= yield %>
   <%= render 'shared/footer' %>
 </div>

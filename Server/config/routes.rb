@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :sections
   resources :courses
   resources :majors
-  get 'register' => 'pages#register'
+  resources :users
+  get 'register' => 'users#new'
   get 'dashboard' => 'pages#dashboard'
   get 'settings' => 'pages#settings'
   get 'search' => 'pages#searchresults'
