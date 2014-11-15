@@ -57,8 +57,8 @@ def genereateSchedules(arrOfCourses)
             elsif i < 5
                 temporarySections = courses.where(title: arrOfCourses.get(i).title).order('created_at DESC')
                 temporarySections.each do |section|
-                    canAdd = true
                     currentSchedules.each do |schedule|
+                        canAdd = true
                         schedule.arrOfSections.each do |sectionToCheck|
                             sectionTimes = section.classTime.split(/ |, |,|:/)
                             for i in sectionTimes.length
@@ -66,38 +66,102 @@ def genereateSchedules(arrOfCourses)
                                     startTime = null
                                     endTime = null
                                     findTime(sectionTimes, i, s)
+                                    if sectionToCheck.classTime.include? "Mon"
+                                        sectionToCheckTimes = sectionToCheck.classTime.split(/ |, |,|:/)
+                                        for j in sectionToCheckTimes.length
+                                            if sectionToCheckTimes[j].include? "Mon"
+                                                checkStartTime = null
+                                                checkEndTime = null
+                                                findTime(sectionToCheckTimes,checkStartTime,checkEndTime)
+                                                if (startTime < checkStartTime && checkStartTime < endTime) or (startTime < checkEndTime && checkEndTime < endTime)
+                                                    canAdd = false
+                                                end
+                                            end
+                                        end
+                                    end
                                 end
                                 if sectionTimes[i].include? "Tue"
                                     startTime = null
                                     endTime = null
                                     findTime(sectionTimes, i, s)
+                                    if sectionToCheck.classTime.include? "Tue"
+                                        sectionToCheckTimes = sectionToCheck.classTime.split(/ |, |,|:/)
+                                        for j in sectionToCheckTimes.length
+                                            if sectionToCheckTimes[j].include? "Tue"
+                                                checkStartTime = null
+                                                checkEndTime = null
+                                                findTime(sectionToCheckTimes,checkStartTime,checkEndTime)
+                                                if (startTime < checkStartTime && checkStartTime < endTime) or (startTime < checkEndTime && checkEndTime < endTime)
+                                                    canAdd = false
+                                                end
+                                            end
+                                        end
+                                    end
                                 end
                                 if sectionTimes[i].include? "Wed"
                                     startTime = null
                                     endTime = null
                                     findTime(sectionTimes, i, s)
+                                    if sectionToCheck.classTime.include? "Wed"
+                                        sectionToCheckTimes = sectionToCheck.classTime.split(/ |, |,|:/)
+                                        for j in sectionToCheckTimes.length
+                                            if sectionToCheckTimes[j].include? "Wed"
+                                                checkStartTime = null
+                                                checkEndTime = null
+                                                findTime(sectionToCheckTimes,checkStartTime,checkEndTime)
+                                                if (startTime < checkStartTime && checkStartTime < endTime) or (startTime < checkEndTime && checkEndTime < endTime)
+                                                    canAdd = false
+                                                end
+                                            end
+                                        end
+                                    end
                                 end
                                 if sectionTimes[i].include? "Thu"
                                     startTime = null
                                     endTime = null
                                     findTime(sectionTimes, i, s)
+                                    if sectionToCheck.classTime.include? "Thu"
+                                        sectionToCheckTimes = sectionToCheck.classTime.split(/ |, |,|:/)
+                                        for j in sectionToCheckTimes.length
+                                            if sectionToCheckTimes[j].include? "Thu"
+                                                checkStartTime = null
+                                                checkEndTime = null
+                                                findTime(sectionToCheckTimes,checkStartTime,checkEndTime)
+                                                if (startTime < checkStartTime && checkStartTime < endTime) or (startTime < checkEndTime && checkEndTime < endTime)
+                                                    canAdd = false
+                                                end
+                                            end
+                                        end
+                                    end
                                 end
                                 if sectionTimes[i].include? "Fri"
                                     startTime = null
                                     endTime = null
                                     findTime(sectionTimes, i, s)
+                                    if sectionToCheck.classTime.include? "Fri"
+                                        sectionToCheckTimes = sectionToCheck.classTime.split(/ |, |,|:/)
+                                        for j in sectionToCheckTimes.length
+                                            if sectionToCheckTimes[j].include? "Fri"
+                                                checkStartTime = null
+                                                checkEndTime = null
+                                                findTime(sectionToCheckTimes,checkStartTime,checkEndTime)
+                                                if (startTime < checkStartTime && checkStartTime < endTime) or (startTime < checkEndTime && checkEndTime < endTime)
+                                                    canAdd = false
+                                                end
+                                            end
+                                        end
+                                    end
                                 end
                             end
-                            #Add logic to add schedules here, unsure how exactly the start and end times will be stored
-                            #Probably something like go through all the days the sectionToCheck has, and see if the section is on that day. If so, see if the times overlap. If they do set the bool to false
+                        if(canAdd)
+                            nextSchedules.push(Schedule.new(section))
                         end
-                    #if the bool is still true, push a new schedule that is the previous and the new section
+                        
                     end
                 end
-            else
-                #Handle breaks
             end
-        end
+            end
         return nextSchedules
+        end
     end
 end
