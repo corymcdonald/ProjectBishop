@@ -1,5 +1,4 @@
-
-    
+//NAVBAR
 .navbar-default {
   background: transparent;
   border: 0;
@@ -10,67 +9,61 @@
 .brand:hover {
   background-color: transparent;
 }
+//END
 
-.jumbotron {
-  padding: 100px 0 36px;
-  margin-top: -100px;
-  background: image-url('JumboBackground.png');
-  height: 600px
+//FOOTER
+.footer h3, .footer h4 {
+  text-align: center;
+  font-weight: 300;
 }
 
-.jumbo h1 {
-  color: white;
-  font-size: 3em;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-}
-
-.jumbo h3 {
-  color: white;
-  font-size: 3em;
-  font-family: 'Roboto', sans-serif;
-}
-.btn {
-   border-radius: 2px;
-   background-color: rgba(255, 255, 255, 0);
-   border-color: rgb(225, 225, 225);
-   color: white;
-   font-family: 'Roboto', sans-serif;
-   font-weight: 300;
-}
-
-.btn:hover {
-  background-color: rgba(255, 255, 255, .1);
-  border-color: rgb(255, 255, 255);
-  color: white;
-}
-
-a:visited {
-  color: white;
-}
-
-a:visited:hover {
-  color: white;
-}
-
-
-body {
-  background-color: black;
+.footer {
+  padding: 70px 0 70px 0;
   
-
+  background: #000000; /* Old browsers */
+  background: -moz-linear-gradient(top, #000000 0%, #212121 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#212121));
+  background: -webkit-linear-gradient(top, #000000 0%, #3a3a3a 100%); 
+  background: -o-linear-gradient(top, #000000 0%, #212121 100%); 
+  background: -ms-linear-gradient(top, #000000 0%, #212121 100%); 
+  background: linear-gradient(to bottom, #000000 0%, #212121 100%); 
 }
+//END
 
-h1, h3, th, td {
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-} 
-
-.img-responsive {
-  margin: auto;
+//JUMBOTRON
+.jumbo {
+  background:url('/assets/JumboBackground.png')
+}
+//END
+    
+//IMAGES
+.brandIMG {
+  height: 50px;
+  padding: 5px 0 5px 0;
 }
 
 .TestImageClass {
   padding: 10px 20px 10px;
   margin: auto;
 }
+//END
+
+//MAIN CSS
+body {
+  background-color: #212121;
+}
+//END
+
+
+
+
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+

@@ -2,6 +2,8 @@ class CreateSections < ActiveRecord::Migration
   def change
     create_table :sections do |t|
       t.string :status
+      t.string :name
+      t.string :section
       t.string :courseID
       t.string :title
       t.string :component

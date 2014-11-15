@@ -1,0 +1,11 @@
+<div id="editMajor" class="row whiteUI" style="padding-top: 0;">
+<div class="container">
+<h1>Majors</h1>
+  <% @major.each do |major| %>
+    <a href="<%= majors_path %>/<%= major.major %>"><%= major.major %></a><br/>
+  <% end %>
+<br/>
+ <a class="btn btn-default btn-lg" href=<%= new_major_path %>>New Major</a>
+  
+</div>
+</div>

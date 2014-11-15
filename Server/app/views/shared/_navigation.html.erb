@@ -1,12 +1,51 @@
+<script>
+$(document).ready(function() {
+  $('.dropdown').on('show.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  $('.dropdown').on('hide.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+});
+</script>
+
+
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-    <!--Fix this column stuff -->
-      <div class="col-xs-12 col-lg-8">
-        <a class="brand" href="#"> <img class="img-responsive"src="/assets/NamelogoS.png"></a>
-      </div>
-      <div class="col-lg-4">
-        <li><a href="#">Link</a></li>
-      </div>
-  </div>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href='/'> <img class="brandIMG"src="/assets/NamelogoS.png"></a>
+    </div>
+  
+  <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <%= form_tag(courses_path, method: :get, class: "navbar-form navbar-right")  do %>
+        <%= text_field_tag :search, nil, :class => 'form-control' %>
+        <%= submit_tag "Search", class: "btn btn-default"%>
+      <% end %>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href='/dashboard' style="">Dashboard</a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lucas Dorrough <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href='/profile'>Profile</a></li>
+            <li><a href='/settings'>Settings</a></li>
+            <li class="divider"></li>
+            <li><a href='/'>Log Out</a></li>
+            <li class="divider"></li>
+            <li><a href='/courses'>Courses</a></li>
+            <li><a href="/">Sections</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
+

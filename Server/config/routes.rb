@@ -1,9 +1,14 @@
-<<<<<<< HEAD
 Rails.application.routes.draw do
   root 'pages#index'
   resources :sections
   resources :courses
-
+  resources :majors
+  get 'register' => 'pages#register'
+  get 'dashboard' => 'pages#dashboard'
+  get 'settings' => 'pages#settings'
+  get 'search' => 'pages#searchresults'
+  get 'profile' => 'pages#profile'
+  get 'courses' => 'courses#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
