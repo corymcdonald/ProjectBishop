@@ -1,27 +1,31 @@
 class MajorsController < ApplicationController
   
+  
   def index
     @major = Major.select('DISTINCT major')
   end
+  
   
   def new
   end
   
   def show
     @courses = []
-    @major = params[:id]
-    @majors = Major.where('major like ?', params[:id])
-    @majors.each do |major|
+    
+    @major = params[:id].downcase
+    @coursesInMajors = Major.where('major like ?', params[:id])
+    @coursesInMajors.each do |major|
       begin
-        @courses.push(Course.where('name = ?', major.course).take!)
-        # render plain: @courses.inspect
+          @courses.push(Course.where('name = ?', major.course).take!)
+          # @courses.push(Major.joins('LEFT OUTER JOIN Courses ON Courses.name = Majors.course').where('name =?', major.course).take!)
+          # @courses.push(Major.joins('LEFT OUTER JOIN Courses ON Courses.name = Majors.course'))
       rescue
         @tempCourse = Course.new(title: major.course)
         @courses.push(@tempCourse)
       end
     end
     
-    # render plain: @courses.inspect
+    # render plain: @courses[0].inspect
   end
   
   def edit
@@ -37,6 +41,12 @@ class MajorsController < ApplicationController
   end
   
   def update
+    majorSeedPath = "db/majorSeed.rb"
+    File.open(majorSeedPath, "a") do |f|
+      f.write('Major.find(' + params[:major_id] +').update(' + new_params.to_s + ')')
+      f.puts @string
+    end
+    
     @major = Major.find(params[:major_id])
     if @major.update(new_params)
       redirect_to majors_url + '/' + params[:id]
@@ -46,6 +56,12 @@ class MajorsController < ApplicationController
   end
   
   def create
+    majorSeedPath = "db/majorSeed.rb"
+    File.open(majorSeedPath, "a") do |f|
+      f.write('Major.new(' + new_params.to_s + ')')
+      f.puts @string
+    end
+    
     @major = Major.new(new_params)
     @major.save
     if(params[:async])
@@ -60,7 +76,13 @@ class MajorsController < ApplicationController
     @major = Major.find(params[:id])
     @major.destroy
     
-    redirect_to majors_path + '/' + @major.major +  '/edit'
+    majorSeedPath = "db/majorSeed.rb"
+    File.open(majorSeedPath, "a") do |f|
+      f.write('Major.destroy(' + new_params.to_s + ')')
+      f.puts @string
+    end
+    
+    # redirect_to majors_path + '/' + @major.major +  '/edit'
   end
   
   private
@@ -68,6 +90,9 @@ class MajorsController < ApplicationController
       if params[:major]["course"]
         params[:major]["course"] = params[:major]["course"].upcase
       end
-      params.require(:major).permit(:major, :course)
+      if params[:major]["major"]
+        params[:major]["major"] = params[:major]["major"].downcase
+      end
+      params.require(:major).permit(:major, :course, :year, :semester)
     end
 end

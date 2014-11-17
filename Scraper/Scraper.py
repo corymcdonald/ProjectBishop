@@ -226,6 +226,56 @@ def parseClassRequirements(prereq):
 
 print("Start: " + str(datetime.datetime.now()))
 
+majorsURL = 'http://catalog.uark.edu/undergraduatecatalog/fieldsofstudy/#fieldsalphabeticallytext'
+majorsData = requests.get(majorsURL)
+majorContent = majorsData.content
+soup = BeautifulSoup(majorContent)
+
+majors = soup.find(id='fieldsalphabeticallytextcontainer')
+seedFile = open("majorSeeds.rb", "a")
+for link in BeautifulSoup(str(majors)).find_all('a'):
+  if link.get('href'):
+    majorURL = 'http://catalog.uark.edu/' + link['href']
+    majorData = requests.get(majorURL)
+    majorContent = majorData.content
+    soup = BeautifulSoup(majorContent)
+    print(link.get('href'))
+  
+    table = soup.find(id="eightsemesterplantextcontainer")
+    if table:
+      table = BeautifulSoup(str(table.findAll('table', { "class" : 'sc_plangrid' })))
+      rows =table.find_all('tr')
+      currentMajor = soup.find(id="content").h1.text.split('(')[0]
+      for row in rows:
+        name = ''
+        if "CORE" in str(row.text).upper() or "ELECTIVE" in str(row.text).upper(): #handling university core stuff
+          name = row.text.split('–')[0]
+          name = name.split('(')[0]
+          name = ''.join([i for i in name if not i.isdigit()])
+          name = name.replace('-','')
+        else:
+          temp = row.text.replace('\xa0', ' ').split(' ')
+          lab = False
+          x=0
+          
+          if x + 1 < len(temp) and len(temp[x + 1].replace('.','').replace(':', '')) == 5 \
+                      and (temp[x + 1])[:4].isdigit():
+                      lab = True
+          
+          # We are currently have a class
+          if x + 1 < len(temp) and (
+            (len(temp[x].replace('.','')) == 4 and temp[x + 1].replace('.','').isdigit()) or lab):
+              name = (temp[x].replace('.', '') + ' ' + temp[x + 1].replace('.', ''))
+        if name:
+          name = name.replace(' ',' ').strip()
+          seedFile.write('Major.create({"major"=>"' + currentMajor.strip().lower() +'", "course"=>"' + str(name) + '"})\n')
+          # print(name )
+    
+    
+    
+    
+  
+
 # scheduleURL = 'https://scheduleofclasses.uark.edu/Main?strm=1149&Search='
 # scheduleData = requests.get(scheduleURL)
 # scheduleContent = scheduleData.content
@@ -269,48 +319,48 @@ print("Start: " + str(datetime.datetime.now()))
 #       sectionFile.write(result)
   
 
-catalogURL = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
-catalogData = requests.get(catalogURL)
-catalogContent = catalogData.content
+# catalogURL = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
+# catalogData = requests.get(catalogURL)
+# catalogContent = catalogData.content
 
-soup = BeautifulSoup(catalogContent)
+# soup = BeautifulSoup(catalogContent)
 
-soup.select(".sitemaplink")
-i=0
-myfile = open("courseSeeds.rb", "a")
-for link in soup.select(".sitemaplink"):
-  majorURL = 'http://catalog.uark.edu/' + link['href']
-  majorData = requests.get(majorURL)
-  majorContent = majorData.content
-  majorSoup = BeautifulSoup(majorContent)
-  courses = majorSoup.select(".courseblock")
+# soup.select(".sitemaplink")
+# i=0
+# myfile = open("courseSeeds.rb", "a")
+# for link in soup.select(".sitemaplink"):
+#   majorURL = 'http://catalog.uark.edu/' + link['href']
+#   majorData = requests.get(majorURL)
+#   majorContent = majorData.content
+#   majorSoup = BeautifulSoup(majorContent)
+#   courses = majorSoup.select(".courseblock")
 
-  for course in courses:
-    courseBlockTitle = course.select(".courseblocktitle")[0].get_text().strip().replace(' ',' ')
-    courseBlockDescription = course.select(".courseblockdesc")[0].get_text().strip().replace(' ',' ')
-    courseBlockDescription = courseBlockDescription.replace("'", "")
-    courseBlockTitle = courseBlockTitle.replace("'", "")
-    # if "student's" in courseBlockDescription:
-    #   print(courseBlockDescription)
-    #   break
-    courseDescriptionAndPreCoReq = courseBlockDescription.split("Corequisite:")
-    courseDescription = courseDescriptionAndPreCoReq[0].strip().replace("'", "\'")
+#   for course in courses:
+#     courseBlockTitle = course.select(".courseblocktitle")[0].get_text().strip().replace(' ',' ')
+#     courseBlockDescription = course.select(".courseblockdesc")[0].get_text().strip().replace(' ',' ')
+#     courseBlockDescription = courseBlockDescription.replace("'", "")
+#     courseBlockTitle = courseBlockTitle.replace("'", "")
+#     # if "student's" in courseBlockDescription:
+#     #   print(courseBlockDescription)
+#     #   break
+#     courseDescriptionAndPreCoReq = courseBlockDescription.split("Corequisite:")
+#     courseDescription = courseDescriptionAndPreCoReq[0].strip().replace("'", "\'")
     
-    coReq = ''
-    preReq = ''
+#     coReq = ''
+#     preReq = ''
 
-    if len(courseDescriptionAndPreCoReq) >1:
-      preAndCoReq = courseDescriptionAndPreCoReq[1].strip().split('Prerequisite')
-      coReq = preAndCoReq[0].replace(':','').strip().replace("'","\'")
-      if len(preAndCoReq) >1:
-        preReq = preAndCoReq[1].replace("'","\'")
-    elif "Prerequisite" in courseDescription:
-      preReq = courseBlockDescription.split("Prerequisite")[1].replace(':','').strip()
+#     if len(courseDescriptionAndPreCoReq) >1:
+#       preAndCoReq = courseDescriptionAndPreCoReq[1].strip().split('Prerequisite')
+#       coReq = preAndCoReq[0].replace(':','').strip().replace("'","\'")
+#       if len(preAndCoReq) >1:
+#         preReq = preAndCoReq[1].replace("'","\'")
+#     elif "Prerequisite" in courseDescription:
+#       preReq = courseBlockDescription.split("Prerequisite")[1].replace(':','').strip()
     
-    name = courseBlockTitle.replace('.','').split(' ')
-    name = name[0] + ' ' + name[1]
+#     name = courseBlockTitle.replace('.','').split(' ')
+#     name = name[0] + ' ' + name[1]
     
-    myfile.write("Course.create(name: '" + name + "', title: '" + courseBlockTitle + "', description: '" + courseDescription.replace("'","\'").replace("'", "\'") + "', coreqDesc: '" + coReq + "', coreqData: '" + parseClassRequirements(coReq.replace('\n',' ')) + "', prereqDesc: '" + preReq + "', prereqData: '" + parseClassRequirements(preReq.replace('\n',' '))+ "')\n")
+#     myfile.write("Course.create(name: '" + name + "', title: '" + courseBlockTitle + "', description: '" + courseDescription.replace("'","\'").replace("'", "\'") + "', coreqDesc: '" + coReq + "', coreqData: '" + parseClassRequirements(coReq.replace('\n',' ')) + "', prereqDesc: '" + preReq + "', prereqData: '" + parseClassRequirements(preReq.replace('\n',' '))+ "')\n")
       
 
 print("End: " + str(datetime.datetime.now()))

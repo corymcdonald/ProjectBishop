@@ -4,6 +4,7 @@ class CreateMajors < ActiveRecord::Migration
       t.string :major
       t.string :course
       t.string :year
+      t.string :handbookYear
       t.string :semester
       t.timestamps
     end
