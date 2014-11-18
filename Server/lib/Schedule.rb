@@ -52,7 +52,7 @@ class Schedule
                 currentSchedules = Marshal.load(Marshal.dump(nextSchedules))
                 temporarySections = Array.new
                 nextSchedules = Array.new
-                #puts arrOfCourses[i].name
+                puts currentSchedules.length
                 tempName = arrOfCourses[i].name.split
                 tempName[0] = tempName[0]+tempName[1]
                 temporarySections = Section.where(name: tempName[0])

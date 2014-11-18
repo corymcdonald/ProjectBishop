@@ -5,4 +5,4 @@ rake db:reset
 echo "Seeding database..."
 rake db:seed:courseSeeds
 rake db:seed:sectionSeeds
-echo "RESTART SERVER"
+echo "Please restart the server..."

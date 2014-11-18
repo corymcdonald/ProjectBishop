@@ -1,0 +1,5 @@
+Major.new({"major"=>"csce"})
+Major.new({"major"=>"csce", "course"=>"CSCE 2114", "year"=>"0", "semester"=>"Fall"})
+Major.find(2).update({"course"=>"CSCE 2114", "year"=>"0", "semester"=>"Spring"})
+Major.find(2).update({"course"=>"CSCE 2114", "year"=>"0", "semester"=>"Summer"})
+Major.new({"major"=>"csce", "course"=>"CSCE 2004", "year"=>"0", "semester"=>"Fall"})

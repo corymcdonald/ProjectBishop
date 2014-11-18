@@ -1,4 +1,21 @@
-Hello world!
-<% @section.each do |section| %>
-  <%= section.title %><br/>
-<% end %>
+<script type="text/javascript">
+function test() {
+    sections = <%= raw @section.to_json -%>;
+    
+    alert(sections[1])       
+}
+</script>
+
+<div class="row whiteUI">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-6">
+    <h1>Section sandbox..</h1>
+    <select class="form-control">
+         <%= @section.each do |a| %>
+            <option><%= a.name %> - <%= a.section %></option>
+        <% end %>
+    </select>
+    </div>
+    
+    
+</div>
