@@ -1,0 +1,107 @@
+.blackUI {
+  background-color: black;
+}
+
+.blackUI h1, .blackUI h2, .blackUI h3, .blackUI h4, .blackUI h5, .blackUI h6, {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.blackUI p {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.blackUI tr {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.blackUI th {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.blackUI a {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+////FORMS
+
+  //Button
+  .blackUI .btn {
+     border-radius: 2px;
+     background-color: rgba(255, 255, 255, 0);
+     border-color: rgb(225, 225, 225);
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 300;
+  }
+  
+  .blackUI .btn:hover {
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgb(255, 255, 255);
+    color: white;
+  }
+  
+  .blackUI a:visited {
+    color: white;
+  }
+  
+  .blackUI a:visited:hover {
+    color: white;
+  }
+  
+  .blackUI .dropdown a {
+     border-radius: 2px;
+     background-color: rgba(255, 255, 255, 0);
+     border-color: rgb(225, 225, 225);
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 500;
+  }
+  
+  .blackUI .dropdown .btn {
+     border-radius: 2px;
+     background-color: rgba(255, 255, 255, 0);
+     border-color: rgb(225, 225, 225);
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 500;
+  }
+  
+  .blackUI .dropdown .btn:hover {
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgb(255, 255, 255);
+    color: white;
+  }
+  
+  .blackUI .dropdown a:visited {
+    color: white;
+  }
+  
+  .blackUI .dropdown a:visited:hover {
+    color: white;
+  }
+  
+  .blackUI .dropdown-menu {
+      background-color: black;
+  }
+  //end
+  
+  //Labels
+  .blackUI label {
+     color: white;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 400;
+  }
+  //end
+  
+
+////END

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bishop</title>
+  <link rel="shortcut icon" type="image/png" href="/assets/favIcon.png"/>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="/assets/fonts.js"></script>
+  <%= stylesheet_link_tag    'bishopTheme', media: 'all' %>
+  <%= stylesheet_link_tag    'blackUI', media: 'all' %>
+  <%= stylesheet_link_tag    'whiteUI', media: 'all' %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="blackUI" style="padding: 2px 0 2px;">
+  <%= render 'shared/navigation' %>
+</div>
+    
+<div id="main-container" class="container-fluid">
+  <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+  <%= yield %>
+  <%= render 'shared/footer' %>
+</div>
+
+
+
+
+</body>
+</html>

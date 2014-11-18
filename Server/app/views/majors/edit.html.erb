@@ -1,0 +1,131 @@
+<div style="padding-top:0;" class="row whiteUI">
+<div class="container">
+<h1><a href="<%= majors_path %>">Majors</a></h1>
+<h2 ><a href="<%= majors_path + '/' + @major.major %>"><%= @major.major.titleize %></a></h2>
+
+<h2>Add new</h2>
+<%= form_for :major, remote:true, url: majors_path, :html => {:id => "newMajor"} do |f| %>
+    <%= f.hidden_field :major %>
+    <%= hidden_field_tag(:async, "true") %>
+    <p>
+      <%= f.label :course %><br>
+      <%= f.text_field :course, class: "create_input" %>
+    </p>
+    <p>
+          <%= f.label :year %><br>
+          <%= f.number_field :year %><br/>
+        </p>
+         <p>
+          <%= f.label :semester %><br>
+          <%= f.radio_button(:semester, "Fall") %>
+          <%= label_tag(:semester_Fall, "Fall") %>
+          
+          <%= f.radio_button(:semester, "Spring") %>
+          <%= label_tag(:semester_Spring, "Spring") %>
+          
+          <%= f.radio_button(:semester, "Summer") %>
+          <%= label_tag(:semester_Summer, "Summer") %>
+        </p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+<center><div style="width: 90%; height:1px; background-color: gray; margin: 25px 0;"></div></center>
+
+  <div id="editMajor">
+    <% @majors.each do |major| %>
+      <%= form_for major, remote:true, url: majors_path + '/' + major.major, method: :patch do |f| %>
+        <%= hidden_field_tag(:major_id, major.id) %>
+        <p>
+          <%= f.label :course %><br>
+          
+          <%= f.text_field :course, class: "create_input" %>
+        </p>
+        
+        <p>
+          <%= f.label :year %><br>
+          <%= f.number_field :year %><br/>
+        </p>
+         <p>
+          <%= f.label :semester %><br>
+          <%= f.radio_button(:semester, "Fall") %>
+          <%= label_tag(:semester_fall, "Fall") %>
+          
+          <%= f.radio_button(:semester, "Spring") %>
+          <%= label_tag(:semester_Spring, "Spring") %>
+          
+          <%= f.radio_button(:semester, "Summer") %>
+          <%= label_tag(:semester_Summer, "Summer") %>
+        </p>
+        
+        <p>
+          <%= f.submit %>
+          
+          <%= link_to 'Remove', major_path(major), remote: true,
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+                    
+        </p>
+        <center><div style="width: 90%; height:1px; background-color: gray; margin: 25px 0;"></div></center>
+      <%end%>
+    <%end%>
+  </div>
+
+<br/>
+
+
+
+
+
+<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
+<script>
+$('head').append('<link rel="stylesheet" type="text/css" href="http://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.3.custom.css" />')
+availableTags =  <%=  raw @coursesList.to_json %>
+
+function jqueryLoaded() {
+  $.each($('.create_input'), function() {
+    $(this).autocomplete({
+      source: availableTags
+    });
+  });
+}
+function checkJquery() {
+    if (window.jQuery && jQuery.ui) {
+        jqueryLoaded();
+    } else {
+        window.setTimeout(checkJquery, 100);
+    }
+}
+$(document).ready(function() {
+    
+  
+    checkJquery();
+
+
+});
+$(document).ready(function() {
+
+  $("#newMajor").on("ajax:success", function(e, data, status, xhr) {
+    $('#editMajor').html($(data).find('#editMajor').html())
+    $('#newMajor input[name="major[course]"]').val('')
+  })
+  $("#newMajor").on("ajax:error", function(e, xhr, status, error) {
+    $("#newMajor").append("<p>ERROR</p>");
+  });
+  $('.container').delegate('a', 'click', function() {
+    $(".edit_major").on("ajax:success", function(e, data, status, xhr) {
+      console.log('sucess!')
+    })
+    $(".edit_major").on("ajax:error", function(e, xhr, status, error) {
+      $(this).remove()
+      
+    });
+  });
+});
+
+</script>
+
+
+
+</div>
+</div>

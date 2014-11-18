@@ -1,0 +1,57 @@
+.whiteUI {
+  padding: 50px 0 50px;
+  background-color: #F2F2F2;
+}
+
+.whiteUI h1, .whiteUI h2, .whiteUI h3, .whiteUI h4, .whiteUI h5, .whiteUI h6, {
+  color: black;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.whiteUI p, .whiteUI a {
+  color: black;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+.whiteUI a:hover {
+  background-color: transparent
+}
+
+////FORMS
+
+  //Button
+  .whiteUI .btn {
+     border-radius: 2px;
+     background-color: rgba(150, 150, 150, 0);
+     border-color: rgb(150, 150, 150);
+     color: black;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 300;
+  }
+  
+  .whiteUI .btn:hover {
+    background-color: rgba(150, 150, 150, .1);
+    border-color: rgb(0, 0, 0);
+    color: black;
+  }
+  
+  .whiteUI a:visited {
+    color: black;
+  }
+  
+  .whiteUI a:visited:hover {
+    color: black;
+  }
+  //end
+  
+  //Labels
+  .whiteUI label {
+     color: black;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 400;
+  }
+  //end
+
+////END

@@ -1,0 +1,22 @@
+<script type="text/javascript">
+function test() {
+    courses = <%= raw @course.to_json -%>;
+    
+    alert(courses[1])       
+}
+</script>
+
+<div class="row whiteUI">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-6">
+
+    <h1>Course sandbox..</h1>
+    <select class="form-control">
+         <%= @course.each do |a| %>
+            <option><%= a.title %></option>
+        <% end %>
+    </select>
+    </div>
+    
+    
+</div>
