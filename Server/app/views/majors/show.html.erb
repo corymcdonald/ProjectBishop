@@ -2,7 +2,7 @@
   <div class="container">
     <div >
       <h1><a href="<%= majors_path %>">Majors</a></h1>
-      <h2 ><%= @major %></h2>
+      <h2 ><%= @major.titleize %></h2>
       <a class="btn btn-default btn-lg " href=<%= edit_major_path(@major) %>>Add or Edit Courses</a>
     </div>
     

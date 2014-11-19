@@ -1,14 +1,26 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'pages#index'
   resources :sections
   resources :courses
   resources :majors
-  get 'register' => 'pages#register'
-  get 'dashboard' => 'pages#dashboard'
+  resources :users
+  resources :dashboard 
+    
+  
+  get 'register' => 'users#new'
   get 'settings' => 'pages#settings'
   get 'search' => 'pages#searchresults'
   get 'profile' => 'pages#profile'
   get 'courses' => 'courses#index'
+  get 'sections' => 'sections#index'
+  get 'majors' => 'major#index'
+  
+  
+  get 'login'   => 'sessions#new'
+  post 'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
