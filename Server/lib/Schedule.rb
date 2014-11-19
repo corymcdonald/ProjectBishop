@@ -48,11 +48,12 @@ class Schedule
             currentSchedules = Array.new
             nextSchedules = Array.new
             temporarySections = Array.new
-            for i in 0..4
+            for i in 0..arrOfCourses.length-1
                 currentSchedules = Marshal.load(Marshal.dump(nextSchedules))
                 temporarySections = Array.new
                 nextSchedules = Array.new
-                #puts arrOfCourses[i].name
+                puts arrOfCourses[i].name
+                puts currentSchedules.length
                 tempName = arrOfCourses[i].name.split
                 tempName[0] = tempName[0]+tempName[1]
                 temporarySections = Section.where(name: tempName[0])
@@ -68,7 +69,7 @@ class Schedule
                             #puts "Made one"
                         end
                     end
-                elsif i < 5
+                else
                 if currentSchedules.length == 0
                     return currentSchedules
                 end
@@ -204,11 +205,14 @@ class Schedule
                                             end
                                     end
                                 end
-                                tempSchedule = Marshal.load(Marshal.dump(schedule))
-                                tempSchedule.addSection(section)
                                 #puts canAdd
                                 if(canAdd == true)
-                                    nextSchedules.push(tempSchedule)
+                                tempSchedule = Marshal.load(Marshal.dump(schedule))
+                                tempSchedule.addSection(section)
+                                nextSchedules.push(tempSchedule)
+                                    if(nextSchedules.length >= 1000)
+                                        break
+                                    end
                                 end
                                 
                             end
@@ -222,15 +226,15 @@ class Schedule
         end
     end
 end
-=begin
 courses = Array.new
-courses[0] = Course.find_by(name: 'CSCE 2004')
-courses[1] = Course.find_by(name: 'CSCE 2014')
-courses[2] = Course.find_by(name: 'CSCE 2214')
-courses[3] = Course.find_by(name: 'PHYS 2054')
-courses[4] = Course.find_by(name: 'CSCE 3313')
+courses[0] = Course.find_by(name: 'MATH 1204')
+courses[1] = Course.find_by(name: 'COMM 1313')
+courses[2] = Course.find_by(name: 'PHYS 2054')
+courses[3] = Course.find_by(name: 'ENGL 1013')
+courses[4] = Course.find_by(name: 'ENGL 1023')
 schedules = Schedule.genereateSchedules(courses)
 puts schedules.length
+=begin
 if schedules.length > 0
     for k in 0..schedules.length - 1
         puts "Current Schedule"
