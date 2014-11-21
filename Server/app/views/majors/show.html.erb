@@ -1,10 +1,11 @@
 <div style="padding-top: 0;" id="editMajor" class="row whiteUI">
   <div class="container">
-    <div >
+    <div style="padding-bottom: 25px">
       <h1><a href="<%= majors_path %>">Majors</a></h1>
-      <h2 ><%= @major.titleize %></h2>
-      <a class="btn btn-default btn-lg " href=<%= edit_major_path(@major) %>>Add or Edit Courses</a>
+      <div class="pull-left"><h2 style="margin:0"><%= @major.titleize %></h2></div>
+      <div class="pull-right "><a class="btn btn-default" href=<%= edit_major_path(@major) %>><span class="glyphicon glyphicon-edit"></span></a></div>
     </div>
+    
       <table class="table table-striped">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <tr>
