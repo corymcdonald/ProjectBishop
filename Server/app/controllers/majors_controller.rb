@@ -14,14 +14,13 @@ class MajorsController < ApplicationController
     
     @major = params[:id].downcase
     @coursesInMajors = Major.where('major like ?', params[:id])
+    
     @coursesInMajors.each do |major|
       begin
-          @courses.push(Course.where('name = ?', major.course).take!)
-          # @courses.push(Major.joins('LEFT OUTER JOIN Courses ON Courses.name = Majors.course').where('name =?', major.course).take!)
-          # @courses.push(Major.joins('LEFT OUTER JOIN Courses ON Courses.name = Majors.course'))
+          @courses.push(major: major ,course: Course.where('name = ?', major.course).take!)
       rescue
-        @tempCourse = Course.new(title: major.course)
-        @courses.push(@tempCourse)
+        @tempCourse = Course.new(title: major.course,name: major.course)
+        @courses.push(major: major, course: @tempCourse)
       end
     end
     

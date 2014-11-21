@@ -1,7 +1,6 @@
 <div style="padding-top:0;" class="row whiteUI">
 <div class="container">
-<h1><a href="<%= majors_path %>">Majors</a></h1>
-<h2 ><a href="<%= majors_path + '/' + @major.major %>"><%= @major.major.titleize %></a></h2>
+<h1 ><a href="<%= majors_path + '/' + @major.major %>"><%= @major.major.titleize %></a></h1>
 
 <h2>Add new</h2>
 <%= form_for :major, remote:true, url: majors_path, :html => {:id => "newMajor"} do |f| %>
