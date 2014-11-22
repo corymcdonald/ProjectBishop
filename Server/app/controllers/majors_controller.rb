@@ -2,7 +2,15 @@ class MajorsController < ApplicationController
   
   
   def index
-    @major = Major.select('DISTINCT major')
+    @major = Major.select('DISTINCT major').order('major')
+    
+    # @major = Major.where('major like ?', '%Chemical%')
+    
+    @major.each do |major|
+      # major.major = 'chemical engineering'
+      # major.save
+    end
+    # render plain: @major.count
   end
   
   
@@ -10,6 +18,7 @@ class MajorsController < ApplicationController
   end
   
   def show
+    
     @courses = []
     
     @major = params[:id].downcase
@@ -40,12 +49,6 @@ class MajorsController < ApplicationController
   end
   
   def update
-    majorSeedPath = "db/majorSeed.rb"
-    File.open(majorSeedPath, "a") do |f|
-      f.write('Major.find(' + params[:major_id] +').update(' + new_params.to_s + ')')
-      f.puts @string
-    end
-    
     @major = Major.find(params[:major_id])
     if @major.update(new_params)
       redirect_to majors_url + '/' + params[:id]
@@ -64,7 +67,7 @@ class MajorsController < ApplicationController
     @major = Major.new(new_params)
     @major.save
     if(params[:async])
-      redirect_to majors_path + '/' + @major.major +  '/edit'
+      redirect_to majors_path + '/' + @major.major.gsub(' ', '%20') +  '/edit'
     else
       redirect_to majors_path
     end
@@ -75,11 +78,6 @@ class MajorsController < ApplicationController
     @major = Major.find(params[:id])
     @major.destroy
     
-    majorSeedPath = "db/majorSeed.rb"
-    File.open(majorSeedPath, "a") do |f|
-      f.write('Major.destroy(' + new_params.to_s + ')')
-      f.puts @string
-    end
     
     # redirect_to majors_path + '/' + @major.major +  '/edit'
   end

@@ -1,11 +1,17 @@
 <div style="padding-top: 0;" id="editMajor" class="row whiteUI">
   <div class="container">
-    <div style="padding-bottom: 25px">
+  
       <h1><a href="<%= majors_path %>">Majors</a></h1>
-      <div class="pull-left"><h2 style="margin:0"><%= @major.titleize %></h2></div>
-      <div class="pull-right "><a class="btn btn-default" href=<%= edit_major_path(@major) %>><span class="glyphicon glyphicon-edit"></span></a></div>
+    <div  class="row" >
+      <div class="col-md-11">
+        <h2 style="margin:0" ><%= @major.titleize %></h2>
+      </div>
+      <div class="col-md-1">
+        <a class="btn btn-default" href=<%= edit_major_path(@major) %>><span class="glyphicon glyphicon-edit"></span></a>
+      </div>
     </div>
     
+    <div class="table-responsive">
       <table class="table table-striped">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <tr>
@@ -15,28 +21,33 @@
           <th>Semester</th>
         </tr>
         <% @courses.each do |current| %>
-          <% if current %>
+          <% if current and current[:course].name %>
           <tr>
             <td><%= current[:course].name %></td>
             <%
                 #Putting logic in views!
-                index = current[:course].title.index('.')
-                if !index
-                  index = 0
-                else
-                  index = index+1
+                index = 0
+                if current[:course].title
+                    index = current[:course].title.index('.')
+                    if !index
+                      index = 0
+                    else index
+                      index = index + 1
+                  end
                 end
             %>
-            
-            <td><%= current[:course].title[index,current[:course].title.length] %></td>
-            <% if(current[:major])  %>
-              <td><%=current[:major].year%></td>
-              <td><%= current[:major].semester %></td>
+            <% if current[:course].title %>
+              <td><%= current[:course].title[index,current[:course].title.length] %></td>
+              <% if(current[:major])  %>
+                <td><%=current[:major].year%></td>
+                <td><%= current[:major].semester %></td>
+              <%end%>
             <%end%>
           </tr>
           <%end%>
       <%end %>
       </table>
+      </div>
+      </div>
     </div>
   </div>
-</div>
