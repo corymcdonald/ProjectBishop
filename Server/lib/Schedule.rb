@@ -48,6 +48,7 @@ class Schedule
             currentSchedules = Array.new
             nextSchedules = Array.new
             temporarySections = Array.new
+            #fix the number of classes here
             for i in 0..4
                 currentSchedules = Marshal.load(Marshal.dump(nextSchedules))
                 temporarySections = Array.new
@@ -56,7 +57,7 @@ class Schedule
                 tempName = arrOfCourses[i].name.split
                 tempName[0] = tempName[0]+tempName[1]
                 temporarySections = Section.where(name: tempName[0])
-            
+                
                 if i == 0
                     temporarySections.each do |section|
                         if !(section.component.include? "Drill") && !(section.component.include? 'Laboratory') && !(section.career.include? 'GRAD')

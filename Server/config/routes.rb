@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :courses
   resources :majors
   resources :users
-  resources :dashboard 
-    
+  resources :dashboard
+  resources :usercourses
   
   get 'register' => 'users#new'
   get 'settings' => 'pages#settings'

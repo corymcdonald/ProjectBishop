@@ -1,0 +1,94 @@
+Advising Copy
+The University of Arkansas
+Registrar's Office
+141 Uptown Campus
+Fayetteville, AR 72701
+United States
+Identifying Code: 001108
+Name      :  Cory McDonald
+Student ID:  010596211
+Birthdate :  1993-05-23
+Print Date   :  2014-11-22
+              - - - - -   Beginning of Undergraduate Record   - - - - -
+                                      Fall 2012
+Program  : Engineering
+Plan     : Engineering First Year Preparation
+BIOL     1541L      PRINCIPLES OF BIOLOGY LAB         1.00     1.00 B        3.000
+BIOL     1543       PRINCIPLES OF BIOLOGY             3.00     3.00 C        6.000
+ENGL     1013       COMPOSITION I                     3.00     3.00 A       12.000
+GERM     2003       INTERMEDIATE GERMAN I             3.00     3.00 C        6.000
+GNEG     1111       INTRO TO ENGR I                   1.00     1.00 A        4.000
+MATH     1204       COLLEGE ALG WITH REVIEW           4.00     4.00 A       16.000
+                    Good Standing
+         TERM GPA :     3.133      TERM TOTALS :     15.00    15.00         47.000
+         CUM  GPA :     3.133      CUM  TOTALS :     15.00    15.00         47.000
+                                     Spring 2013
+Program  : Engineering
+Plan     : Engineering First Year Preparation
+CHEM     1101L      UNIVERSITY CHEMISTRY I LAB        1.00     1.00 B        3.000
+CHEM     1103       UNIVERSITY CHEM I                 3.00     0.00 W
+ENGL     1023       COMPOSITION II                    3.00     3.00 B        9.000
+GNEG     1121       INTRO TO ENGR II                  1.00     1.00 B        3.000
+GNEG     1514       ENGR APPLICATIONS OF MATH         4.00     4.00 C        8.000
+HIST     2013       HIST/AMER PEOPLE 1877-PR          3.00     3.00 B        9.000
+Other Credits Applied Toward Engineering Program
+CSCE     2004       PROGRAMMING FOUNDATIONS I         4.00     4.00 CR
+   Other Trans GPA:     0.000  Transfer Totals :      4.00     4.00          0.000
+                    Good Standing
+         TERM GPA :     2.667      TERM TOTALS :     12.00    12.00         32.000
+         CUM  GPA :     2.926      CUM  TOTALS :     31.00    31.00         79.000
+                                     Summer 2013
+Program  : Engineering
+Plan     : Computer Engineering Major
+MATH     2554       CALCULUS I                        4.00     4.00 B       12.000
+                    Good Standing
+         TERM GPA :     3.000      TERM TOTALS :      4.00     4.00         12.000
+         CUM  GPA :     2.935      CUM  TOTALS :     35.00    35.00         91.000
+                                      Fall 2013
+Program  : Engineering
+Plan     : Computer Engineering Major
+CSCE     2014       PROGRAMMING FOUNDATIONS II        4.00     4.00 B       12.000
+CSCE     2114       DIGITAL DESIGN                    4.00     4.00 B       12.000
+MATH     2564C      CALCULUS II                       4.00     4.00 D        4.000
+MLIT     1003       MUSIC LECTURE                     3.00     3.00 A       12.000
+                    Good Standing
+         TERM GPA :     2.667      TERM TOTALS :     15.00    15.00         40.000
+         CUM  GPA :     2.848      CUM  TOTALS :     50.00    50.00        131.000
+                                     Spring 2014
+Program  : Engineering
+Plan     : Computer Engineering Major
+CSCE     2214       COMPUTER ORGANIZATION             4.00     4.00 B       12.000
+CSCE     3193       PROGRAMMING PARADIGMS             3.00     3.00 A       12.000
+MATH     2564C      CALCULUS II                       4.00     0.00 W
+PHYS     2054       UNIVERSITY PHYSICS I              4.00     4.00 B       12.000
+                    Good Standing
+         TERM GPA :     3.273      TERM TOTALS :     11.00    11.00         36.000
+         CUM  GPA :     2.930      CUM  TOTALS :     61.00    61.00        167.000
+                                     Summer 2014
+Program  : Engineering
+Plan     : Computer Engineering Major
+MATH     2603       DISCRETE MATHEMATICS              3.00     3.00 C        6.000
+MATH     2564       CALCULUS II                       4.00     4.00 A       16.000
+                    Good Standing
+         TERM GPA :     3.143      TERM TOTALS :      7.00     7.00         22.000
+         CUM  GPA :     2.953      CUM  TOTALS :     68.00    68.00        189.000
+                                      Fall 2014
+Program  : Engineering
+Plan     : Computer Engineering Major
+ANTH     1023       INTRO TO CULTURAL ANTHROPOLOGY    3.00
+CSCE     3513       SOFTWARE ENGINEERING              3.00
+CSCE     3613       OPERATING SYSTEMS                 3.00
+MATH     3103       COMBINATOR/DISCRETE MATH          3.00
+PSYC     2003       GENERAL PSYCHOLOGY                3.00
+         TERM GPA :     0.000      TERM TOTALS :      0.00     0.00          0.000
+         CUM  GPA :     2.953      CUM  TOTALS :     68.00    68.00        189.000
+                                     Spring 2015
+Program  : Engineering
+Plan     : Computer Science Major
+Plan     : Mathematics Minor
+CSCE     3313       ALGORITHMS                        3.00
+CSCE     4613       ARTIFICIAL INTELLIGENCE           3.00
+MATH     3083       LINEAR ALGEBRA                    3.00
+SOCI     2013       GENERAL SOCIOLOGY                 3.00
+         TERM GPA :     0.000      TERM TOTALS :      0.00     0.00          0.000
+         CUM  GPA :     2.953      CUM  TOTALS :     68.00    68.00        189.000
