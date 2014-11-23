@@ -1,0 +1,1 @@
+Major.new({"major"=>"test"})

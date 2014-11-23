@@ -1,0 +1,21 @@
+<div  class="row whiteUI">
+<div class="container">
+<h1 style="margin:0"><a href="<%= usercourses_path %>">Courses taken</a></h1>
+  <%= form_for :usercourse, url: usercourse_path(@usercourse), method: :patch do |f| %>
+      <%= hidden_field_tag(:user, 'test user') %>
+
+      <p>
+        <%= f.label :course %><br/>
+        <%= f.text_field :course, class: "course_input"%>
+      </p>
+      <p>
+        <%= f.label :grade %><br/>
+        <%= f.text_field :grade %>
+      </p>
+    
+      <p>
+        <%= f.submit %>
+      </p>
+  <% end %>
+</div>
+</div>
