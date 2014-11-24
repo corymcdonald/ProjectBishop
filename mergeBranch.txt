@@ -1,0 +1,9 @@
+checkout develop
+pull 
+checkout branch
+pull develop
+
+TEST/change conflicts
+
+checkout develop
+merge branch

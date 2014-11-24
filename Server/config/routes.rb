@@ -6,12 +6,18 @@ Rails.application.routes.draw do
   resources :courses
   resources :majors
   resources :users
+  resources :dashboard
+  resources :usercourses
+  
   get 'register' => 'users#new'
-  get 'dashboard' => 'pages#dashboard'
   get 'settings' => 'pages#settings'
   get 'search' => 'pages#searchresults'
   get 'profile' => 'pages#profile'
   get 'courses' => 'courses#index'
+  get 'sections' => 'sections#index'
+  get 'majors' => 'major#index'
+  
+  
   get 'login'   => 'sessions#new'
   post 'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'

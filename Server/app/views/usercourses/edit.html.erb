@@ -1,0 +1,51 @@
+<div  class="row whiteUI">
+<div class="container">
+<h1 style="margin:0"><a href="<%= usercourses_path %>">Courses taken</a></h1>
+  <%= form_for :usercourse, url: usercourse_path(@usercourse), method: :patch do |f| %>
+      <%= hidden_field_tag(:user, 'test user') %>
+
+      <p>
+        <%= f.label :course %><br/>
+        <%= f.text_field :course, class: "course_input"%>
+      </p>
+      <p>
+        <%= f.label :grade %><br/>
+        <%= f.text_field :grade %>
+      </p>
+    
+      <p>
+        <%= f.submit %>
+      </p>
+  <% end %>
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
+<script>
+$('head').append('<link rel="stylesheet" type="text/css" href="http://jquery-ui-bootstrap.github.io/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.10.3.custom.css" />')
+availableTags =  <%=  raw @coursesList.to_json %>
+
+function jqueryLoaded() {
+  $.each($('.course_input'), function() {
+    $(this).autocomplete({
+      source: availableTags
+    });
+  });
+}
+function checkJquery() {
+    if (window.jQuery && jQuery.ui) {
+        jqueryLoaded();
+    } else {
+        window.setTimeout(checkJquery, 100);
+    }
+}
+$(document).ready(function() {
+    
+    checkJquery();
+
+
+});
+
+</script>

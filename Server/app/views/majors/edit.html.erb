@@ -1,41 +1,68 @@
 <div style="padding-top:0;" class="row whiteUI">
 <div class="container">
-<h1><a href="<%= majors_path %>">Majors</a></h1>
-<h2 ><a href="<%= majors_path + '/' + @major.major %>"><%= @major.major %></a></h2>
-  <div id="editMajor">
-    <% @majors.each do |major| %>
-      <%= form_for major, url: majors_path + '/' + major.major, method: :patch do |f| %>
-        <%= hidden_field_tag(:major_id, major.id) %>
-        <p>
-          <%= f.label :course %><br>
-          <%= f.text_field :course %>
-        </p>
-        <p>
-          <%= f.submit %>
-          
-          <%= link_to 'Remove', major_path(major), remote: true,
-                    method: :delete, data: { confirm: 'Are you sure?' } %>
-                    
-        </p>
-        
-      <%end%>
-    <%end%>
-  </div>
+<h1 ><a href="<%= majors_path + '/' + @major.major %>"><%= @major.major.titleize %></a></h1>
 
-<br/>
 <h2>Add new</h2>
 <%= form_for :major, remote:true, url: majors_path, :html => {:id => "newMajor"} do |f| %>
     <%= f.hidden_field :major %>
     <%= hidden_field_tag(:async, "true") %>
     <p>
       <%= f.label :course %><br>
-      <%= f.text_field :course %>
+      <%= f.text_field :course, class: "create_input" %>
     </p>
-   
     <p>
-      <%= f.submit %>
+        <%= f.label :year %><br>
+        <%= f.select :year, [ '1', '2', '3', '4','5'], :prompt => 'Select One'  %>
+      </p>
+       <p>
+       <%= f.label :semester %><br>
+        <%= f.select :semester, [ 'Fall', 'Spring', 'Summer'], :prompt => 'Select One'  %>
+      </p>
+    <%= f.submit %>
     </p>
 <% end %>
+
+<center><div style="width: 90%; height:1px; background-color: gray; margin: 25px 0;"></div></center>
+
+<div class="row">
+  <h4><div class="col-md-9">Course</div></h4>
+  <h4><div class="col-md-1">Year</div></h4>
+  <h4><div class="col-md-1">Semester</div></h4>
+  <h4><div class="col-md-1">Remove</div></h4>
+</div>
+<br/>
+<div id="editMajor">
+  <% @majors.each do |major| %>
+    <div class="row">
+      <%= form_for major, remote:true, url: majors_path + '/' + major.major, method: :patch do |f| %>
+        <% if major.course %>
+           <%= hidden_field_tag(:major_id, major.id) %>
+          <div class="col-md-9">
+            <%= f.text_field :course, class: "create_input", style: "width:100%" %>
+          </div>
+          <div class="col-md-1">
+            <%= f.select :year, [ '1', '2', '3', '4','5'], :prompt => 'Select One'  %>
+          </div>
+          <div class="col-md-1">
+            <%= f.select :semester, [ 'Fall', 'Spring', 'Summer'], :prompt => 'Select One'  %>
+          </div>
+          <div class="col-md-1">
+            <a class="col-md-2 col-md-offset-2" data-confirm="Are you sure?" data-method="delete" data-remote="true" href="<%=major_path(major)%>" rel="nofollow">
+            <span class="glyphicon glyphicon-remove"></span></a>
+          </div>
+        <%end%>
+      <%end%>
+    </div>
+  <%end%>
+  <br/>
+</div>
+<a class="pull-right btn  btn-lg" id="updateall">Update</a>
+<br/>
+
+
+
+
+
 <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
 
 <script>
@@ -43,7 +70,7 @@ $('head').append('<link rel="stylesheet" type="text/css" href="http://jquery-ui-
 availableTags =  <%=  raw @coursesList.to_json %>
 
 function jqueryLoaded() {
-  $.each($('input'), function() {
+  $.each($('.create_input'), function() {
     $(this).autocomplete({
       source: availableTags
     });
@@ -64,22 +91,28 @@ $(document).ready(function() {
 
 });
 $(document).ready(function() {
-
+  $('#updateall').click(function(){
+    $.each($('.edit_major'), function(){
+      $(this).submit();
+    })
+    
+  });
   $("#newMajor").on("ajax:success", function(e, data, status, xhr) {
-    $('#editMajor').html($(data).find('#editMajor').html())
     $('#newMajor input[name="major[course]"]').val('')
+    $('#editMajor').html($(data).find('#editMajor').html())
   })
   $("#newMajor").on("ajax:error", function(e, xhr, status, error) {
     $("#newMajor").append("<p>ERROR</p>");
   });
-  $('.container').delegate('a', 'click', function() {
+  
+  
     $(".edit_major").on("ajax:success", function(e, data, status, xhr) {
       console.log('sucess!')
     })
     $(".edit_major").on("ajax:error", function(e, xhr, status, error) {
+      console.log('error')
       $(this).remove()
       
-    });
   });
 });
 
