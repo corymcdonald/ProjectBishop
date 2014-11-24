@@ -37,8 +37,10 @@ $(document).ready(function() {
           <ul class="dropdown-menu" role="menu">
             <li><a href='/profile'>Profile</a></li>
             <li><a href='/settings'>Settings</a></li>
-            <li class="divider"></li>
-            <li><a href='/'>Log Out</a></li>
+            <% if logged_in? %>
+              <li class="divider"></li>
+              <li><a href='/'>Log Out</a></li>
+            <% end %>
             <li class="divider"></li>
             <li><a href='/courses'>Courses</a></li>
             <li><a href="/sections">Sections</a></li>
