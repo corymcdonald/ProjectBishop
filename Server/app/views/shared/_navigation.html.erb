@@ -39,7 +39,7 @@ $(document).ready(function() {
             <li><a href='/settings'>Settings</a></li>
             <% if logged_in? %>
               <li class="divider"></li>
-              <li><a href='/'>Log Out</a></li>
+              <li><%= link_to "Log out", logout_path, method: "delete" %></li>
             <% end %>
             <li class="divider"></li>
             <li><a href='/courses'>Courses</a></li>
