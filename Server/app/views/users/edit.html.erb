@@ -16,8 +16,8 @@
       <%= f.label :last_name %>
       <%= f.text_field :lastName, class: 'form-control' %>
       
-      <%= f.label :major %>
-      <%= f.text_field :major, class: 'form-control' %>
+      <%= f.select :major, @major, :prompt => 'Select One' %>
+      <br/>
 
       <%= f.label :email %>
       <%= f.text_field :email, class: 'form-control' %>

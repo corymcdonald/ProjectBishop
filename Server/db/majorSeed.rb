@@ -1,1 +1,0 @@
-Major.new({"major"=>"test"})
