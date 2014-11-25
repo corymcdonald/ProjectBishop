@@ -99,13 +99,15 @@ create_table "sections", force: true do |t|
 #### Users
 ```ruby
   create_table :users do |t|
-     t.string :firstName
-     t.string :lastName
-     t.string :email
-     t.string :salt
-     t.string :password
-     t.string :major
-     t.timestamps
+    t.string   "firstName"
+    t.string   "lastName"
+    t.string   "email"
+    t.string   "major"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
+    t.string   "remember_digest"
+    t.boolean  "admin",           default: false
    end
 ```
 
