@@ -58,11 +58,11 @@ class MajorsController < ApplicationController
   end
   
   def create
-    majorSeedPath = "db/majorSeed.rb"
-    File.open(majorSeedPath, "a") do |f|
-      f.write('Major.new(' + new_params.to_s + ')')
-      f.puts @string
-    end
+    # majorSeedPath = "db/majorSeed.rb"
+    # File.open(majorSeedPath, "a") do |f|
+    #   f.write('Major.new(' + new_params.to_s + ')')
+    #   f.puts @string
+    # end
     
     @major = Major.new(new_params)
     @major.save
