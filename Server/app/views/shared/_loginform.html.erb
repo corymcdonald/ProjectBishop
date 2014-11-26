@@ -1,31 +1,11 @@
-<%= form_for(@login, html: {class: 'form-horizontal'}) do |f| %>
-  <% if @login.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@login.errors.count, "error") %> prohibited this Login from being saved:</h2>
+<%= form_for(:session, url: login_path) do |f| %>
 
-      <ul>
-      <% @login.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control' %>
 
-  <div class="field form-group">
-    <%= f.label :user_name, class: 'col-sm-2 control-label' %>
-    <div class="col-sm-10">
-      <%= f.text_field :user_name, class: 'form-control' %>
-    </div>
-  </div>
-  <div class="field form-group">
-    <%= f.label :password, class: 'col-sm-2 control-label' %>
-    <div class="col-sm-10">
-      <%= f.text_area :password, class: 'form-control' %>
-    </div>
-  </div>
-  <div class="actions form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <%= f.submit %>
-    </div>
-  </div>
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.submit "Log in", class: "btn btn-primary btn-lg" %>
+    <a class="btn btn-primary btn-lg" href='register' role="button">Register</a>
 <% end %>

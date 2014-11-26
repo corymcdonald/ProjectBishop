@@ -1,0 +1,34 @@
+<% provide(:title, "Edit user") %>
+<h1>Update your profile</h1>
+
+<div class="row whiteUI">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <h1>Register</h1>
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :first_name %>
+      <%= f.text_field :firstName, class: 'form-control' %>
+      
+      <%= f.label :last_name %>
+      <%= f.text_field :lastName, class: 'form-control' %>
+      
+      <%= f.select :major, @major, :prompt => 'Select One' %>
+      <br/>
+
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control', :autocomplete =>"off" %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
