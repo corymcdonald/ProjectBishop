@@ -1,0 +1,38 @@
+<div style="padding:0" class="row whiteUI">
+<div class="container">
+<h1><%= @course.title.split('.')[1] %><br/>
+<small><%= @course.name %></small>
+</h1>
+<h3>Course Description</h3>
+<p><%= @course.description %></p>
+<% if @course.coreqDesc? %>
+  <h3>Corequisite: </h3>
+  <p><%= @course.coreqDesc %></p>
+<%end%>
+<% if @course.prereqDesc? %>
+  <h3><%= pluralize(@numOfPreReqs, 'Prerequisite')%> </h3>
+  <p><%= @course.prereqDesc.gsub(':','') %></p>
+<%end%>
+<h3>Sections</h3>
+<table class="table table-striped table-hover">
+    <tr>
+      <td>Name</td>
+      <td>Section</td>
+      <td>Class Time</td>
+      <td>Instructor</td>
+      <td>Location</td>
+      <td>Enrolled</td>
+    </tr>
+   <% @sections.each do |section| %>
+    <tr>
+      <td><%= @course.name %></td>
+      <td><%= section.section %></td>
+      <td><%= section.classTime.gsub('; - ', '') %></td>
+      <td><%= section.instructor %></td>
+      <td><%= section.location %></td>
+      <td><%= section.enrolled + '/'+ section.size %></td>
+    </tr>
+  <%end%>
+</table>
+</div>
+</div>
