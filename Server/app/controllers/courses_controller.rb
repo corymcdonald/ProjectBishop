@@ -21,10 +21,45 @@ class CoursesController < ApplicationController
     Rails.logger.info(DateTime.now)
   end
   
+  def destroy
+    @course = Course.find(params[:id])
+    @course.destroy
+ 
+  redirect_to courses_path
+  end
+  
+  def new
+    @course = Course.new
+  end
+  def create
+    @course = Course.new(course_params)
+   
+    @course.save
+    redirect_to @course
+  end
+  
   def show
     @course = Course.find(params[:id])
     @sections = Section.where('name = ?', @course.name.gsub(' ', ''))
-    @numOfPreReqs =JSON.parse(@course.prereqData).count
-    
   end
+  
+  def edit
+    @course = Course.find(params[:id])
+  end
+  
+  def update
+     @course = Course.find(params[:id])
+ 
+    if @course.update(course_params)
+      redirect_to @course
+    else
+      render 'edit'
+    end
+  end
+  
+  private
+    def course_params
+      params.require(:course).permit(:title, :name, :description, :coreqDesc, :prereqDesc)
+    end
+  
 end

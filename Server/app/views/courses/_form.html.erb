@@ -1,0 +1,16 @@
+<%= form_for @course do |f|  %>
+  <h3>Title: <%= f.text_field :title,  style: "width:100%" %>
+  <small><%= f.text_field :name, :placeholder=>"Name" %></small>
+  </h3>
+  <h3>Course Description</h3>
+  <p>
+    <%= f.text_area :description, style: "width:100%; height:100px" %>
+  </p>
+  <h3>Corequisites: </h3>
+  <%= f.text_area :coreqDesc, style: "width:100%"  %>
+  
+  <h3>Prerequisites: </h3>
+  <%= f.text_area :prereqDesc, style: "width:100%" %>
+  
+  <%= f.submit 'Save', :style => "margin-top:15px", :class => 'pull-right btn btn-lg btn-default' %>
+<%end%>

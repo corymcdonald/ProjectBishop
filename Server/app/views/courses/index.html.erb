@@ -1,6 +1,13 @@
 <div style="padding:0" class="row whiteUI">
 <div class="container">
-    <h1>Courses</h1>
+    <div style="padding-top: 15px" class="row">
+    <div class="col-md-11">
+      <h1 style="margin:0" >Courses</h1>
+    </div>
+    <div class="col-md-1">
+      <a class="btn  btn-default" href=<%= new_course_path %>><span class="glyphicon glyphicon-plus"></span> New</a>
+    </div>
+  </div>
     <a onclick="$('.table-responsive').hide()" href="#">Collapse all</a> |
     <a onclick="$('.table-responsive').show()" href="#">Expand all</a>
       <% @uniqcourses.each do |a| %>
