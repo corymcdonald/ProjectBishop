@@ -9,10 +9,16 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.whiteUI p, .whiteUI a {
+.whiteUI p {
   color: black;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
+}
+.whiteUI a:link
+{
+  color: #333;
+  cursor: pointer;
+  // font-weight: bold;
 }
 
 .whiteUI a:hover {
