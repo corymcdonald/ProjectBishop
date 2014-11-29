@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :users
   resources :dashboard
   resources :admin
+  resources :generaleducationrequirements
   resources :usercourses
   
   get 'register' => 'users#new'
