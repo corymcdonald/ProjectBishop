@@ -5,18 +5,18 @@
   <div class="table-responsive">
     <table class="table table-striped">
       <tr>
-        <th>Course</th>
+        <th>Title</th>
         <th>Grade</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
       <% @usercourses.each do |course| %>
       <tr>
-        <td><%= course.course %></td>
-        <td><%= course.grade %></td>
-        <td><%= link_to 'Edit', edit_usercourse_path(course) %></td>
-        <td><%= link_to 'Destroy', usercourse_path(course),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% @course = Course.where('name like ?', course.course.strip).first %>
+        <td><%= @course? @course.title : '' %></td>
+        <td><%= course.grade.titleize %></td>
+        <td><a class="btn btn-default btn-xs" href=<%= edit_usercourse_path(course) %>><span class="glyphicon glyphicon-edit"></span></a></td>
+      <td><a class="btn btn-default btn-xs" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href=<%= usercourse_path(course) %>><span class="glyphicon glyphicon-remove"></span></a></td>
       </tr>
       <% end %>
   </table>

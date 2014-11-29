@@ -1,11 +1,12 @@
 class UsercoursesController < ApplicationController
   require 'Parsethis'
-  
+  before_action :logged_in_user
+    
   def index
     @usercourses = Usercourse.all
+    
   end
   
-
   def new
     @courses = Course.all
     @coursesList = []
@@ -51,7 +52,7 @@ class UsercoursesController < ApplicationController
 
     else
       transcript = ::Parsethis
-      transcript.parseIt(params[:transcript])
+      transcript.parseIt(params[:transcript], current_user)
       redirect_to usercourses_path
     end
     
@@ -61,6 +62,14 @@ class UsercoursesController < ApplicationController
     def new_params
       if(params[:usercourse])
         params.require(:usercourse).permit(:user, :course, :grade)
+      end
+    end
+    # Confirms a logged-in user.
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
       end
     end
 end

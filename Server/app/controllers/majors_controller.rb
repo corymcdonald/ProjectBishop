@@ -15,6 +15,7 @@ class MajorsController < ApplicationController
   
   
   def new
+    @major = Major.new
   end
   
   def show
@@ -50,20 +51,15 @@ class MajorsController < ApplicationController
   
   def update
     @major = Major.find(params[:major_id])
+    
     if @major.update(new_params)
-      redirect_to majors_url + '/' + params[:id]
+      redirect_to majors_url
     else
       render 'edit'
     end
   end
   
   def create
-    # majorSeedPath = "db/majorSeed.rb"
-    # File.open(majorSeedPath, "a") do |f|
-    #   f.write('Major.new(' + new_params.to_s + ')')
-    #   f.puts @string
-    # end
-    
     @major = Major.new(new_params)
     @major.save
     if(params[:async])
@@ -78,8 +74,6 @@ class MajorsController < ApplicationController
     @major = Major.find(params[:id])
     @major.destroy
     
-    
-    # redirect_to majors_path + '/' + @major.major +  '/edit'
   end
   
   private

@@ -1,6 +1,13 @@
 <div class="row whiteUI">
   <div class="container">
+    <h1> Courses left to take</h1>
+    <%  @major.each do |current| %>
+      <% if current.course? %>
+        <%= current.course.strip %><br/>
+        
+        <%= @usercourse.where(course: current.course.strip).inspect %><br/>
+      <%end%>
+    <%end %>
     <%= @usercourse.inspect %>
-
   </div>
 </div>
