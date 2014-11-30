@@ -29,6 +29,8 @@ function test() {
          
       <% end %>
     <%end%>
+    <% if user_admin? %>
     <a class="btn btn-lg btn-default" href=<%= new_section_path %>><span class="glyphicon glyphicon-plus"></span> New</a>
+    <%end%>
   </div>
 </div>

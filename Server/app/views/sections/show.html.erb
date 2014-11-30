@@ -6,9 +6,11 @@
     <small><%= @section.name.insert(4, ' ') + ' - ' + @section.section %></small></h1>
   </div>
   <div class="col-md-2">
+  <% if user_admin? %>
     <a class="btn btn-lg btn-default" href=<%= edit_section_path(@section) %>><span class="glyphicon glyphicon-edit"></span></a>
     <a class="btn btn-lg btn-default " data-confirm="Are you sure?" rel="nofollow" data-method="delete" href=<%= section_path(@section) %>><span class="glyphicon glyphicon-remove"></span>
     </a>
+    <%end%>
   </div>
 </div>
 <% if @section.status? %>

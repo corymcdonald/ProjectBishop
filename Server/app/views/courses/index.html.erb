@@ -4,9 +4,11 @@
     <div class="col-md-11">
       <h1 style="margin:0" >Courses</h1>
     </div>
-    <div class="col-md-1">
-      <a class="btn  btn-default" href=<%= new_course_path %>><span class="glyphicon glyphicon-plus"></span> New</a>
-    </div>
+    <% if user_admin? %>
+      <div class="col-md-1">
+        <a class="btn  btn-default" href=<%= new_course_path %>><span class="glyphicon glyphicon-plus"></span> New</a>
+      </div>
+    <% end%>
   </div>
   <% if params[:search] %>
       <div class="table-responsive">

@@ -5,7 +5,9 @@
     <h1 style="margin-top:0">General education requirements</h1>
   </div>
   <div class="col-md-2">
-    <a class="btn  btn-default" href=<%= new_generaleducationrequirement_path %>><span class="glyphicon glyphicon-plus"></span> New</a>
+    <% if user_admin? %>
+      <a class="btn  btn-default" href=<%= new_generaleducationrequirement_path %>><span class="glyphicon glyphicon-plus"></span> New</a>
+    <%end%>
   </div>
 </div>
 
@@ -13,15 +15,19 @@
     <tr>
       <td>Course</td>
       <td>Requirement</td>
-      <td>Edit</td>
-      <td>Remove</td>
+      <% if user_admin? %>
+        <td>Edit</td>
+        <td>Remove</td>
+      <%end%>
     </tr>
    <% @GeneralEducationRequirement.each do |requirement| %>
     <tr>
       <td><%= requirement.course %></td>
       <td><%= requirement.requirement %></td>
+      <% if user_admin? %>
       <td><a class="btn btn-default btn-xs" href=<%= edit_generaleducationrequirement_path(requirement) %>><span class="glyphicon glyphicon-edit"></span></a></td>
       <td><a class="btn btn-default btn-xs" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href=<%= generaleducationrequirement_path(requirement) %>><span class="glyphicon glyphicon-remove"></span></a></td>
+      <%end%>
     </tr>
     
   <%end%>
