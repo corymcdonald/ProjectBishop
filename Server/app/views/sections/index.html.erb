@@ -2,20 +2,35 @@
 function test() {
     sections = <%= raw @section.to_json -%>;
     
-    alert(sections[1])       
+    alert(sections[1])
 }
 </script>
 
 <div class="row whiteUI">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-6">
-    <h1>Section sandbox..</h1>
-    <select class="form-control">
-         <%= @section.each do |a| %>
-            <option><%= a.name %> - <%= a.section %></option>
-        <% end %>
-    </select>
+  <div class="container">
+    <h1 style="margin-top:0">Sections</h1>
+      
+    
+    
+    <%= form_tag(sections_path, method: :get, :class=> "form-inline") do %>
+    <div class="form-group">
+    <%= text_field_tag :search, "", placeholder: "Course", :class=>"form-control"  %>
+    <button type="button" type="submit" class="btn btn-default">
+      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </button>
     </div>
-    
-    
+    <% end %>
+    <div style="padding:10px"></div><!-- seperator -->
+    <% if @section and @section.count > 0 %>
+       <% @section.each do |a| %>
+        <%= link_to (a.name + '-' + a.section), a %>
+        
+        <br/>
+         
+      <% end %>
+    <%end%>
+    <% if user_admin? %>
+    <a class="btn btn-lg btn-default" href=<%= new_section_path %>><span class="glyphicon glyphicon-plus"></span> New</a>
+    <%end%>
+  </div>
 </div>

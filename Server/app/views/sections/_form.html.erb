@@ -1,0 +1,84 @@
+<%= form_for @section do |f| %>
+<div class="form-group">
+    <%= f.label :title %><br/>
+    <%= f.text_field :title, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :name %><br/>
+    <%= f.text_field :name, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :section %><br/>
+    <%= f.text_field :section, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :courseID %><br/>
+    <%= f.text_field :courseID, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :status %><br/>
+    <%= f.text_field :status, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :component %><br/>
+    <%= f.text_field :component, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :session %><br/>
+    <%= f.text_field :session, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :hour %><br/>
+    <%= f.text_field :hour, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :classNumber %><br/>
+    <%= f.text_field :classNumber, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :startDate %><br/>
+    <%= f.text_field :startDate, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :endDate %><br/>
+    <%= f.text_field :endDate, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :classTime %><br/>
+    <%= f.text_field :classTime, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :location %><br/>
+    <%= f.text_field :location, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :instructor %><br/>
+    <%= f.text_field :instructor, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :enrolled %><br/>
+    <%= f.text_field :enrolled, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :size %><br/>
+    <%= f.text_field :size, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :career %><br/>
+    <%= f.text_field :career, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :school %><br/>
+    <%= f.text_field :school, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :department %><br/>
+    <%= f.text_field :department, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :campus %><br/>
+    <%= f.text_field :campus, :class=>"form-control" %>
+  </div>
+  <%= f.submit 'Save', :style => "margin-top:15px", :class => 'pull-right btn btn-lg btn-default' %>
+  
+<%end%>

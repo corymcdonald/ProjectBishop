@@ -1,0 +1,2 @@
+module GeneralEducationRequirementsHelper
+end

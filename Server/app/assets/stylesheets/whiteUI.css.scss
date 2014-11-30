@@ -1,6 +1,7 @@
 .whiteUI {
   padding: 50px 0 50px;
   background-color: #F2F2F2;
+  background:url('/assets/subtlePat.png')
 }
 
 .whiteUI h1, .whiteUI h2, .whiteUI h3, .whiteUI h4, .whiteUI h5, .whiteUI h6, {
@@ -9,10 +10,16 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.whiteUI p, .whiteUI a {
+.whiteUI p {
   color: black;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
+}
+.whiteUI a:link
+{
+  color: #333;
+  cursor: pointer;
+  // font-weight: bold;
 }
 
 .whiteUI a:hover {

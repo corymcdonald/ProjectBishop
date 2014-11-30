@@ -6,13 +6,15 @@ Rails.application.routes.draw do
   resources :courses
   resources :majors
   resources :users
-  resources :dashboard 
-    
+  resources :dashboard
+  resources :admin
+  resources :generaleducationrequirements
+  resources :usercourses
   
   get 'register' => 'users#new'
   get 'settings' => 'pages#settings'
   get 'search' => 'pages#searchresults'
-  get 'profile' => 'pages#profile'
+  get 'profile' => 'users#show'
   get 'courses' => 'courses#index'
   get 'sections' => 'sections#index'
   get 'majors' => 'major#index'

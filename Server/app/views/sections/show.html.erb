@@ -1,0 +1,63 @@
+<div class="row whiteUI">
+<div class="container">
+<div style="padding-top: 15px" class="row">
+  <div class="col-md-10">
+    <h1 style="margin:0" ><%= @section.title %><br/>
+    <small><%= @section.name.insert(4, ' ') + ' - ' + @section.section %></small></h1>
+  </div>
+  <div class="col-md-2">
+  <% if user_admin? %>
+    <a class="btn btn-lg btn-default" href=<%= edit_section_path(@section) %>><span class="glyphicon glyphicon-edit"></span></a>
+    <a class="btn btn-lg btn-default " data-confirm="Are you sure?" rel="nofollow" data-method="delete" href=<%= section_path(@section) %>><span class="glyphicon glyphicon-remove"></span>
+    </a>
+    <%end%>
+  </div>
+</div>
+<% if @section.status? %>
+  <h4>Status: <%= @section.status %> </h4>
+<%end%>
+<% if @section.component? %>
+  <h4>Component: <%= @section.component %> </h4>
+<%end%>
+<% if @section.session? %>
+  <h4>Session: <%= @section.session %> </h4>
+<%end%>
+<% if @section.hour? %>
+  <h4>Hours: <%= @section.hour %> </h4>
+<%end%>
+<% if @section.classNumber? %>
+  <h4>ClassNumber: <%= @section.classNumber %> </h4>
+<%end%>
+<% if @section.startDate? and @section.endDate? %>
+  <h4>Date: <%= @section.startDate %> -  <%= @section.endDate %></h4>
+<%end%>
+<% if @section.classTime? %>
+  <h4>Class Time: <%= @section.classTime %> </h4>
+<%end%>
+<% if @section.location? %>
+  <h4>Location: <%= @section.location %> </h4>
+<%end%>
+<% if @section.instructor? %>
+  <h4>Instructor: <%= @section.instructor %> </h4>
+<%end%>
+<% if @section.enrolled? %>
+  <h4>Enrolled: <%= @section.enrolled %> </h4>
+<%end%>
+<% if @section.size? %>
+  <h4>Size: <%= @section.size %> </h4>
+<%end%>
+<% if @section.career? %>
+  <h4>Career: <%= @section.career %> </h4>
+<%end%>
+<% if @section.school? %>
+  <h4>School: <%= @section.school %> </h4>
+<%end%>
+<% if @section.department? %>
+<h4>department: <%= @section.department %> </h4>
+<%end%>
+<% if @section.campus? %>
+<h4>campus: <%= @section.campus %> </h4>
+<%end%>
+
+</div>
+</div>
