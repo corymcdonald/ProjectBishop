@@ -1,3 +1,5 @@
+<% if @loggedin %>
+
 <div class="row whiteUI">
   <div class="col-md-3"></div>
   <div class="col-md-6">
@@ -5,3 +7,22 @@
     <%= @user.firstName %>, <%= @user.email %>
   </div>
 </div>
+
+<% else %>
+
+<div class="row whiteUI">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-6">
+
+    <h1>User Sandbox..</h1>
+    <select class="form-control">
+         <%= @user.each do |a| %>
+            <option><%= a.firstName %></option>
+        <% end %>
+    </select>
+    </div>
+    
+    
+</div>
+
+<% end %>

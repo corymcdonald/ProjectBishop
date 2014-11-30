@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
+    if(params.has_key?(:id) )
+      @user = User.find(params[:id])
+      @loggedin = true
+    else
+      @user = User.all
+      @loggedin = false
+    end
   end
 
   def new

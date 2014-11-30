@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'register' => 'users#new'
   get 'settings' => 'pages#settings'
   get 'search' => 'pages#searchresults'
-  get 'profile' => 'pages#profile'
+  get 'profile' => 'users#show'
   get 'courses' => 'courses#index'
   get 'sections' => 'sections#index'
   get 'majors' => 'major#index'
