@@ -1,6 +1,31 @@
 <div class="row whiteUI">
 <div class="container">
+<div class="row">
+  <div class="col-md-10">
+    <h1 style="margin-top:0">General education requirements</h1>
+  </div>
+  <div class="col-md-2">
+    <a class="btn  btn-default" href=<%= new_generaleducationrequirement_path %>><span class="glyphicon glyphicon-plus"></span> New</a>
+  </div>
+</div>
 
-<%=@GeneralEducationRequirement.inspect %>
+<table class="table table-striped table-hover">
+    <tr>
+      <td>Course</td>
+      <td>Requirement</td>
+      <td>Edit</td>
+      <td>Remove</td>
+    </tr>
+   <% @GeneralEducationRequirement.each do |requirement| %>
+    <tr>
+      <td><%= requirement.course %></td>
+      <td><%= requirement.requirement %></td>
+      <td><a class="btn btn-default btn-xs" href=<%= edit_generaleducationrequirement_path(requirement) %>><span class="glyphicon glyphicon-edit"></span></a></td>
+      <td><a class="btn btn-default btn-xs" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href=<%= generaleducationrequirement_path(requirement) %>><span class="glyphicon glyphicon-remove"></span></a></td>
+    </tr>
+    
+  <%end%>
+</table>
+  
 </div>
 </div>

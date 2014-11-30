@@ -1,6 +1,7 @@
 class GeneraleducationrequirementsController < ApplicationController
   def index
     @GeneralEducationRequirement = GeneralEducationRequirement.all
+    
   end
   
   def new
@@ -8,21 +9,16 @@ class GeneraleducationrequirementsController < ApplicationController
   end
   
   def create
-    @GeneralEducationRequirement = GeneralEducationRequirement.new(GeneralEducationRequirement_params)
+    @GeneralEducationRequirement = GeneralEducationRequirement.new(my_params)
    
     @GeneralEducationRequirement.save
-    redirect_to @GeneralEducationRequirement
-  end
-  
-  def show
-    @GeneralEducationRequirement = GeneralEducationRequirement.find(params[:id])
+    redirect_to generaleducationrequirements_path
   end
   
   def update
     @GeneralEducationRequirement = GeneralEducationRequirement.find(params[:id])
- 
-    if @GeneralEducationRequirement.update(GeneralEducationRequirement_params)
-      redirect_to @GeneralEducationRequirement
+    if @GeneralEducationRequirement.update(my_params)
+      redirect_to generaleducationrequirements_path
     else
       render 'edit'
     end
@@ -36,13 +32,18 @@ class GeneraleducationrequirementsController < ApplicationController
     @GeneralEducationRequirement = GeneralEducationRequirement.find(params[:id])
     @GeneralEducationRequirement.destroy
  
-    redirect_to GeneralEducationRequirements_path
+    redirect_to generaleducationrequirements_path
   end
 
     
   private
-    def GeneralEducationRequirement_params
-      params.require(:GeneralEducationRequirement).permit(:course, :requirement)
+    def my_params
+      # In the future don't freaking name models with camel case just one big headache
+      if(params[:GeneralEducationRequirement])
+        params.require(:GeneralEducationRequirement).permit(:course, :requirement)
+      else
+        params.require(:general_education_requirement).permit(:course, :requirement)
+      end
     end
   
 end
