@@ -4,7 +4,7 @@ class Parsethis
 
   end
   
-  def self.parseIt(source)
+  def self.parseIt(source,current_user)
     Rails.logger = Logger.new(STDOUT)
 
     userCourses = []
@@ -19,8 +19,13 @@ class Parsethis
       if course and grade
         course = course.to_s.sub('     ',' ')
         grade = grade.to_s.sub('.00','')
-        @usercourse = Usercourse.new("course" => course, "grade"=>grade)
+        @usercourse = Usercourse.new("user"=> current_user.id, "course" => course.strip, "grade"=>grade.strip)
         @usercourse.save
+      elsif course
+        course = course.to_s.sub('     ',' ')
+        @usercourse = Usercourse.create("user"=> current_user.id, "course" => course.strip, "grade"=>'pending')
+        @usercourse.save
+        
       end
     end
     

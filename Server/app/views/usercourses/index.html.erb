@@ -1,22 +1,33 @@
 <div  style="padding-top:25px" class="row  whiteUI">
 <div class="container">
-  <h1 style="margin-top:0">Courses you've taken</h1>
+  <h2> Courses remaining:</h2>
+    <table class="table">
+    <tr>
+    <th>Course</th>
+    <th>Title</th>
+    </tr>
+    <% @missing.each do |coursemissing| %>
+      <tr><td><%=coursemissing.course %></td>
+      <td><%= @Course.where('name = ?', coursemissing.course).first ? @Course.where('name = ?', coursemissing.course).first.title.split('.')[1] : '' %></td></tr>
+    <%end%>
+  </table>
+  <h2 >Courses you've taken</h2>
   
   <div class="table-responsive">
     <table class="table table-striped">
       <tr>
-        <th>Course</th>
+        <th>Title</th>
         <th>Grade</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
       <% @usercourses.each do |course| %>
       <tr>
-        <td><%= course.course %></td>
-        <td><%= course.grade %></td>
-        <td><%= link_to 'Edit', edit_usercourse_path(course) %></td>
-        <td><%= link_to 'Destroy', usercourse_path(course),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% @course = Course.where('name like ?', course.course.strip).first %>
+        <td><%= @course? @course.title : '' %></td>
+        <td><%= course.grade.titleize %></td>
+        <td><a class="btn btn-default btn-xs" href=<%= edit_usercourse_path(course) %>><span class="glyphicon glyphicon-edit"></span></a></td>
+      <td><a class="btn btn-default btn-xs" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href=<%= usercourse_path(course) %>><span class="glyphicon glyphicon-remove"></span></a></td>
       </tr>
       <% end %>
   </table>

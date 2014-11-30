@@ -8,11 +8,13 @@
     <small><%= @course.name %></small></h1>
   </div>
   <div class="col-md-2">
+  <% if user_admin? %>
     <div class="btn-group" role="group">
       <a class="btn-default btn" href=<%= edit_course_path(@course) %>><span class="glyphicon glyphicon-edit"></span> Edit</a>
       <a data-confirm="Are you sure?" data-method="delete" class="btn-default btn" rel="nofollow" href=<%= course_path(@course) %>><span class="glyphicon glyphicon-remove"></span> Remove</a>
       
     </div>
+    <%end%>
   </div>
 </div>
 <h3>Course Description</h3>
@@ -42,8 +44,10 @@
       <td>Instructor</td>
       <td>Location</td>
       <td>Enrolled</td>
+      <% if user_admin? %>
       <td>Edit</td>
       <td>Remove</td>
+      <%end%>
     </tr>
    <% @sections.each do |section| %>
     <tr>
@@ -53,8 +57,10 @@
       <td><%= section.instructor %></td>
       <td><%= section.location %></td>
       <td><%= section.enrolled + '/'+ section.size %></td>
+      <% if user_admin? %>
       <td><a class="btn btn-default btn-xs" href=<%= edit_section_path(section) %>><span class="glyphicon glyphicon-edit"></span></a></td>
       <td><a class="btn btn-default btn-xs" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href=<%= section_path(section) %>><span class="glyphicon glyphicon-remove"></span></a></td>
+      <%end%>
     </tr>
     
     

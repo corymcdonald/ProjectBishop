@@ -7,7 +7,9 @@
         <h2 style="margin:0" ><%= @major.titleize %></h2>
       </div>
       <div class="col-md-1">
+        <% if user_admin? %>
         <a class="btn btn-default" href=<%= edit_major_path(@major) %>><span class="glyphicon glyphicon-edit"></span></a>
+        <% end %>
       </div>
     </div>
     

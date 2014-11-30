@@ -34,8 +34,8 @@
 <div id="editMajor">
   <% @majors.each do |major| %>
     <div class="row">
-      <%= form_for major, remote:true, url: majors_path + '/' + major.major, method: :patch do |f| %>
-        <% if major.course %>
+      <% if major.course %>
+        <%= form_for major, remote:true, url: majors_path + '/' + major.major, method: :patch do |f| %>
            <%= hidden_field_tag(:major_id, major.id) %>
           <div class="col-md-9">
             <%= f.text_field :course, class: "create_input", style: "width:100%" %>
