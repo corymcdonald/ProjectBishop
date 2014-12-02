@@ -38,7 +38,7 @@ class GeneraleducationrequirementsController < ApplicationController
     
   private
     def my_params
-      # In the future don't freaking name models with camel case just one big headache
+      # In the future don't freaking name models with camel case just one big headache, AND DONT GIVE THEM SUCH A LONG NAME CORY! >:(
       if(params[:GeneralEducationRequirement])
         params.require(:GeneralEducationRequirement).permit(:course, :requirement)
       else

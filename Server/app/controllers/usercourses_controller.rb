@@ -3,6 +3,10 @@ class UsercoursesController < ApplicationController
   before_action :logged_in_user
     
   def index
+    @user = User.find(current_user.id)
+
+    
+    
     @usercourses = Usercourse.where("user = ?", current_user.id)
     
     @Course = Course.all

@@ -19,9 +19,16 @@
 </div>
     
 <div id="main-container" class="container-fluid">
+  
   <% flash.each do |message_type, message| %>
+  <div class="row whiteUI">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
         <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
+    </div>
+  </div>
+  <% end %>
+  
   <%= yield %>
   <%= render 'shared/footer' %>
 </div>
