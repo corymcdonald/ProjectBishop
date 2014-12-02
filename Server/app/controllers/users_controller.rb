@@ -14,6 +14,11 @@ class UsersController < ApplicationController
   end
 
   def new
+    @majors = Major.select('DISTINCT major').order('major')
+    @major = []
+    for current in @majors
+      @major.push(current.major.titleize)
+    end
     @user = User.new
   end
   
@@ -34,16 +39,21 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
+    if params[:old_password] != "" && (@user.authenticate(params[:old_password][0])) && @user.update_attributes(user_params) 
       flash[:success] = "Profile updated"
       redirect_to @user
     else
+      @majors = Major.select('DISTINCT major').order('major')
+      @major = []
+      for current in @majors
+        @major.push(current.major.titleize)
+      end
       render 'edit'
     end
   end
   
   def edit
-    @majors = Major.all.order("major")
+    @majors = Major.select('DISTINCT major').order('major')
     @major = []
     for current in @majors
       @major.push(current.major.titleize)

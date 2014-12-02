@@ -1,5 +1,5 @@
 .whiteUI {
-  padding: 50px 0 50px;
+  padding: 10px 0 10px;
   background-color: #F2F2F2;
   background:url('/assets/subtlePat.png')
 }
@@ -12,7 +12,7 @@
 
 .whiteUI p {
   color: black;
-  font-weight: 300;
+  font-weight: 400;
   font-family: 'Roboto', sans-serif;
 }
 .whiteUI a:link
@@ -35,7 +35,7 @@
      border-color: rgb(150, 150, 150);
      color: black;
      font-family: 'Roboto', sans-serif;
-     font-weight: 300;
+     font-weight: 400;
   }
   
   .whiteUI .btn:hover {
@@ -60,5 +60,7 @@
      font-weight: 400;
   }
   //end
+  
+  
 
 ////END

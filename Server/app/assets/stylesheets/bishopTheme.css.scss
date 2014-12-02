@@ -6,9 +6,30 @@
   height: auto;
 }
 
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: transparent;
+  color: white;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
 .brand:hover {
   background-color: transparent;
 }
+
+
 //END
 
 //FOOTER
@@ -79,3 +100,10 @@ body {
 * html .ui-autocomplete {
   height: 100px;
 }
+
+
+
+
+
+
+
