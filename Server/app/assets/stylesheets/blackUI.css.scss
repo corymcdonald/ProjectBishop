@@ -32,6 +32,8 @@
   font-weight: 500;
 }
 
+
+
 ////FORMS
 
   //Button
@@ -41,7 +43,7 @@
      border-color: rgb(225, 225, 225);
      color: white;
      font-family: 'Roboto', sans-serif;
-     font-weight: 300;
+     font-weight: 400;
   }
   
   .blackUI .btn:hover {
@@ -56,6 +58,7 @@
   
   .blackUI a:visited:hover {
     color: white;
+
   }
   
   .blackUI .dropdown a {
@@ -86,8 +89,12 @@
     color: white;
   }
   
+   .blackUI .dropdown a:hover {
+    color: white
+  }
+  
   .blackUI .dropdown a:visited:hover {
-    color: white;
+    color: white
   }
   
   .blackUI .dropdown-menu {
