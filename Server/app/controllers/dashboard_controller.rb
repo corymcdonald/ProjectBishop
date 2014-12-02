@@ -24,8 +24,13 @@ class DashboardController < ApplicationController
             circle 550, 550, 50
           end
         end
-        
         @flowchart = img.output
+        
+        @courses = Course.all
+        @coursesList = []
+        @courses.each do |p|
+          @coursesList.push(p.name)
+        end
         
         if(params.has_key?(:classes) )
             @classParams = params[:classes]

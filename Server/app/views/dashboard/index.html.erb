@@ -1,30 +1,41 @@
 <script type="text/javascript" src="/assets/weekSchedule.js"></script>
   
   
-<div class="row whiteUI">
-  <div class="col-md-3"></div>
-  <div class="col-md-6">
-    <h1>Dashboard</h1>
+<div class="row whiteUI device-md visible-md visible-lg">
+  <div class="col-md-2">
+    <h1>Edit</h1>
     <div class="form-group">
-      <label>Pick classes  </label>  
-      <button class="btn btn-info" onclick="addClassesBox()" type="button"> <span class="glyphicon glyphicon-plus"></span></button>
+      <label>Classes  </label>  
+      <button class="btn btn-info pull-right" onclick="addClassesBox()" type="button"> <span class="glyphicon glyphicon-plus"></span></button>
+      <button class="btn btn-info pull-right" onclick="removeClassesBox()" type="button"> <span class="glyphicon glyphicon-minus"></span></button>
     </div>
     <div class="form-group" id="classesBoxGroup"></div>
     <div class="form-group">
-      <button type="button" onclick="loadSchedule()" class="btn btn-default">Generate</button>
+      <label>Breaks  </label>  
+      <button class="btn btn-info pull-right" onclick="addBreaksBox()" type="button"> <span class="glyphicon glyphicon-plus"></span></button>
+      <button class="btn btn-info pull-right" onclick="removeBreaksBox()" type="button"> <span class="glyphicon glyphicon-minus"></span></button>
+    </div>
+    
+    <div class="form-group">
+      <button type="button" onclick="loadSchedule()" class="btn btn-default">Create</button>
       <label id="loadingTag"></label>
     </div>
-    <div class="form-inline form-group">
-      <label>Pick a Schedule</label>
-      <select id="selectSchedule" class="form-control" onchange="updateTable(this.selectedIndex)"></select>
-    </div>
+    <table id="largeTableSchedule" class="table"></table>
   </div>
+  <div id="canCol" class="col-md-10">
+      <div class="form-inline">
+        <h1> Schedule</h1>
+        <select id="selectSchedule" class="form-control" onchange="updateTable(this.selectedIndex)"></select>
+      </div>
+      <canvas id="c" width="100%" height="901px"></canvas>
+      <script>
+      addData(<%=  raw @coursesList.to_json -%>);
+      createWeekcalendar()
+              $(window).resize(createWeekcalendar);</script>
+    </div>
 </div>
 
-<div class="row whiteUI device-md visible-md visible-lg">
-    <h1> Large Screen Table</h1>
-    <table id="largeTableSchedule" class="table"></table>
-</div>
+
 
 <div class="row whiteUI device-xs visible-xs visible-sm">
     <h1> Small Screen Table</h1>
