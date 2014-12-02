@@ -51,7 +51,11 @@ module SessionsHelper
     
     # Returns true if user is an admin
     def user_admin?
-    current_user.admin
+      if logged_in?
+        current_user.admin
+      else
+        false
+      end
     end
     
     # Redirects to stored location (or to the default).
