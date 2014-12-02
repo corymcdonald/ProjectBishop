@@ -1,34 +1,44 @@
-<% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
-
 <div class="row whiteUI">
   <div class="col-md-3"></div>
   <div class="col-md-6">
-    <h1>Register</h1>
-  </div>
-  <div class="col-md-6 col-md-offset-3">
+
+    <h1>Settings</h1>
+
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
-
+      <div class="form-group">
       <%= f.label :first_name %>
       <%= f.text_field :firstName, class: 'form-control' %>
+      </div>
       
+      <div class="form-group">
       <%= f.label :last_name %>
       <%= f.text_field :lastName, class: 'form-control' %>
+      </div>
       
-      <%= f.select :major, @major, :prompt => 'Select One' %>
-      <br/>
-
+      <div class="form-group">
+      <label>Major</label>
+      <%= f.select :major, @major,:prompt => 'Select One'%>
+      </div>
+    
+       <div class="form-group">
       <%= f.label :email %>
       <%= f.text_field :email, class: 'form-control' %>
-
+      </div>
+      
+      <div class="form-group">
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control', :autocomplete =>"off" %>
-
+      </div>
+      
+      <div class="form-group">
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-
+      </div>
+      
+      <div class="form-group">
       <%= f.submit "Save changes", class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 </div>
