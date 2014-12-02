@@ -48,16 +48,16 @@ class Schedule
             currentSchedules = Array.new
             nextSchedules = Array.new
             temporarySections = Array.new
-            for i in 0..arrOfCourses.length-1
-                temporarySections[i] = Section.where(courseID: arrOfCourses[i],career: "UGRD")
-            end
             #for i in 0..arrOfCourses.length-1
-            #    tempName = arrOfCourses[i].name.split
-            #    tempName[0] = tempName[0]+tempName[1]
-            #    temporarySections[i] = Section.where(name: tempName[0],component: 'Lecture')
+            #    temporarySections[i] = Section.where(courseID: arrOfCourses[i],career: "UGRD")
             #end
+            for i in 0..arrOfCourses.length-2
+                tempName = arrOfCourses[i].name.split
+                tempName[0] = tempName[0]+tempName[1]
+                temporarySections[i] = Section.where(name: tempName[0],component: 'Lecture')
+            end
             temporarySections = temporarySections.sort_by(&:length)
-            for i in 0..arrOfCourses.length-1
+            for i in 0..arrOfCourses.length-2
                 temp = Time.now
             
                 currentSchedules = Marshal.load(Marshal.dump(nextSchedules))
@@ -230,6 +230,7 @@ class Schedule
         end
     end
 end
+=begin
 courses = Array.new
 courses[0] = Array.new
 courses[0][0] = "CSCE2004 001"
@@ -240,19 +241,16 @@ courses[1][2] = "CSCE2004 L003"
 courses[2] = Array.new
 courses[2][0] = "CSCE2004 001"
 courses[2][1] = "CVEG4303 001"
-=begin
 courses[0] = Course.find_by(name: 'MATH 1204')
 courses[1] = Course.find_by(name: 'CSCE 3313')
 courses[2] = Course.find_by(name: 'GNEG 1111')
 courses[3] = Course.find_by(name: 'PHYS 2054')
 courses[4] = Course.find_by(name: 'ENGL 1013')
-=end
 temp = Time.now
 schedules = Schedule.genereateSchedules(courses)
 tempTwo = Time.now
 puts tempTwo - temp
 puts schedules.length
-=begin
 if schedules.length > 0
     for k in 0..schedules.length - 1
         puts "Current Schedule"
