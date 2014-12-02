@@ -18,8 +18,9 @@
       <%= f.text_field :lastName, class: 'form-control' %>
       <br>
       <%= f.label :major %>
-      <br>
-      <%= f.text_field :major, class: 'form-control' %>
+      <br/>
+      <%= f.select :major, @major %>
+      <br/>
       <br>
       <%= f.label :email %>
       <br>
