@@ -226,97 +226,97 @@ def parseClassRequirements(prereq):
 
 print("Start: " + str(datetime.datetime.now()))
 
-majorsURL = 'http://catalog.uark.edu/undergraduatecatalog/fieldsofstudy/#fieldsalphabeticallytext'
-majorsData = requests.get(majorsURL)
-majorContent = majorsData.content
-soup = BeautifulSoup(majorContent)
+# majorsURL = 'http://catalog.uark.edu/undergraduatecatalog/fieldsofstudy/#fieldsalphabeticallytext'
+# majorsData = requests.get(majorsURL)
+# majorContent = majorsData.content
+# soup = BeautifulSoup(majorContent)
 
-majors = soup.find(id='fieldsalphabeticallytextcontainer')
-seedFile = open("majorSeeds.rb", "a")
-for link in BeautifulSoup(str(majors)).find_all('a'):
-  if link.get('href'):
-    majorURL = 'http://catalog.uark.edu/' + link['href']
-    majorData = requests.get(majorURL)
-    majorContent = majorData.content
-    soup = BeautifulSoup(majorContent)
-    print(link.get('href'))
+# majors = soup.find(id='fieldsalphabeticallytextcontainer')
+# seedFile = open("majorSeeds.rb", "a")
+# for link in BeautifulSoup(str(majors)).find_all('a'):
+#   if link.get('href'):
+#     majorURL = 'http://catalog.uark.edu/' + link['href']
+#     majorData = requests.get(majorURL)
+#     majorContent = majorData.content
+#     soup = BeautifulSoup(majorContent)
+#     print(link.get('href'))
   
-    table = soup.find(id="eightsemesterplantextcontainer")
-    if table:
-      table = BeautifulSoup(str(table.findAll('table', { "class" : 'sc_plangrid' })))
-      rows =table.find_all('tr')
-      currentMajor = soup.find(id="content").h1.text.split('(')[0]
-      for row in rows:
-        name = ''
-        if "CORE" in str(row.text).upper() or "ELECTIVE" in str(row.text).upper(): #handling university core stuff
-          name = row.text.split('–')[0]
-          name = name.split('(')[0]
-          name = ''.join([i for i in name if not i.isdigit()])
-          name = name.replace('-','')
-        else:
-          temp = row.text.replace('\xa0', ' ').split(' ')
-          lab = False
-          x=0
+#     table = soup.find(id="eightsemesterplantextcontainer")
+#     if table:
+#       table = BeautifulSoup(str(table.findAll('table', { "class" : 'sc_plangrid' })))
+#       rows =table.find_all('tr')
+#       currentMajor = soup.find(id="content").h1.text.split('(')[0]
+#       for row in rows:
+#         name = ''
+#         if "CORE" in str(row.text).upper() or "ELECTIVE" in str(row.text).upper(): #handling university core stuff
+#           name = row.text.split('–')[0]
+#           name = name.split('(')[0]
+#           name = ''.join([i for i in name if not i.isdigit()])
+#           name = name.replace('-','')
+#         else:
+#           temp = row.text.replace('\xa0', ' ').split(' ')
+#           lab = False
+#           x=0
           
-          if x + 1 < len(temp) and len(temp[x + 1].replace('.','').replace(':', '')) == 5 \
-                      and (temp[x + 1])[:4].isdigit():
-                      lab = True
+#           if x + 1 < len(temp) and len(temp[x + 1].replace('.','').replace(':', '')) == 5 \
+#                       and (temp[x + 1])[:4].isdigit():
+#                       lab = True
           
-          # We are currently have a class
-          if x + 1 < len(temp) and (
-            (len(temp[x].replace('.','')) == 4 and temp[x + 1].replace('.','').isdigit()) or lab):
-              name = (temp[x].replace('.', '') + ' ' + temp[x + 1].replace('.', ''))
-        if name:
-          name = name.replace(' ',' ').strip()
-          seedFile.write('Major.create({"major"=>"' + currentMajor.strip().lower() +'", "course"=>"' + str(name) + '"})\n')
-          # print(name )
+#           # We are currently have a class
+#           if x + 1 < len(temp) and (
+#             (len(temp[x].replace('.','')) == 4 and temp[x + 1].replace('.','').isdigit()) or lab):
+#               name = (temp[x].replace('.', '') + ' ' + temp[x + 1].replace('.', ''))
+#         if name:
+#           name = name.replace(' ',' ').strip()
+#           seedFile.write('Major.create({"major"=>"' + currentMajor.strip().lower() +'", "course"=>"' + str(name) + '"})\n')
+#           # print(name )
     
     
     
     
   
 
-# scheduleURL = 'https://scheduleofclasses.uark.edu/Main?strm=1149&Search='
-# scheduleData = requests.get(scheduleURL)
-# scheduleContent = scheduleData.content
-# soup = BeautifulSoup(scheduleContent)
-# table = soup.find("table")
-# rows = table.find_all('tr')
-# i = 0
-# for row in rows:
-#   result = 'Section.create('
-#   cells = row.find_all("td")
-#   if len(cells) > 0:
-#     result += "status: '" +  cells[0].get_text() + "',"
-#     result += "courseID: '" +  cells[1].get_text() + "',"
-#     result += "name: '" + cells[1].get_text().split(' ')[0] + "',"
-#     result += "section: '" + cells[1].get_text().split(' ')[1] + "',"
-#     result += "title: '" +  cells[2].get_text().replace("'","") + "',"
-#     result += "component: '" +  cells[3].get_text().replace("'","") + "',"
-#     result += "session: '" +  cells[4].get_text() + "',"
-#     result += "hour: '" + cells[5].get_text() + "',"
-#     result += "classNumber: '" + cells[6].get_text() + "',"
-#     result += "startDate: '" + cells[7].get_text() + "',"
-#     result += "endDate: '" + cells[8].get_text() + "',"
-#     result += "classTime: '" + cells[9].get_text().replace('\xa0', ';') + "',"
-#     result += "location: '" + cells[10].get_text() + "',"
-#     result += "instructor: '" + cells[11].get_text().replace("'", "\\'") + "',"
-#     result += "enrolled: '" + cells[12].get_text().split('/')[0] + "',"
-#     result += "size: '" + cells[12].get_text().split('/')[0] + "',"
-#     result += "career: '" + cells[13].get_text() + "',"
-#     result += "school: '" + cells[14].get_text() + "',"
-#     result += "department: '" + cells[15].get_text() + "',"
-#     result += "campus: '" + cells[16].get_text() + "'"
+scheduleURL = 'https://scheduleofclasses.uark.edu/Main?strm=1149&Search='
+scheduleData = requests.get(scheduleURL)
+scheduleContent = scheduleData.content
+soup = BeautifulSoup(scheduleContent)
+table = soup.find("table")
+rows = table.find_all('tr')
+i = 0
+for row in rows:
+  result = 'Section.create('
+  cells = row.find_all("td")
+  if len(cells) > 0:
+    result += "status: '" +  cells[0].get_text() + "',"
+    result += "courseID: '" +  cells[1].get_text() + "',"
+    result += "name: '" + cells[1].get_text().split(' ')[0] + "',"
+    result += "section: '" + cells[1].get_text().split(' ')[1] + "',"
+    result += "title: '" +  cells[2].get_text().replace("'","") + "',"
+    result += "component: '" +  cells[3].get_text().replace("'","") + "',"
+    result += "session: '" +  cells[4].get_text() + "',"
+    result += "hour: '" + cells[5].get_text() + "',"
+    result += "classNumber: '" + cells[6].get_text() + "',"
+    result += "startDate: '" + cells[7].get_text() + "',"
+    result += "endDate: '" + cells[8].get_text() + "',"
+    result += "classTime: '" + cells[9].get_text().replace('\xa0', ';') + "',"
+    result += "location: '" + cells[10].get_text() + "',"
+    result += "instructor: '" + cells[11].get_text().replace("'", "\\'") + "',"
+    result += "enrolled: '" + cells[12].get_text().split('/')[0] + "',"
+    result += "size: '" + cells[12].get_text().split('/')[1] + "',"
+    result += "career: '" + cells[13].get_text() + "',"
+    result += "school: '" + cells[14].get_text() + "',"
+    result += "department: '" + cells[15].get_text() + "',"
+    result += "campus: '" + cells[16].get_text() + "'"
   
-#   result += ')\n'
-#   # currentRow += '\n'
+  result += ')\n'
+  # currentRow += '\n'
   
-#   # if i>100:
-#     # break
-#   i += 1
-#   if result != 'Section.create(':
-#     with open("sectionSeeds.rb", "a") as sectionFile:
-#       sectionFile.write(result)
+  # if i>100:
+    # break
+  i += 1
+  if result != 'Section.create(':
+    with open("sectionSeeds.rb", "a") as sectionFile:
+      sectionFile.write(result)
   
 
 # catalogURL = 'http://catalog.uark.edu/undergraduatecatalog/coursesofinstruction/'
