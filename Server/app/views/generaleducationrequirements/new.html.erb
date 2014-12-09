@@ -1,0 +1,21 @@
+<div class="row whiteUI">
+<div class="container">
+<h1 style="margin:0">New requirement</h1>
+
+<%= form_for(@GeneralEducationRequirement, url: generaleducationrequirements_path) do |f| %>
+  <div class="form-group">
+    <%= f.label :course %><br/>
+    <%= f.text_field :course, :class=>"form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :requirement %><br/>
+    <%= f.text_field :requirement, :class=>"form-control" %>
+  </div>
+  
+  <%= f.submit 'Save', :style => "margin-top:15px", :class => 'pull-right btn btn-lg btn-default' %>
+<%end%>
+
+
+</div>
+</div>

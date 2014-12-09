@@ -1,22 +1,49 @@
-<script type="text/javascript">
-function test() {
-    courses = <%= raw @course.to_json -%>;
-    
-    alert(courses[1])       
-}
-</script>
-
 <div class="row whiteUI">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-6">
-
-    <h1>Course sandbox..</h1>
-    <select class="form-control">
-         <%= @course.each do |a| %>
-            <option><%= a.title %></option>
-        <% end %>
-    </select>
+<div class="container">
+    <div style="padding-top: 15px" class="row">
+    <div class="col-md-11">
+      <h1 style="margin:0" >Courses</h1>
     </div>
+    <% if user_admin? %>
+      <div class="col-md-1">
+        <a class="btn  btn-default" href=<%= new_course_path %>><span class="glyphicon glyphicon-plus"></span> New</a>
+      </div>
+    <% end%>
+  </div>
+  <% if params[:search] %>
+      <div class="table-responsive">
+        <table class="table table-striped">
+        <tr><th>Name</th><th>Title</th></tr>
+        <% @course.each do |a| %>
+          <tr>
+            <td><%= link_to a.name, a %></td>
+            <td><%= a.title.split('.')[1].strip %></td>
+          </tr>
+        <% end%>
+        </table>
+      </div>
+  <%end%>
+  <% if !params[:search] %>
+    <a onclick="$('.table-responsive').hide()" href="#">Collapse all</a> |
+    <a onclick="$('.table-responsive').show()" href="#">Expand all</a>
+      <% @uniqcourses.each do |a| %>
+        <a onclick="$(this).next().toggle()" href="#<%=a%>" id="<%=a%>"><h3><%= a %></h3></a>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <% @courses[a].each do |b| %>
+              <tr>
+                <td><%= link_to b.name, b %></td>
+                <td><%= b.title.split('.')[1].strip %></td>
+              </tr>
+            <%end%>
+          </table>
+        </div>
+      <% end %>
     
-    
+  <%end%>
+  
 </div>
+</div>
+<script type="text/javascript">
+
+</script>

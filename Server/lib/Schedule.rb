@@ -48,38 +48,46 @@ class Schedule
             currentSchedules = Array.new
             nextSchedules = Array.new
             temporarySections = Array.new
-            #fix the number of classes here
-            for i in 0..4
-                currentSchedules = Marshal.load(Marshal.dump(nextSchedules))
-                temporarySections = Array.new
-                nextSchedules = Array.new
-                puts currentSchedules.length
+            #for i in 0..arrOfCourses.length-1
+            #    temporarySections[i] = Section.where(courseID: arrOfCourses[i],career: "UGRD")
+            #end
+            for i in 0..arrOfCourses.length-2
                 tempName = arrOfCourses[i].name.split
                 tempName[0] = tempName[0]+tempName[1]
-                temporarySections = Section.where(name: tempName[0])
-                
+                temporarySections[i] = Section.where(name: tempName[0],component: 'Lecture')
+            end
+            temporarySections = temporarySections.sort_by(&:length)
+            for i in 0..arrOfCourses.length-2
+                temp = Time.now
+            
+                currentSchedules = Marshal.load(Marshal.dump(nextSchedules))
+                nextSchedules = Array.new
+                tempScheduleSections = Array.new
                 if i == 0
-                    temporarySections.each do |section|
-                        if !(section.component.include? "Drill") && !(section.component.include? 'Laboratory') && !(section.career.include? 'GRAD')
-                            
-                            tempScheduleSections = Array.new
+                    temporarySections[i].each do |section|
+                            temporarySections[i] = Array.new
                             tempScheduleSections[0] = section
                             tempSchedule = Schedule.new(tempScheduleSections)
                             nextSchedules.push(tempSchedule)
                             #puts "Made one"
-                        end
                     end
-                elsif i < 5
+                else
                 if currentSchedules.length == 0
                     return currentSchedules
                 end
-                    temporarySections.each do |section|
-                        if !(section.component.include? "Drill") && !(section.component.include? 'Laboratory') && !(section.career.include? 'GRAD')
+                    temporarySections[i].each do |section|
+                        
                             currentSchedules.each do |schedule|
+                                if(nextSchedules.length >= 500)
+                                    break
+                                end
                                 canAdd = true
                                 schedule.arrOfSections.each do |sectionToCheck|
                                     sectionTimes = section.classTime.split(/ |, |,|:/)
                                     for i in 0..sectionTimes.length - 1
+                                        if canAdd == false
+                                            break
+                                        end
                                         if sectionTimes[i].include? "Mon"
                                             startTime = String.new
                                             endTime = String.new
@@ -205,19 +213,18 @@ class Schedule
                                             end
                                     end
                                 end
-                                tempSchedule = Marshal.load(Marshal.dump(schedule))
-                                tempSchedule.addSection(section)
                                 #puts canAdd
                                 if(canAdd == true)
-                                    nextSchedules.push(tempSchedule)
+                                tempSchedule = Marshal.load(Marshal.dump(schedule))
+                                tempSchedule.addSection(section)
+                                nextSchedules.push(tempSchedule)
                                 end
-                                
                             end
-                            
-                        end
-                        
                    end
                 end
+                
+                tempTwo = Time.now
+                #puts tempTwo - temp
             end
             return nextSchedules
         end
@@ -225,12 +232,24 @@ class Schedule
 end
 =begin
 courses = Array.new
-courses[0] = Course.find_by(name: 'CSCE 2004')
-courses[1] = Course.find_by(name: 'CSCE 2014')
-courses[2] = Course.find_by(name: 'CSCE 2214')
+courses[0] = Array.new
+courses[0][0] = "CSCE2004 001"
+courses[1] = Array.new
+courses[1][0] = "CSCE2004 L001"
+courses[1][1] = "CSCE2004 L002"
+courses[1][2] = "CSCE2004 L003"
+courses[2] = Array.new
+courses[2][0] = "CSCE2004 001"
+courses[2][1] = "CVEG4303 001"
+courses[0] = Course.find_by(name: 'MATH 1204')
+courses[1] = Course.find_by(name: 'CSCE 3313')
+courses[2] = Course.find_by(name: 'GNEG 1111')
 courses[3] = Course.find_by(name: 'PHYS 2054')
-courses[4] = Course.find_by(name: 'CSCE 3313')
+courses[4] = Course.find_by(name: 'ENGL 1013')
+temp = Time.now
 schedules = Schedule.genereateSchedules(courses)
+tempTwo = Time.now
+puts tempTwo - temp
 puts schedules.length
 if schedules.length > 0
     for k in 0..schedules.length - 1

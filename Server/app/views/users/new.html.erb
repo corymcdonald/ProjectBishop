@@ -8,32 +8,40 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
-    
+      
+      <div class="form-group">
       <%= f.label :firstName, "First Name" %>
-      <br>
       <%= f.text_field :firstName, class: 'form-control' %>
-      <br>
+      </div>
+    
+      <div class="form-group">
       <%= f.label :lastName, "Last Name" %>
-      <br>
       <%= f.text_field :lastName, class: 'form-control' %>
-      <br>
+      </div>
+  
+      <div class="form-group">
       <%= f.label :major %>
-      <br>
-      <%= f.text_field :major, class: 'form-control' %>
-      <br>
+      <%= f.select :major, @major %>
+      </div>
+   
+      <div class="form-group">
       <%= f.label :email %>
-      <br>
       <%= f.text_field :email, class: 'form-control' %>
-      <br>
+      </div>
+  
+      <div class="form-group">
       <%= f.label :password %>
-      <br>
       <%= f.password_field :password, class: 'form-control' %>
-      <br>
+      </div>
+      
+      <div class="form-group">
       <%= f.label :password_confirmation, "Password Confirmation" %>
-      <br>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
-      <br><br>
+      </div>
+       
+      <div class="form-group">
       <%= f.submit "Create my account", class: "btn btn-primary" %>
+      </div>
       
     <% end %>
   </div>

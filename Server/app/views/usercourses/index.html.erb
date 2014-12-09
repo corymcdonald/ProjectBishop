@@ -1,0 +1,64 @@
+
+
+<div class="row whiteUI">
+  <div class="col-md-2"></div>
+  <div class="col-md-6">
+    <h1>Profile</h1>
+    <%= @user.firstName %>
+    <%= @user.email %>
+   
+  </div>
+</div>
+
+
+<div class="row  whiteUI">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+  <h2> Courses remaining:</h2>
+    <table class="table">
+    <tr>
+    <th>Course</th>
+    <th>Title</th>
+    </tr>
+    <% @missing.each do |coursemissing| %>
+      <tr><td><%=coursemissing.course %></td>
+      <td><%= @Course.where('name = ?', coursemissing.course).first ? @Course.where('name = ?', coursemissing.course).first.title.split('.')[1] : '' %></td></tr>
+    <%end%>
+  </table>
+  <h2 >Courses you've taken</h2>
+  
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <tr>
+        <th>Title</th>
+        <th>Grade</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <% @usercourses.each do |course| %>
+      <tr>
+        <% @course = Course.where('name like ?', course.course.strip).first %>
+        <td><%= @course? @course.title : '' %></td>
+        <td><%= course.grade.titleize %></td>
+        <td><a class="btn btn-default btn-xs" href=<%= edit_usercourse_path(course) %>><span class="glyphicon glyphicon-edit"></span></a></td>
+      <td><a class="btn btn-default btn-xs" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href=<%= usercourse_path(course) %>><span class="glyphicon glyphicon-remove"></span></a></td>
+      </tr>
+      <% end %>
+  </table>
+  </div>
+  
+  <br/>
+  <a class="btn btn-default btn-lg" href=<%= new_usercourse_path %>>Add course</a>
+  <a class="btn btn-default btn-lg" onclick="$('#toggle').toggle()">Import unoffficial transcript</a>
+  <div style="padding-top: 25px;">
+  <%= form_tag usercourses_path, :id => 'toggle', :style => 'display:none'  do %>
+    <%= label_tag(:transcript, "Unofficial transcript") %><br/>
+    <%= text_area_tag(:transcript, "", size: "50x10") %><br/>
+    <%= submit_tag("Upload") %>
+  <% end %>
+  </div>
+</div>
+</div>
+
+
+

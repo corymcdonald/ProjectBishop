@@ -1,33 +1,55 @@
-<div style="padding-top: 0;" id="editMajor" class="row whiteUI">
+<div id="editMajor" class="row whiteUI">
   <div class="container">
-    <div >
+  
       <h1><a href="<%= majors_path %>">Majors</a></h1>
-      <h2 ><%= @major.titleize %></h2>
-      <a class="btn btn-default btn-lg " href=<%= edit_major_path(@major) %>>Add or Edit Courses</a>
+    <div  class="row" >
+      <div class="col-md-11">
+        <h2 style="margin:0" ><%= @major.titleize %></h2>
+      </div>
+      <div class="col-md-1">
+        <% if user_admin? %>
+        <a class="btn btn-default" href=<%= edit_major_path(@major) %>><span class="glyphicon glyphicon-edit"></span></a>
+        <% end %>
+      </div>
     </div>
     
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-      <% @courses.each do |course| %>
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="heading<%= course.id %>">
-            <div class="panel-title">
-              <a  data-toggle="collapse" data-parent="#accordion" href="#collapse<%= course.id %>" aria-expanded="true" aria-controls="collapse<%= course.id %>">
-                  <%= course.title %>
-              </a>
-            </div>
-          </div>
-          <div id="collapse<%= course.id %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading<%= course.id %>">
-            <div class="panel-body">
-              <% if course.description and course.coreqDesc and course.prereqDesc %>
-                <code>Description:</code> <%= course.description %><br/>
-                <code>Corequisites:</code> <%= course.coreqDesc %><br/>
-                <code>Prerequisites:</code> <%= course.prereqDesc %><br/>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <tr>
+          <th>Course</th>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Semester</th>
+        </tr>
+        <% @courses.each do |current| %>
+          <% if current and current[:course].name %>
+          <tr>
+            <td><%= current[:course].name %></td>
+            <%
+                #Putting logic in views!
+                index = 0
+                if current[:course].title
+                    index = current[:course].title.index('.')
+                    if !index
+                      index = 0
+                    else index
+                      index = index + 1
+                  end
+                end
+            %>
+            <% if current[:course].title %>
+              <td><%= current[:course].title[index,current[:course].title.length] %></td>
+              <% if(current[:major])  %>
+                <td><%=current[:major].year%></td>
+                <td><%= current[:major].semester %></td>
               <%end%>
-            </div>
-          </div>
-        </div>
-    
-    <%end %>
+            <%end%>
+          </tr>
+          <%end%>
+      <%end %>
+      </table>
+      </div>
+      </div>
     </div>
   </div>
-</div>
