@@ -3,29 +3,6 @@ class DashboardController < ApplicationController
       
       
     def index
-        require 'rasem'
-        img = Rasem::SVGImage.new(1000,700) do
-          with_style :fill=>"#6fcde3", :stroke=>"black" do
-            line 100, 100, 250, 250
-            line 400, 100, 550, 400
-            line 100, 100, 100, 250
-            line 400, 250, 550, 550
-            line 400, 400, 400, 250
-            circle 100, 100, 50
-            circle 250, 250, 50
-            circle 400, 100, 50
-            circle 550, 400, 50
-            circle 100, 250, 50
-            circle 250, 400, 50
-            circle 400, 250, 50
-            circle 100, 400, 50
-            circle 250, 550, 50
-            circle 400, 400, 50
-            circle 550, 550, 50
-          end
-        end
-        @flowchart = img.output
-        
         @courses = Course.all
         @coursesList = []
         @courses.each do |p|
@@ -45,12 +22,20 @@ class DashboardController < ApplicationController
                 
             end
            @schArray = sch.genereateSchedules(courses).to_json
+           respond_to do |format|
+            format.json  { render :json => @schArray }
+          end
        end
        
-       respond_to do |format|
-        format.html 
-        format.json  { render :json => @schArray }
+      if(params.has_key?(:classID) )
+        @idParams = params[:classID]
+        logger.info("TESSSSST")
+        @sections = Section.where(name: @idParams.upcase ,component: 'Lecture') 
+        respond_to do |format|
+          format.json  { render :json => @sections }
+        end
       end
+       
         
     end
     

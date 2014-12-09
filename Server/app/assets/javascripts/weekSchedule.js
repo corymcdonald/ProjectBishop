@@ -2,6 +2,8 @@ var secArray
 var classBoxArray = []
 var currentSel
 var availableTags 
+var currentModal
+var sectionsArray
 
 function addData(tags){
     availableTags = tags;
@@ -25,35 +27,8 @@ function updateTable(k){
     currentSel = k;
     createWeekcalendar();
     
-     var bigTable = document.getElementById("largeTableSchedule")
      var smallTable = document.getElementById("smallTableSchedule")
      
-     while (bigTable.rows.length > 0 )
-     {
-      bigTable.deleteRow(0)
-     }
-     
-     for(var i = 0; i < secArray[k].arrOfSections.length; i++)
-     {
-         // Create an empty <tr> element and add it to the 1st position of the table:
-        var row = bigTable.insertRow(i);
-        
-        // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-      
-        
-        // Add some text to the new cells:
-        cell1.innerHTML = secArray[k].arrOfSections[i].name + " - " + secArray[k].arrOfSections[i].section ;
-        cell3.innerHTML = secArray[k].arrOfSections[i].enrolled + "/" + secArray[k].arrOfSections[i].size;
-        if(secArray[k].arrOfSections[i].enrolled = secArray[k].arrOfSections[i].size)
-            cell3.style.color = "red";
-        else
-            cell3.style.color = "black";
-     }
-    
-    
     while (smallTable.rows.length > 0 )
      {
      smallTable.deleteRow(0)
@@ -109,6 +84,32 @@ function loadSchedule(){
    
 }
 
+function loadSections(className){
+    
+    className = className.replace(/\s/g,'')
+    
+    var classNameOB = {
+        classID: className
+    }
+    
+    console.log(classNameOB);
+        
+   $.ajax({
+        url: "/dashboard",
+        data: classNameOB,
+        dataType: 'JSON',
+        contentType: "application/json;charset=utf-8",
+        context: this,
+        success: function(data) {
+            modalDisplay(data);
+        },
+        error: function(xhr, status, error){
+            alert("ERROR - xhr.status: " + xhr.status + '\nxhr.responseText: ' + xhr.responseText + '\nxhr.statusText: ' + xhr.statusText + '\nError: ' + error + '\nStatus: ' + status);
+        }
+    });
+    
+}
+
 function addClassesBox(){
 
     var container = document.getElementById("classesBoxGroup")
@@ -117,9 +118,11 @@ function addClassesBox(){
     
     inputDiv.className = "form-inline input-group form-group"
     
+    
     var input = document.createElement('input')
     var connectSpan = document.createElement('span')
     var editButton = document.createElement('button')
+    var deleteButton = document.createElement('button')
     var optionsDiv = document.createElement('div')
     
     editButton.className = "btn btn-default"
@@ -127,8 +130,13 @@ function addClassesBox(){
     editButton.dataset.toggle = "modal"
     editButton.dataset.target = "#testDiv"
     
+    deleteButton.className = "btn btn-default"
+    deleteButton.innerHTML = "<span class='glyphicon glyphicon-remove'></span>"
+    deleteButton.onclick = function(){ removeClassesBox(input)}
+    
     connectSpan.className = "input-group-btn"
     connectSpan.appendChild(editButton)
+    connectSpan.appendChild(deleteButton)
     
     optionsDiv.className = "modal fade"
     optionsDiv.id = "testDiv"
@@ -137,12 +145,15 @@ function addClassesBox(){
     
     input.type = "text"
     input.className = "form-control"
+    //input.onchange = function(){alert('HEY')}
     
     inputDiv.appendChild(input)
+    inputDiv.appendChild(optionsDiv)
     inputDiv.appendChild(connectSpan)
     
+    
     container.appendChild(inputDiv)
-    container.appendChild(optionsDiv)
+    
     
     classBoxArray.push(input);
 }
@@ -151,28 +162,80 @@ function addClassesBox(){
 function modalSet(optionsDiv){
     var dialog = document.createElement('div')
     var inter = document.createElement('div')
+    
+    
     dialog.className = "modal-dialog"
     inter.className = "modal-content"
-    inter.innerHTML = "<h1>No course selected</h1>"
     
+    
+    $(optionsDiv).on('show.bs.modal', function (e) {
+     console.log(e.target.firstChild.firstChild.children[1])  
+     if(e.target.firstChild.firstChild.children[1] != null)
+        e.target.firstChild.firstChild.removeChild(e.target.firstChild.firstChild.children[1])
+    $(e.target.firstChild.firstChild).append("<h4 class='modal-title' style='font-weight: 400; padding: 10px 10px 10px 10px'>Loading...</h4>")
+     
+    })
+    
+    $(optionsDiv).on('shown.bs.modal', function (e) {
+        var className = e.relatedTarget.parentNode.parentNode.firstChild.value
+        var sectionArray = 
+         currentModal = e.target.children[1].firstChild
+         loadSections(className);
+    });
+    
+    $(inter).append("<div class='modal-header'><button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button><h4 class='modal-title' style='font-weight: 400'>Sections</h4></div>")
     dialog.appendChild(inter);
     optionsDiv.appendChild(dialog);
     
 }
 
-function removeClassesBox(){
+function modalDisplay(sections){
+    if(currentModal.children[1] != null)
+            currentModal.removeChild(currentModal.children[1])
     
+    if(sections.length != 0)
+    {
+        var table = document.createElement('table')
+        table.className = "table"
+        var tableBody = document.createElement('tbody');
+        
+        for(var i = 0; i < sections.length; i++)
+        {var row = document.createElement('tr');
+            
+            var check = document.createElement('input');
+            var cell1 = document.createElement('td');
+            var cell = document.createElement('td');
+            var cell2 = document.createElement('td');
+            var cell3 = document.createElement('td');
+            check.type = "checkbox"
+            check.checked = true
+            cell1.appendChild(check);
+            cell.appendChild(document.createTextNode(sections[i].courseID));
+            cell2.appendChild(document.createTextNode(sections[i].classTime));
+            cell3.appendChild(document.createTextNode(sections[i].location));
+            row.appendChild(cell1);
+            row.appendChild(cell);
+            row.appendChild(cell2);
+            row.appendChild(cell3);
+         
+            tableBody.appendChild(row);
+        }
+        
     
+        table.appendChild(tableBody);
+        currentModal.appendChild(table);
+    }
+    else {
+        $(currentModal).append("<h4 class='modal-title' style='font-weight: 400; padding: 10px 10px 10px 10px'>No Valid Course</h4>")
+    }
 }
 
-function addBreaksBox(){
-
+function removeClassesBox(box){
+    classBoxArray.splice(classBoxArray.indexOf(box), 1);
     
+    box.parentNode.parentNode.removeChild(box.parentNode);
 }
 
-function removeBreaksBox(){
-    
-}
 
 function createWeekcalendar(){
     
