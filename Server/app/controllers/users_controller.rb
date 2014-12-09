@@ -30,6 +30,11 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to Project Bishop!"
       redirect_to @user
     else
+      @majors = Major.select('DISTINCT major').order('major')
+      @major = []
+      for current in @majors
+        @major.push(current.major.titleize)
+    end
       render 'new'
     end
   end
