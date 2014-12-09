@@ -1,0 +1,25 @@
+
++BRAKEMAN REPORT+
+
+Application path: /home/chronos/user/Downloads/ProjectBishop/Server
+Rails version: 4.1.6
+Brakeman version: 2.6.3
+Started at 2014-11-30 15:48:30 -0600
+Duration: 1.159990228 seconds
+Checks run: BasicAuth, ContentTag, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, EscapeFunction, Evaluation, Execute, FileAccess, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NumberToCurrency, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, ResponseSplitting, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoS, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, YAMLParsing
+
+
++SUMMARY+
+
++-------------------+-------+
+| Scanned/Reported  | Total |
++-------------------+-------+
+| Controllers       | 11    |
+| Models            | 6     |
+| Templates         | 36    |
+| Errors            | 0     |
+| Security Warnings | 0 (0) |
++-------------------+-------+
+
+
+
